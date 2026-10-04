@@ -419,7 +419,7 @@ function fillDetail(){
   const b=D.bt,B=b.params||{},avg=a=>a.length?a.reduce((s,x)=>s+x[2],0)/a.length:null;
   const BASIS_CN={long:'毛多头寸（多头买量）',net:'净头寸（多−空）',short:'毛空头寸'}[B.basis]||B.basis;
   const judge=e=>e>=10?'成立':(e>=3?'弱成立':(e>-3?'基本无效':'反向'));
-  const sig=x=>x>0?'up':'down',sgn=x=>(x>0?'+':'')+x;
+  const sig=x=>x>0?'up':'down',sgn=(x,d)=>((x>0?'+':'')+Number(x).toFixed(d==null?1:d));
   // 每个持有期现算：事件 = [日期, 读数, 后 N 周收益]，命中率＝方向一致占比（含亏损，与基准同口径）
   function rowOf(r,w,key,wantUp){
     const ev=(r&&r[key])||[];if(!ev.length)return null;
@@ -427,8 +427,8 @@ function fillDetail(){
     const win=ev.filter(e=>(e[2]>0)===wantUp).length;
     return {n:ev.length,hit:win/ev.length*100,bDir:bDir,exc:win/ev.length*100-bDir,avg:avg(ev)};
   }
-  const cell=x=>x?('<b>'+fmt(x.hit,0)+'%</b> <span class="'+sig(x.exc)+'">'+sgn(x.exc)+'pp</span>'
-    +'<br><span style="font-size:10px;color:var(--sub)">均'+sgn(x.avg)+'%（n='+x.n+'）</span>'):'—';
+  const cell=x=>x?('<b>'+fmt(x.hit,0)+'%</b> <span class="'+sig(x.exc)+'">'+sgn(x.exc,1)+'pp</span>'
+    +'<br><span style="font-size:10px;color:var(--sub)">均'+sgn(x.avg,2)+'%（n='+x.n+'）</span>'):'—';
   let sh='<table><tr><th>持有期</th><th>基准<br>上涨率</th><th>绿线打顶后</th><th>蓝线打顶后</th></tr>';
   D.sens.holds.forEach(r=>{sh+='<tr><td>'+r.w+' 周</td><td>'+D.sens.base_up[r.w]+'%</td>'
     +'<td>'+cell(rowOf(r,r.w,'prod',true))+'</td><td>'+cell(rowOf(r,r.w,'mm',false))+'</td></tr>';});
@@ -437,13 +437,13 @@ function fillDetail(){
   const m0=rowOf(H[0],H[0].w,'mm',false),mL=rowOf(H[H.length-1],H[H.length-1].w,'mm',false);
   const trend=(a,z)=>!a||!z?'':(z.exc>a.exc+3?'，且随持有期拉长走强':(z.exc<a.exc-3?'，且随持有期拉长走弱':'，各持有期基本一致'));
   document.getElementById('btBlock').innerHTML=
-    '<p>口径：<b>'+BASIS_CN+'</b> / K='+B.speed_weeks+' / N='+B.norm_weeks+'，打顶＝读数≥0.90，事件按 4 周去重。样本：COT '+D.cot_n+' 周，基准 '+b.base.n+' 次滚动观测（基准上涨率 '+b.base.up_rate+'% / 平均 '+sgn(b.base.avg_ret)+'%）。</p>'
+    '<p>口径：<b>'+BASIS_CN+'</b> / K='+B.speed_weeks+' / N='+B.norm_weeks+'，打顶＝读数≥0.90，事件按 4 周去重。样本：COT '+D.cot_n+' 周，基准 '+b.base.n+' 次滚动观测（基准上涨率 '+b.base.up_rate+'% / 平均 '+sgn(b.base.avg_ret,2)+'%）。</p>'
     +'<table><tr><th>信号</th><th>事件</th><th>命中率</th><th>基准</th><th>超额</th></tr>'
-    +'<tr><td>绿线打顶＝买点</td><td>'+b.prod.n+'</td><td><b>'+b.prod.hit_rate+'%</b></td><td>'+b.prod.base_dir_rate+'%</td><td class="'+sig(b.prod.excess_pp)+'">'+sgn(b.prod.excess_pp)+'pp → '+judge(b.prod.excess_pp)+'</td></tr>'
-    +'<tr><td>蓝线打顶＝衰减</td><td>'+b.mm.n+'</td><td><b>'+b.mm.hit_rate+'%</b></td><td>'+b.mm.base_dir_rate+'%</td><td class="'+sig(b.mm.excess_pp)+'">'+sgn(b.mm.excess_pp)+'pp → '+judge(b.mm.excess_pp)+'</td></tr></table>'
+    +'<tr><td>绿线打顶＝买点</td><td>'+b.prod.n+'</td><td><b>'+b.prod.hit_rate+'%</b></td><td>'+b.prod.base_dir_rate+'%</td><td class="'+sig(b.prod.excess_pp)+'">'+sgn(b.prod.excess_pp,1)+'pp → '+judge(b.prod.excess_pp)+'</td></tr>'
+    +'<tr><td>蓝线打顶＝衰减</td><td>'+b.mm.n+'</td><td><b>'+b.mm.hit_rate+'%</b></td><td>'+b.mm.base_dir_rate+'%</td><td class="'+sig(b.mm.excess_pp)+'">'+sgn(b.mm.excess_pp,1)+'pp → '+judge(b.mm.excess_pp)+'</td></tr></table>'
     +sh
-    +'<p><b>结论（'+BASIS_CN+'）</b>：① 绿线打顶后 8 周命中率 '+b.prod.hit_rate+'%、较基准 '+sgn(b.prod.excess_pp)+'pp（<b>'+judge(b.prod.excess_pp)+'</b>）'+(trend(p0,pL)||'')+'；'
-    +'② 蓝线打顶后 8 周命中率 '+b.mm.hit_rate+'%、较基准 '+sgn(b.mm.excess_pp)+'pp（<b>'+judge(b.mm.excess_pp)+'</b>）'+(trend(m0,mL)||'')+'；'
+    +'<p><b>结论（'+BASIS_CN+'）</b>：① 绿线打顶后 8 周命中率 '+b.prod.hit_rate+'%、较基准 '+sgn(b.prod.excess_pp,1)+'pp（<b>'+judge(b.prod.excess_pp)+'</b>）'+(trend(p0,pL)||'')+'；'
+    +'② 蓝线打顶后 8 周命中率 '+b.mm.hit_rate+'%、较基准 '+sgn(b.mm.excess_pp,1)+'pp（<b>'+judge(b.mm.excess_pp)+'</b>）'+(trend(m0,mL)||'')+'；'
     +'③ 事件只有 '+b.prod.n+' / '+b.mm.n+' 个，单点差异随时会翻盘——这套速度指数<b>适合看形态，不宜单条当交易信号</b>。</p>'
     +'<p style="font-size:11px;color:var(--sub)">口径溯源：绿线读数取自商业头寸<b>毛多</b>——2026-08-25 本模型 0.9109、他画面 0.908（差 0.3%），是全部 12 条候选口径里唯一对得上的；若改用净头寸，同日读数变成 0.158（差 75%），校准点直接否掉净头寸口径。两条线「一上一下」是<b>视觉现象</b>（毛多口径下两者相关性仅 +0.09，几乎互不相干；换成净头寸虽能做出 −0.74 的镜像感，但绿线读数就对不上他了），不是数据层面的负相关。</p>';
 }
