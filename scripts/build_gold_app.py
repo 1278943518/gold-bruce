@@ -106,7 +106,8 @@ def main():
 :root{--bg:#f5f6f8;--card:#fff;--ink:#1b1f24;--sub:#67717d;--line:#e6e9ee;--grid:#eef1f4;
 --red:#c62828;--green:#1b7a4b;--amber:#a06a00;--blue:#1f5fbf;
 --c-prod:#0f7a52;--c-mm:#1f5fbf;--c-other:#c62828;--c-swap:#8a94a0}
-*{box-sizing:border-box;-webkit-tap-highlight-color:transparent}
+*{box-sizing:border-box;-webkit-tap-highlight-color:transparent;
+-webkit-touch-callout:none;-webkit-user-select:none;-moz-user-select:none;-ms-user-select:none;user-select:none}
 body{margin:0;background:var(--bg);color:var(--ink);
 font:14px/1.55 -apple-system,BlinkMacSystemFont,"Segoe UI","PingFang SC","Microsoft YaHei",sans-serif}
 .wrap{max-width:560px;margin:0 auto;padding:10px 10px 40px}
@@ -142,7 +143,8 @@ svg{width:100%;height:auto;display:block}
 .warn{background:var(--grid);border:1px solid var(--line);border-radius:9px;padding:8px 10px;font-size:12px;margin:8px 0}
 .tag{display:inline-block;font-size:10.5px;padding:1px 6px;border-radius:5px;background:var(--grid)}
 #tip{position:fixed;pointer-events:none;background:#fff;border:1px solid var(--line);
-border-radius:8px;padding:5px 8px;font-size:10.5px;box-shadow:0 3px 12px rgba(0,0,0,.15);display:none;z-index:99;white-space:nowrap;line-height:1.5}
+border-radius:8px;padding:6px 9px;font-size:12px;box-shadow:0 3px 12px rgba(0,0,0,.15);display:none;z-index:99;white-space:normal;max-width:76vw;line-height:1.55}
+#tip .hint{color:var(--sub);font-size:10.5px;margin-top:2px}
 .foot{text-align:center;color:var(--sub);font-size:10.5px;margin:16px 0 4px}
 </style></head><body><div class="wrap">
 
@@ -312,9 +314,15 @@ function drawChart(id,h,cfg){
   function mv(cx,cy){const bb=svg.getBoundingClientRect();
     const sx=(cx-bb.left)/bb.width*W;paint(x2i(sx),cy,cx);}
   rect.addEventListener('mousemove',e=>mv(e.clientX,e.clientY));
-  rect.addEventListener('mouseleave',()=>{IDS.forEach(id=>{const s=document.getElementById(id);if(s._hl)s._hl.setAttribute('opacity',0);});tip.style.display='none';});
+  rect.addEventListener('mouseleave',hideTip);
   rect.addEventListener('touchmove',e=>{mv(e.touches[0].clientX,e.touches[0].clientY);},{passive:true});
-  rect.addEventListener('touchend',()=>{setTimeout(()=>{tip.style.display='none';IDS.forEach(id=>{const s=document.getElementById(id);if(s._hl)s._hl.setAttribute('opacity',0);});},1600);});
+  // 触屏松手后弹窗保留，方便阅读；点图表以外的空白处才收起
+  rect.addEventListener('touchend',()=>{});
+}
+
+function hideTip(){
+  tip.style.display='none';
+  IDS.forEach(id=>{const s=document.getElementById(id);if(s._hl)s._hl.setAttribute('opacity',0);});
 }
 
 function paint(i,cy,cx){
@@ -322,14 +330,20 @@ function paint(i,cy,cx){
   IDS.forEach(id=>{const s=document.getElementById(id);
     if(s._hl){s._hl.setAttribute('x1',px2x(i));s._hl.setAttribute('x2',px2x(i));s._hl.setAttribute('opacity',0.5);}});
   const j=WMAP[i];
+  // 价格 %B 与 PCR %B：都是在各自 20 日布林带里的位置（0%=下轨，100%=上轨）
+  const pbI=(V.up[i]!=null&&V.dn[i]!=null)?((V.c[i]-V.dn[i])/(V.up[i]-V.dn[i])*100):null;
+  const pbP=(PO_UP[i]!=null&&PO_DN[i]!=null)?((PO[i]-PO_DN[i])/(PO_UP[i]-PO_DN[i])*100):null;
   let cot='';CATS.forEach(c=>{const v=(j<0)?null:D['w_'+c+'_net'][j];
     cot+='<br><span style="color:'+catColor(c)+'">■</span>'+(c==='prod'?'商业':(c==='mm'?'管理基金':'散户'))+'净 '+
     (v==null?'—':Math.round(v).toLocaleString())+'　速 '+fmt(C4.dl[c][i],2);});
   tip.innerHTML='<b>'+V.dates[i]+'</b>'+(j>=0?'（'+D.w_dates[j]+'周报）':'')+'<br>'
-    +'GC 收 '+fmt(V.c[i],1)+'　PCR '+fmt(PO[i],3)+cot;
+    +'GC 收 '+fmt(V.c[i],1)+' <span style="color:var(--sub)">价格 %B '+fmt(pbI,0)+'%</span>'
+    +'<br>PCR '+fmt(PO[i],3)+' <span style="color:var(--sub)">PCR %B '+fmt(pbP,0)+'%</span>'
+    +cot+'<div class="hint">点图表以外的空白处收起</div>';
   tip.style.display='block';
-  tip.style.left=Math.min(cx+10,window.innerWidth-170)+'px';
-  tip.style.top=(cy-14)+'px';
+  const tw=tip.offsetWidth||200;
+  tip.style.left=Math.max(4,Math.min(cx+10,window.innerWidth-tw-8))+'px';
+  tip.style.top=Math.max(4,Math.min(cy-14,window.innerHeight-tip.offsetHeight-8))+'px';
 }
 
 function state4(v){return v==null?'—':(v>=0.90?'<span style="color:var(--c-other)">已打顶</span>':(v<=0.10?'打底':'中性'));}
@@ -420,6 +434,14 @@ updateCards();
 fillDetail();
 document.getElementById('updDate').textContent=V.dates[N-1];
 document.getElementById('builtAt').textContent='构建 '+D.built_at;
+
+/* 弹窗保留策略：点图表以外的区域才收起（触屏与鼠标都生效） */
+document.addEventListener('touchstart',function(e){
+  if(!e.target.closest||!e.target.closest('svg'))hideTip();
+},{passive:true});
+document.addEventListener('mousedown',function(e){
+  if(!e.target.closest||!e.target.closest('svg'))hideTip();
+});
 
 /* 云端自更新：页面加载后去 GitHub 取最新数据，取到且比内置快照新就整体重绘。
    取不到（离线 / CDN 不通）就保留内置快照，页面永远有内容。 */
