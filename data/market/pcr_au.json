@@ -1,0 +1,5537 @@
+[
+ {
+  "date": "2024-03-21",
+  "call_vol": 52182,
+  "put_vol": 43848,
+  "call_oi": 35616,
+  "put_oi": 61235,
+  "pcr_vol": 0.8403,
+  "pcr_oi": 1.7193
+ },
+ {
+  "date": "2024-03-22",
+  "call_vol": 41464,
+  "put_vol": 42342,
+  "call_oi": 34988,
+  "put_oi": 61113,
+  "pcr_vol": 1.0212,
+  "pcr_oi": 1.7467
+ },
+ {
+  "date": "2024-03-25",
+  "call_vol": 43528,
+  "put_vol": 36818,
+  "call_oi": 20086,
+  "put_oi": 30621,
+  "pcr_vol": 0.8458,
+  "pcr_oi": 1.5245
+ },
+ {
+  "date": "2024-03-26",
+  "call_vol": 9357,
+  "put_vol": 9034,
+  "call_oi": 21727,
+  "put_oi": 32902,
+  "pcr_vol": 0.9655,
+  "pcr_oi": 1.5143
+ },
+ {
+  "date": "2024-03-27",
+  "call_vol": 25717,
+  "put_vol": 17126,
+  "call_oi": 24164,
+  "put_oi": 37352,
+  "pcr_vol": 0.6659,
+  "pcr_oi": 1.5458
+ },
+ {
+  "date": "2024-03-28",
+  "call_vol": 26197,
+  "put_vol": 17022,
+  "call_oi": 25607,
+  "put_oi": 41235,
+  "pcr_vol": 0.6498,
+  "pcr_oi": 1.6103
+ },
+ {
+  "date": "2024-03-29",
+  "call_vol": 53657,
+  "put_vol": 32124,
+  "call_oi": 26323,
+  "put_oi": 46642,
+  "pcr_vol": 0.5987,
+  "pcr_oi": 1.7719
+ },
+ {
+  "date": "2024-04-01",
+  "call_vol": 48813,
+  "put_vol": 22073,
+  "call_oi": 30062,
+  "put_oi": 49788,
+  "pcr_vol": 0.4522,
+  "pcr_oi": 1.6562
+ },
+ {
+  "date": "2024-04-02",
+  "call_vol": 37629,
+  "put_vol": 22043,
+  "call_oi": 32229,
+  "put_oi": 52083,
+  "pcr_vol": 0.5858,
+  "pcr_oi": 1.616
+ },
+ {
+  "date": "2024-04-03",
+  "call_vol": 57279,
+  "put_vol": 30908,
+  "call_oi": 33984,
+  "put_oi": 55692,
+  "pcr_vol": 0.5396,
+  "pcr_oi": 1.6388
+ },
+ {
+  "date": "2024-04-08",
+  "call_vol": 42592,
+  "put_vol": 29567,
+  "call_oi": 33555,
+  "put_oi": 58948,
+  "pcr_vol": 0.6942,
+  "pcr_oi": 1.7568
+ },
+ {
+  "date": "2024-04-09",
+  "call_vol": 37200,
+  "put_vol": 20006,
+  "call_oi": 35526,
+  "put_oi": 61293,
+  "pcr_vol": 0.5378,
+  "pcr_oi": 1.7253
+ },
+ {
+  "date": "2024-04-10",
+  "call_vol": 45671,
+  "put_vol": 25993,
+  "call_oi": 36036,
+  "put_oi": 65906,
+  "pcr_vol": 0.5691,
+  "pcr_oi": 1.8289
+ },
+ {
+  "date": "2024-04-11",
+  "call_vol": 43567,
+  "put_vol": 25423,
+  "call_oi": 39213,
+  "put_oi": 67793,
+  "pcr_vol": 0.5835,
+  "pcr_oi": 1.7288
+ },
+ {
+  "date": "2024-04-12",
+  "call_vol": 48078,
+  "put_vol": 36355,
+  "call_oi": 39144,
+  "put_oi": 72071,
+  "pcr_vol": 0.7562,
+  "pcr_oi": 1.8412
+ },
+ {
+  "date": "2024-04-15",
+  "call_vol": 99388,
+  "put_vol": 61551,
+  "call_oi": 38020,
+  "put_oi": 73485,
+  "pcr_vol": 0.6193,
+  "pcr_oi": 1.9328
+ },
+ {
+  "date": "2024-04-16",
+  "call_vol": 72529,
+  "put_vol": 38220,
+  "call_oi": 39417,
+  "put_oi": 74850,
+  "pcr_vol": 0.527,
+  "pcr_oi": 1.8989
+ },
+ {
+  "date": "2024-04-17",
+  "call_vol": 54328,
+  "put_vol": 26900,
+  "call_oi": 41909,
+  "put_oi": 74759,
+  "pcr_vol": 0.4951,
+  "pcr_oi": 1.7838
+ },
+ {
+  "date": "2024-04-18",
+  "call_vol": 57852,
+  "put_vol": 28930,
+  "call_oi": 43862,
+  "put_oi": 75314,
+  "pcr_vol": 0.5001,
+  "pcr_oi": 1.7171
+ },
+ {
+  "date": "2024-04-19",
+  "call_vol": 63130,
+  "put_vol": 32363,
+  "call_oi": 46026,
+  "put_oi": 76227,
+  "pcr_vol": 0.5126,
+  "pcr_oi": 1.6562
+ },
+ {
+  "date": "2024-04-22",
+  "call_vol": 53982,
+  "put_vol": 26023,
+  "call_oi": 49093,
+  "put_oi": 78287,
+  "pcr_vol": 0.4821,
+  "pcr_oi": 1.5947
+ },
+ {
+  "date": "2024-04-23",
+  "call_vol": 62518,
+  "put_vol": 42357,
+  "call_oi": 51405,
+  "put_oi": 75828,
+  "pcr_vol": 0.6775,
+  "pcr_oi": 1.4751
+ },
+ {
+  "date": "2024-04-24",
+  "call_vol": 54702,
+  "put_vol": 32350,
+  "call_oi": 48348,
+  "put_oi": 75356,
+  "pcr_vol": 0.5914,
+  "pcr_oi": 1.5586
+ },
+ {
+  "date": "2024-04-25",
+  "call_vol": 44371,
+  "put_vol": 23716,
+  "call_oi": 50750,
+  "put_oi": 76120,
+  "pcr_vol": 0.5345,
+  "pcr_oi": 1.4999
+ },
+ {
+  "date": "2024-04-26",
+  "call_vol": 53550,
+  "put_vol": 26713,
+  "call_oi": 51782,
+  "put_oi": 76981,
+  "pcr_vol": 0.4988,
+  "pcr_oi": 1.4866
+ },
+ {
+  "date": "2024-04-29",
+  "call_vol": 54233,
+  "put_vol": 26444,
+  "call_oi": 52178,
+  "put_oi": 78174,
+  "pcr_vol": 0.4876,
+  "pcr_oi": 1.4982
+ },
+ {
+  "date": "2024-04-30",
+  "call_vol": 36766,
+  "put_vol": 23397,
+  "call_oi": 52422,
+  "put_oi": 77776,
+  "pcr_vol": 0.6364,
+  "pcr_oi": 1.4837
+ },
+ {
+  "date": "2024-05-06",
+  "call_vol": 28112,
+  "put_vol": 19340,
+  "call_oi": 56405,
+  "put_oi": 76443,
+  "pcr_vol": 0.688,
+  "pcr_oi": 1.3553
+ },
+ {
+  "date": "2024-05-07",
+  "call_vol": 45592,
+  "put_vol": 23249,
+  "call_oi": 54774,
+  "put_oi": 76704,
+  "pcr_vol": 0.5099,
+  "pcr_oi": 1.4004
+ },
+ {
+  "date": "2024-05-08",
+  "call_vol": 49833,
+  "put_vol": 21973,
+  "call_oi": 52762,
+  "put_oi": 76000,
+  "pcr_vol": 0.4409,
+  "pcr_oi": 1.4404
+ },
+ {
+  "date": "2024-05-09",
+  "call_vol": 35498,
+  "put_vol": 16600,
+  "call_oi": 54464,
+  "put_oi": 75046,
+  "pcr_vol": 0.4676,
+  "pcr_oi": 1.3779
+ },
+ {
+  "date": "2024-05-10",
+  "call_vol": 100286,
+  "put_vol": 45106,
+  "call_oi": 62255,
+  "put_oi": 74234,
+  "pcr_vol": 0.4498,
+  "pcr_oi": 1.1924
+ },
+ {
+  "date": "2024-05-13",
+  "call_vol": 110533,
+  "put_vol": 34129,
+  "call_oi": 63905,
+  "put_oi": 75436,
+  "pcr_vol": 0.3088,
+  "pcr_oi": 1.1804
+ },
+ {
+  "date": "2024-05-14",
+  "call_vol": 55205,
+  "put_vol": 23857,
+  "call_oi": 66580,
+  "put_oi": 75384,
+  "pcr_vol": 0.4322,
+  "pcr_oi": 1.1322
+ },
+ {
+  "date": "2024-05-15",
+  "call_vol": 54491,
+  "put_vol": 23258,
+  "call_oi": 67155,
+  "put_oi": 75966,
+  "pcr_vol": 0.4268,
+  "pcr_oi": 1.1312
+ },
+ {
+  "date": "2024-05-16",
+  "call_vol": 101901,
+  "put_vol": 44132,
+  "call_oi": 69024,
+  "put_oi": 78234,
+  "pcr_vol": 0.4331,
+  "pcr_oi": 1.1334
+ },
+ {
+  "date": "2024-05-17",
+  "call_vol": 44510,
+  "put_vol": 22179,
+  "call_oi": 69413,
+  "put_oi": 79362,
+  "pcr_vol": 0.4983,
+  "pcr_oi": 1.1433
+ },
+ {
+  "date": "2024-05-20",
+  "call_vol": 198463,
+  "put_vol": 65651,
+  "call_oi": 68900,
+  "put_oi": 79493,
+  "pcr_vol": 0.3308,
+  "pcr_oi": 1.1537
+ },
+ {
+  "date": "2024-05-21",
+  "call_vol": 129958,
+  "put_vol": 42568,
+  "call_oi": 69354,
+  "put_oi": 79426,
+  "pcr_vol": 0.3276,
+  "pcr_oi": 1.1452
+ },
+ {
+  "date": "2024-05-22",
+  "call_vol": 81204,
+  "put_vol": 32363,
+  "call_oi": 71468,
+  "put_oi": 79030,
+  "pcr_vol": 0.3985,
+  "pcr_oi": 1.1058
+ },
+ {
+  "date": "2024-05-23",
+  "call_vol": 99089,
+  "put_vol": 79019,
+  "call_oi": 71980,
+  "put_oi": 70823,
+  "pcr_vol": 0.7975,
+  "pcr_oi": 0.9839
+ },
+ {
+  "date": "2024-05-24",
+  "call_vol": 82130,
+  "put_vol": 68506,
+  "call_oi": 75843,
+  "put_oi": 67851,
+  "pcr_vol": 0.8341,
+  "pcr_oi": 0.8946
+ },
+ {
+  "date": "2024-05-27",
+  "call_vol": 57743,
+  "put_vol": 35110,
+  "call_oi": 33248,
+  "put_oi": 33693,
+  "pcr_vol": 0.608,
+  "pcr_oi": 1.0134
+ },
+ {
+  "date": "2024-05-28",
+  "call_vol": 29613,
+  "put_vol": 15884,
+  "call_oi": 35044,
+  "put_oi": 36206,
+  "pcr_vol": 0.5364,
+  "pcr_oi": 1.0332
+ },
+ {
+  "date": "2024-05-29",
+  "call_vol": 34212,
+  "put_vol": 16436,
+  "call_oi": 35905,
+  "put_oi": 37383,
+  "pcr_vol": 0.4804,
+  "pcr_oi": 1.0412
+ },
+ {
+  "date": "2024-05-30",
+  "call_vol": 28891,
+  "put_vol": 23700,
+  "call_oi": 37227,
+  "put_oi": 38097,
+  "pcr_vol": 0.8203,
+  "pcr_oi": 1.0234
+ },
+ {
+  "date": "2024-05-31",
+  "call_vol": 20117,
+  "put_vol": 16269,
+  "call_oi": 38426,
+  "put_oi": 38925,
+  "pcr_vol": 0.8087,
+  "pcr_oi": 1.013
+ },
+ {
+  "date": "2024-06-03",
+  "call_vol": 33215,
+  "put_vol": 44240,
+  "call_oi": 40021,
+  "put_oi": 42630,
+  "pcr_vol": 1.3319,
+  "pcr_oi": 1.0652
+ },
+ {
+  "date": "2024-06-04",
+  "call_vol": 22167,
+  "put_vol": 22134,
+  "call_oi": 40526,
+  "put_oi": 43315,
+  "pcr_vol": 0.9985,
+  "pcr_oi": 1.0688
+ },
+ {
+  "date": "2024-06-05",
+  "call_vol": 26292,
+  "put_vol": 37739,
+  "call_oi": 42519,
+  "put_oi": 44309,
+  "pcr_vol": 1.4354,
+  "pcr_oi": 1.0421
+ },
+ {
+  "date": "2024-06-06",
+  "call_vol": 51378,
+  "put_vol": 32413,
+  "call_oi": 43888,
+  "put_oi": 45246,
+  "pcr_vol": 0.6309,
+  "pcr_oi": 1.0309
+ },
+ {
+  "date": "2024-06-07",
+  "call_vol": 40562,
+  "put_vol": 20299,
+  "call_oi": 43233,
+  "put_oi": 44817,
+  "pcr_vol": 0.5004,
+  "pcr_oi": 1.0366
+ },
+ {
+  "date": "2024-06-11",
+  "call_vol": 30019,
+  "put_vol": 28550,
+  "call_oi": 47414,
+  "put_oi": 44216,
+  "pcr_vol": 0.9511,
+  "pcr_oi": 0.9326
+ },
+ {
+  "date": "2024-06-12",
+  "call_vol": 27747,
+  "put_vol": 20761,
+  "call_oi": 48701,
+  "put_oi": 44320,
+  "pcr_vol": 0.7482,
+  "pcr_oi": 0.91
+ },
+ {
+  "date": "2024-06-13",
+  "call_vol": 40670,
+  "put_vol": 27823,
+  "call_oi": 50006,
+  "put_oi": 46107,
+  "pcr_vol": 0.6841,
+  "pcr_oi": 0.922
+ },
+ {
+  "date": "2024-06-14",
+  "call_vol": 29366,
+  "put_vol": 34750,
+  "call_oi": 50941,
+  "put_oi": 48151,
+  "pcr_vol": 1.1833,
+  "pcr_oi": 0.9452
+ },
+ {
+  "date": "2024-06-17",
+  "call_vol": 39391,
+  "put_vol": 28655,
+  "call_oi": 52759,
+  "put_oi": 50114,
+  "pcr_vol": 0.7275,
+  "pcr_oi": 0.9499
+ },
+ {
+  "date": "2024-06-18",
+  "call_vol": 21848,
+  "put_vol": 23673,
+  "call_oi": 53915,
+  "put_oi": 50243,
+  "pcr_vol": 1.0835,
+  "pcr_oi": 0.9319
+ },
+ {
+  "date": "2024-06-19",
+  "call_vol": 30470,
+  "put_vol": 24374,
+  "call_oi": 54263,
+  "put_oi": 50498,
+  "pcr_vol": 0.7999,
+  "pcr_oi": 0.9306
+ },
+ {
+  "date": "2024-06-20",
+  "call_vol": 37298,
+  "put_vol": 20835,
+  "call_oi": 55431,
+  "put_oi": 50831,
+  "pcr_vol": 0.5586,
+  "pcr_oi": 0.917
+ },
+ {
+  "date": "2024-06-21",
+  "call_vol": 42771,
+  "put_vol": 21481,
+  "call_oi": 56213,
+  "put_oi": 52309,
+  "pcr_vol": 0.5022,
+  "pcr_oi": 0.9305
+ },
+ {
+  "date": "2024-06-24",
+  "call_vol": 51894,
+  "put_vol": 28131,
+  "call_oi": 54720,
+  "put_oi": 52012,
+  "pcr_vol": 0.5421,
+  "pcr_oi": 0.9505
+ },
+ {
+  "date": "2024-06-25",
+  "call_vol": 21244,
+  "put_vol": 15207,
+  "call_oi": 55624,
+  "put_oi": 52636,
+  "pcr_vol": 0.7158,
+  "pcr_oi": 0.9463
+ },
+ {
+  "date": "2024-06-26",
+  "call_vol": 35459,
+  "put_vol": 27315,
+  "call_oi": 57020,
+  "put_oi": 52798,
+  "pcr_vol": 0.7703,
+  "pcr_oi": 0.926
+ },
+ {
+  "date": "2024-06-27",
+  "call_vol": 31142,
+  "put_vol": 30890,
+  "call_oi": 59468,
+  "put_oi": 53166,
+  "pcr_vol": 0.9919,
+  "pcr_oi": 0.894
+ },
+ {
+  "date": "2024-06-28",
+  "call_vol": 34089,
+  "put_vol": 22061,
+  "call_oi": 59575,
+  "put_oi": 53501,
+  "pcr_vol": 0.6472,
+  "pcr_oi": 0.898
+ },
+ {
+  "date": "2024-07-01",
+  "call_vol": 34709,
+  "put_vol": 22140,
+  "call_oi": 59528,
+  "put_oi": 54742,
+  "pcr_vol": 0.6379,
+  "pcr_oi": 0.9196
+ },
+ {
+  "date": "2024-07-02",
+  "call_vol": 25726,
+  "put_vol": 18550,
+  "call_oi": 60380,
+  "put_oi": 54952,
+  "pcr_vol": 0.7211,
+  "pcr_oi": 0.9101
+ },
+ {
+  "date": "2024-07-03",
+  "call_vol": 37480,
+  "put_vol": 24027,
+  "call_oi": 60863,
+  "put_oi": 54835,
+  "pcr_vol": 0.6411,
+  "pcr_oi": 0.901
+ },
+ {
+  "date": "2024-07-04",
+  "call_vol": 46387,
+  "put_vol": 23816,
+  "call_oi": 59944,
+  "put_oi": 55227,
+  "pcr_vol": 0.5134,
+  "pcr_oi": 0.9213
+ },
+ {
+  "date": "2024-07-05",
+  "call_vol": 28535,
+  "put_vol": 17377,
+  "call_oi": 59624,
+  "put_oi": 54821,
+  "pcr_vol": 0.609,
+  "pcr_oi": 0.9194
+ },
+ {
+  "date": "2024-07-08",
+  "call_vol": 54388,
+  "put_vol": 30651,
+  "call_oi": 55963,
+  "put_oi": 54754,
+  "pcr_vol": 0.5636,
+  "pcr_oi": 0.9784
+ },
+ {
+  "date": "2024-07-09",
+  "call_vol": 45142,
+  "put_vol": 25466,
+  "call_oi": 56850,
+  "put_oi": 54786,
+  "pcr_vol": 0.5641,
+  "pcr_oi": 0.9637
+ },
+ {
+  "date": "2024-07-10",
+  "call_vol": 42711,
+  "put_vol": 25791,
+  "call_oi": 58369,
+  "put_oi": 54928,
+  "pcr_vol": 0.6038,
+  "pcr_oi": 0.941
+ },
+ {
+  "date": "2024-07-11",
+  "call_vol": 41860,
+  "put_vol": 20501,
+  "call_oi": 58784,
+  "put_oi": 55020,
+  "pcr_vol": 0.4898,
+  "pcr_oi": 0.936
+ },
+ {
+  "date": "2024-07-12",
+  "call_vol": 63361,
+  "put_vol": 37456,
+  "call_oi": 57295,
+  "put_oi": 56514,
+  "pcr_vol": 0.5912,
+  "pcr_oi": 0.9864
+ },
+ {
+  "date": "2024-07-15",
+  "call_vol": 43041,
+  "put_vol": 23983,
+  "call_oi": 58389,
+  "put_oi": 56595,
+  "pcr_vol": 0.5572,
+  "pcr_oi": 0.9693
+ },
+ {
+  "date": "2024-07-16",
+  "call_vol": 80680,
+  "put_vol": 36157,
+  "call_oi": 60396,
+  "put_oi": 57556,
+  "pcr_vol": 0.4482,
+  "pcr_oi": 0.953
+ },
+ {
+  "date": "2024-07-17",
+  "call_vol": 128047,
+  "put_vol": 55169,
+  "call_oi": 59556,
+  "put_oi": 60742,
+  "pcr_vol": 0.4308,
+  "pcr_oi": 1.0199
+ },
+ {
+  "date": "2024-07-18",
+  "call_vol": 90514,
+  "put_vol": 55092,
+  "call_oi": 60873,
+  "put_oi": 61515,
+  "pcr_vol": 0.6087,
+  "pcr_oi": 1.0105
+ },
+ {
+  "date": "2024-07-19",
+  "call_vol": 98606,
+  "put_vol": 82692,
+  "call_oi": 61615,
+  "put_oi": 57094,
+  "pcr_vol": 0.8386,
+  "pcr_oi": 0.9266
+ },
+ {
+  "date": "2024-07-22",
+  "call_vol": 75299,
+  "put_vol": 69366,
+  "call_oi": 63115,
+  "put_oi": 56833,
+  "pcr_vol": 0.9212,
+  "pcr_oi": 0.9005
+ },
+ {
+  "date": "2024-07-23",
+  "call_vol": 58316,
+  "put_vol": 62768,
+  "call_oi": 63402,
+  "put_oi": 56236,
+  "pcr_vol": 1.0763,
+  "pcr_oi": 0.887
+ },
+ {
+  "date": "2024-07-24",
+  "call_vol": 56679,
+  "put_vol": 57165,
+  "call_oi": 61324,
+  "put_oi": 58574,
+  "pcr_vol": 1.0086,
+  "pcr_oi": 0.9552
+ },
+ {
+  "date": "2024-07-25",
+  "call_vol": 92823,
+  "put_vol": 96785,
+  "call_oi": 31739,
+  "put_oi": 28889,
+  "pcr_vol": 1.0427,
+  "pcr_oi": 0.9102
+ },
+ {
+  "date": "2024-07-26",
+  "call_vol": 31388,
+  "put_vol": 52502,
+  "call_oi": 34658,
+  "put_oi": 31704,
+  "pcr_vol": 1.6727,
+  "pcr_oi": 0.9148
+ },
+ {
+  "date": "2024-07-29",
+  "call_vol": 27437,
+  "put_vol": 26490,
+  "call_oi": 34625,
+  "put_oi": 34336,
+  "pcr_vol": 0.9655,
+  "pcr_oi": 0.9917
+ },
+ {
+  "date": "2024-07-30",
+  "call_vol": 24551,
+  "put_vol": 42545,
+  "call_oi": 35105,
+  "put_oi": 36320,
+  "pcr_vol": 1.7329,
+  "pcr_oi": 1.0346
+ },
+ {
+  "date": "2024-07-31",
+  "call_vol": 35751,
+  "put_vol": 38443,
+  "call_oi": 35728,
+  "put_oi": 38096,
+  "pcr_vol": 1.0753,
+  "pcr_oi": 1.0663
+ },
+ {
+  "date": "2024-08-01",
+  "call_vol": 39849,
+  "put_vol": 32751,
+  "call_oi": 34861,
+  "put_oi": 40106,
+  "pcr_vol": 0.8219,
+  "pcr_oi": 1.1505
+ },
+ {
+  "date": "2024-08-02",
+  "call_vol": 41658,
+  "put_vol": 39197,
+  "call_oi": 36804,
+  "put_oi": 42082,
+  "pcr_vol": 0.9409,
+  "pcr_oi": 1.1434
+ },
+ {
+  "date": "2024-08-05",
+  "call_vol": 57495,
+  "put_vol": 75200,
+  "call_oi": 38384,
+  "put_oi": 41469,
+  "pcr_vol": 1.3079,
+  "pcr_oi": 1.0804
+ },
+ {
+  "date": "2024-08-06",
+  "call_vol": 54915,
+  "put_vol": 65433,
+  "call_oi": 42449,
+  "put_oi": 42031,
+  "pcr_vol": 1.1915,
+  "pcr_oi": 0.9902
+ },
+ {
+  "date": "2024-08-07",
+  "call_vol": 23680,
+  "put_vol": 35183,
+  "call_oi": 44443,
+  "put_oi": 44487,
+  "pcr_vol": 1.4858,
+  "pcr_oi": 1.001
+ },
+ {
+  "date": "2024-08-08",
+  "call_vol": 25705,
+  "put_vol": 34852,
+  "call_oi": 45049,
+  "put_oi": 46018,
+  "pcr_vol": 1.3558,
+  "pcr_oi": 1.0215
+ },
+ {
+  "date": "2024-08-09",
+  "call_vol": 33010,
+  "put_vol": 34901,
+  "call_oi": 44014,
+  "put_oi": 48219,
+  "pcr_vol": 1.0573,
+  "pcr_oi": 1.0955
+ },
+ {
+  "date": "2024-08-12",
+  "call_vol": 21841,
+  "put_vol": 31845,
+  "call_oi": 44209,
+  "put_oi": 49526,
+  "pcr_vol": 1.458,
+  "pcr_oi": 1.1203
+ },
+ {
+  "date": "2024-08-13",
+  "call_vol": 41938,
+  "put_vol": 41839,
+  "call_oi": 42902,
+  "put_oi": 52989,
+  "pcr_vol": 0.9976,
+  "pcr_oi": 1.2351
+ },
+ {
+  "date": "2024-08-14",
+  "call_vol": 29580,
+  "put_vol": 43989,
+  "call_oi": 44643,
+  "put_oi": 54219,
+  "pcr_vol": 1.4871,
+  "pcr_oi": 1.2145
+ },
+ {
+  "date": "2024-08-15",
+  "call_vol": 38305,
+  "put_vol": 54210,
+  "call_oi": 46280,
+  "put_oi": 55725,
+  "pcr_vol": 1.4152,
+  "pcr_oi": 1.2041
+ },
+ {
+  "date": "2024-08-16",
+  "call_vol": 34562,
+  "put_vol": 41507,
+  "call_oi": 46408,
+  "put_oi": 58063,
+  "pcr_vol": 1.2009,
+  "pcr_oi": 1.2511
+ },
+ {
+  "date": "2024-08-19",
+  "call_vol": 58884,
+  "put_vol": 52076,
+  "call_oi": 47238,
+  "put_oi": 59433,
+  "pcr_vol": 0.8844,
+  "pcr_oi": 1.2582
+ },
+ {
+  "date": "2024-08-20",
+  "call_vol": 37944,
+  "put_vol": 25122,
+  "call_oi": 47849,
+  "put_oi": 60328,
+  "pcr_vol": 0.6621,
+  "pcr_oi": 1.2608
+ },
+ {
+  "date": "2024-08-21",
+  "call_vol": 42487,
+  "put_vol": 35370,
+  "call_oi": 47541,
+  "put_oi": 61757,
+  "pcr_vol": 0.8325,
+  "pcr_oi": 1.299
+ },
+ {
+  "date": "2024-08-22",
+  "call_vol": 27077,
+  "put_vol": 26802,
+  "call_oi": 47877,
+  "put_oi": 62953,
+  "pcr_vol": 0.9898,
+  "pcr_oi": 1.3149
+ },
+ {
+  "date": "2024-08-23",
+  "call_vol": 34459,
+  "put_vol": 36438,
+  "call_oi": 49425,
+  "put_oi": 63095,
+  "pcr_vol": 1.0574,
+  "pcr_oi": 1.2766
+ },
+ {
+  "date": "2024-08-26",
+  "call_vol": 36494,
+  "put_vol": 36804,
+  "call_oi": 47567,
+  "put_oi": 60338,
+  "pcr_vol": 1.0085,
+  "pcr_oi": 1.2685
+ },
+ {
+  "date": "2024-08-27",
+  "call_vol": 24716,
+  "put_vol": 25487,
+  "call_oi": 48543,
+  "put_oi": 60472,
+  "pcr_vol": 1.0312,
+  "pcr_oi": 1.2457
+ },
+ {
+  "date": "2024-08-28",
+  "call_vol": 25754,
+  "put_vol": 26097,
+  "call_oi": 49017,
+  "put_oi": 61730,
+  "pcr_vol": 1.0133,
+  "pcr_oi": 1.2594
+ },
+ {
+  "date": "2024-08-29",
+  "call_vol": 31924,
+  "put_vol": 31051,
+  "call_oi": 49583,
+  "put_oi": 63031,
+  "pcr_vol": 0.9727,
+  "pcr_oi": 1.2712
+ },
+ {
+  "date": "2024-08-30",
+  "call_vol": 30274,
+  "put_vol": 29323,
+  "call_oi": 50466,
+  "put_oi": 63685,
+  "pcr_vol": 0.9686,
+  "pcr_oi": 1.2619
+ },
+ {
+  "date": "2024-09-02",
+  "call_vol": 43535,
+  "put_vol": 43000,
+  "call_oi": 47379,
+  "put_oi": 63443,
+  "pcr_vol": 0.9877,
+  "pcr_oi": 1.3391
+ },
+ {
+  "date": "2024-09-03",
+  "call_vol": 16560,
+  "put_vol": 22852,
+  "call_oi": 46919,
+  "put_oi": 64823,
+  "pcr_vol": 1.38,
+  "pcr_oi": 1.3816
+ },
+ {
+  "date": "2024-09-04",
+  "call_vol": 32755,
+  "put_vol": 66228,
+  "call_oi": 45569,
+  "put_oi": 66112,
+  "pcr_vol": 2.0219,
+  "pcr_oi": 1.4508
+ },
+ {
+  "date": "2024-09-05",
+  "call_vol": 27887,
+  "put_vol": 56300,
+  "call_oi": 45595,
+  "put_oi": 67562,
+  "pcr_vol": 2.0189,
+  "pcr_oi": 1.4818
+ },
+ {
+  "date": "2024-09-06",
+  "call_vol": 30658,
+  "put_vol": 45301,
+  "call_oi": 46835,
+  "put_oi": 68777,
+  "pcr_vol": 1.4776,
+  "pcr_oi": 1.4685
+ },
+ {
+  "date": "2024-09-09",
+  "call_vol": 43737,
+  "put_vol": 96979,
+  "call_oi": 47163,
+  "put_oi": 72581,
+  "pcr_vol": 2.2173,
+  "pcr_oi": 1.5389
+ },
+ {
+  "date": "2024-09-10",
+  "call_vol": 19300,
+  "put_vol": 51698,
+  "call_oi": 47461,
+  "put_oi": 76419,
+  "pcr_vol": 2.6787,
+  "pcr_oi": 1.6101
+ },
+ {
+  "date": "2024-09-11",
+  "call_vol": 36575,
+  "put_vol": 60750,
+  "call_oi": 48400,
+  "put_oi": 79417,
+  "pcr_vol": 1.661,
+  "pcr_oi": 1.6408
+ },
+ {
+  "date": "2024-09-12",
+  "call_vol": 33789,
+  "put_vol": 62957,
+  "call_oi": 48777,
+  "put_oi": 81606,
+  "pcr_vol": 1.8632,
+  "pcr_oi": 1.673
+ },
+ {
+  "date": "2024-09-13",
+  "call_vol": 100681,
+  "put_vol": 69715,
+  "call_oi": 49831,
+  "put_oi": 83413,
+  "pcr_vol": 0.6924,
+  "pcr_oi": 1.6739
+ },
+ {
+  "date": "2024-09-18",
+  "call_vol": 28266,
+  "put_vol": 33696,
+  "call_oi": 49368,
+  "put_oi": 85158,
+  "pcr_vol": 1.1921,
+  "pcr_oi": 1.725
+ },
+ {
+  "date": "2024-09-19",
+  "call_vol": 55900,
+  "put_vol": 80738,
+  "call_oi": 49788,
+  "put_oi": 86620,
+  "pcr_vol": 1.4443,
+  "pcr_oi": 1.7398
+ },
+ {
+  "date": "2024-09-20",
+  "call_vol": 60069,
+  "put_vol": 63698,
+  "call_oi": 50407,
+  "put_oi": 82099,
+  "pcr_vol": 1.0604,
+  "pcr_oi": 1.6287
+ },
+ {
+  "date": "2024-09-23",
+  "call_vol": 87054,
+  "put_vol": 73970,
+  "call_oi": 48181,
+  "put_oi": 83537,
+  "pcr_vol": 0.8497,
+  "pcr_oi": 1.7338
+ },
+ {
+  "date": "2024-09-24",
+  "call_vol": 70170,
+  "put_vol": 73521,
+  "call_oi": 21387,
+  "put_oi": 35349,
+  "pcr_vol": 1.0478,
+  "pcr_oi": 1.6528
+ },
+ {
+  "date": "2024-09-25",
+  "call_vol": 24969,
+  "put_vol": 36729,
+  "call_oi": 21912,
+  "put_oi": 38922,
+  "pcr_vol": 1.471,
+  "pcr_oi": 1.7763
+ },
+ {
+  "date": "2024-09-26",
+  "call_vol": 17121,
+  "put_vol": 21811,
+  "call_oi": 22501,
+  "put_oi": 40050,
+  "pcr_vol": 1.2739,
+  "pcr_oi": 1.7799
+ },
+ {
+  "date": "2024-09-27",
+  "call_vol": 20081,
+  "put_vol": 39334,
+  "call_oi": 22502,
+  "put_oi": 41497,
+  "pcr_vol": 1.9588,
+  "pcr_oi": 1.8441
+ },
+ {
+  "date": "2024-09-30",
+  "call_vol": 20215,
+  "put_vol": 55208,
+  "call_oi": 23834,
+  "put_oi": 43216,
+  "pcr_vol": 2.731,
+  "pcr_oi": 1.8132
+ },
+ {
+  "date": "2024-10-08",
+  "call_vol": 12338,
+  "put_vol": 21246,
+  "call_oi": 23668,
+  "put_oi": 45461,
+  "pcr_vol": 1.722,
+  "pcr_oi": 1.9208
+ },
+ {
+  "date": "2024-10-09",
+  "call_vol": 20476,
+  "put_vol": 44457,
+  "call_oi": 24813,
+  "put_oi": 48130,
+  "pcr_vol": 2.1712,
+  "pcr_oi": 1.9397
+ },
+ {
+  "date": "2024-10-10",
+  "call_vol": 12493,
+  "put_vol": 30566,
+  "call_oi": 25831,
+  "put_oi": 49223,
+  "pcr_vol": 2.4467,
+  "pcr_oi": 1.9056
+ },
+ {
+  "date": "2024-10-11",
+  "call_vol": 26172,
+  "put_vol": 32282,
+  "call_oi": 26933,
+  "put_oi": 50236,
+  "pcr_vol": 1.2335,
+  "pcr_oi": 1.8652
+ },
+ {
+  "date": "2024-10-14",
+  "call_vol": 39039,
+  "put_vol": 28570,
+  "call_oi": 29350,
+  "put_oi": 51430,
+  "pcr_vol": 0.7318,
+  "pcr_oi": 1.7523
+ },
+ {
+  "date": "2024-10-15",
+  "call_vol": 28558,
+  "put_vol": 23839,
+  "call_oi": 30625,
+  "put_oi": 53453,
+  "pcr_vol": 0.8348,
+  "pcr_oi": 1.7454
+ },
+ {
+  "date": "2024-10-16",
+  "call_vol": 61633,
+  "put_vol": 36594,
+  "call_oi": 33811,
+  "put_oi": 55718,
+  "pcr_vol": 0.5937,
+  "pcr_oi": 1.6479
+ },
+ {
+  "date": "2024-10-17",
+  "call_vol": 47602,
+  "put_vol": 29131,
+  "call_oi": 34816,
+  "put_oi": 58192,
+  "pcr_vol": 0.612,
+  "pcr_oi": 1.6714
+ },
+ {
+  "date": "2024-10-18",
+  "call_vol": 78900,
+  "put_vol": 43445,
+  "call_oi": 35634,
+  "put_oi": 61900,
+  "pcr_vol": 0.5506,
+  "pcr_oi": 1.7371
+ },
+ {
+  "date": "2024-10-21",
+  "call_vol": 54094,
+  "put_vol": 29592,
+  "call_oi": 35908,
+  "put_oi": 63012,
+  "pcr_vol": 0.547,
+  "pcr_oi": 1.7548
+ },
+ {
+  "date": "2024-10-22",
+  "call_vol": 47102,
+  "put_vol": 27638,
+  "call_oi": 34834,
+  "put_oi": 64108,
+  "pcr_vol": 0.5868,
+  "pcr_oi": 1.8404
+ },
+ {
+  "date": "2024-10-23",
+  "call_vol": 39438,
+  "put_vol": 26640,
+  "call_oi": 34651,
+  "put_oi": 65128,
+  "pcr_vol": 0.6755,
+  "pcr_oi": 1.8795
+ },
+ {
+  "date": "2024-10-24",
+  "call_vol": 48668,
+  "put_vol": 47669,
+  "call_oi": 33689,
+  "put_oi": 64294,
+  "pcr_vol": 0.9795,
+  "pcr_oi": 1.9085
+ },
+ {
+  "date": "2024-10-25",
+  "call_vol": 24110,
+  "put_vol": 28581,
+  "call_oi": 31846,
+  "put_oi": 61270,
+  "pcr_vol": 1.1854,
+  "pcr_oi": 1.9239
+ },
+ {
+  "date": "2024-10-28",
+  "call_vol": 26484,
+  "put_vol": 29192,
+  "call_oi": 33821,
+  "put_oi": 61671,
+  "pcr_vol": 1.1023,
+  "pcr_oi": 1.8235
+ },
+ {
+  "date": "2024-10-29",
+  "call_vol": 33157,
+  "put_vol": 28752,
+  "call_oi": 35328,
+  "put_oi": 63092,
+  "pcr_vol": 0.8671,
+  "pcr_oi": 1.7859
+ },
+ {
+  "date": "2024-10-30",
+  "call_vol": 57673,
+  "put_vol": 36712,
+  "call_oi": 35777,
+  "put_oi": 66096,
+  "pcr_vol": 0.6366,
+  "pcr_oi": 1.8474
+ },
+ {
+  "date": "2024-10-31",
+  "call_vol": 44989,
+  "put_vol": 39885,
+  "call_oi": 35986,
+  "put_oi": 69281,
+  "pcr_vol": 0.8866,
+  "pcr_oi": 1.9252
+ },
+ {
+  "date": "2024-11-01",
+  "call_vol": 58188,
+  "put_vol": 70622,
+  "call_oi": 35865,
+  "put_oi": 71289,
+  "pcr_vol": 1.2137,
+  "pcr_oi": 1.9877
+ },
+ {
+  "date": "2024-11-04",
+  "call_vol": 47701,
+  "put_vol": 52931,
+  "call_oi": 37436,
+  "put_oi": 71048,
+  "pcr_vol": 1.1096,
+  "pcr_oi": 1.8979
+ },
+ {
+  "date": "2024-11-05",
+  "call_vol": 43670,
+  "put_vol": 39131,
+  "call_oi": 38463,
+  "put_oi": 70965,
+  "pcr_vol": 0.8961,
+  "pcr_oi": 1.845
+ },
+ {
+  "date": "2024-11-06",
+  "call_vol": 74365,
+  "put_vol": 58630,
+  "call_oi": 39886,
+  "put_oi": 73370,
+  "pcr_vol": 0.7884,
+  "pcr_oi": 1.8395
+ },
+ {
+  "date": "2024-11-07",
+  "call_vol": 65116,
+  "put_vol": 89139,
+  "call_oi": 42510,
+  "put_oi": 69334,
+  "pcr_vol": 1.3689,
+  "pcr_oi": 1.631
+ },
+ {
+  "date": "2024-11-08",
+  "call_vol": 47320,
+  "put_vol": 50004,
+  "call_oi": 41460,
+  "put_oi": 72563,
+  "pcr_vol": 1.0567,
+  "pcr_oi": 1.7502
+ },
+ {
+  "date": "2024-11-11",
+  "call_vol": 48230,
+  "put_vol": 54820,
+  "call_oi": 40287,
+  "put_oi": 72869,
+  "pcr_vol": 1.1366,
+  "pcr_oi": 1.8087
+ },
+ {
+  "date": "2024-11-12",
+  "call_vol": 54585,
+  "put_vol": 95910,
+  "call_oi": 41555,
+  "put_oi": 69956,
+  "pcr_vol": 1.7571,
+  "pcr_oi": 1.6835
+ },
+ {
+  "date": "2024-11-13",
+  "call_vol": 36992,
+  "put_vol": 55015,
+  "call_oi": 41606,
+  "put_oi": 68149,
+  "pcr_vol": 1.4872,
+  "pcr_oi": 1.638
+ },
+ {
+  "date": "2024-11-14",
+  "call_vol": 60706,
+  "put_vol": 117190,
+  "call_oi": 46320,
+  "put_oi": 64787,
+  "pcr_vol": 1.9305,
+  "pcr_oi": 1.3987
+ },
+ {
+  "date": "2024-11-15",
+  "call_vol": 52282,
+  "put_vol": 97479,
+  "call_oi": 46787,
+  "put_oi": 65168,
+  "pcr_vol": 1.8645,
+  "pcr_oi": 1.3929
+ },
+ {
+  "date": "2024-11-18",
+  "call_vol": 66802,
+  "put_vol": 97178,
+  "call_oi": 47277,
+  "put_oi": 66595,
+  "pcr_vol": 1.4547,
+  "pcr_oi": 1.4086
+ },
+ {
+  "date": "2024-11-19",
+  "call_vol": 65363,
+  "put_vol": 63367,
+  "call_oi": 48108,
+  "put_oi": 68198,
+  "pcr_vol": 0.9695,
+  "pcr_oi": 1.4176
+ },
+ {
+  "date": "2024-11-20",
+  "call_vol": 88198,
+  "put_vol": 86040,
+  "call_oi": 47503,
+  "put_oi": 69501,
+  "pcr_vol": 0.9755,
+  "pcr_oi": 1.4631
+ },
+ {
+  "date": "2024-11-21",
+  "call_vol": 88777,
+  "put_vol": 77259,
+  "call_oi": 45969,
+  "put_oi": 68899,
+  "pcr_vol": 0.8703,
+  "pcr_oi": 1.4988
+ },
+ {
+  "date": "2024-11-22",
+  "call_vol": 114812,
+  "put_vol": 92209,
+  "call_oi": 44727,
+  "put_oi": 71743,
+  "pcr_vol": 0.8031,
+  "pcr_oi": 1.604
+ },
+ {
+  "date": "2024-11-25",
+  "call_vol": 151613,
+  "put_vol": 156627,
+  "call_oi": 20976,
+  "put_oi": 33723,
+  "pcr_vol": 1.0331,
+  "pcr_oi": 1.6077
+ },
+ {
+  "date": "2024-11-26",
+  "call_vol": 25755,
+  "put_vol": 34214,
+  "call_oi": 22855,
+  "put_oi": 36080,
+  "pcr_vol": 1.3284,
+  "pcr_oi": 1.5786
+ },
+ {
+  "date": "2024-11-27",
+  "call_vol": 19871,
+  "put_vol": 29867,
+  "call_oi": 24310,
+  "put_oi": 37634,
+  "pcr_vol": 1.503,
+  "pcr_oi": 1.5481
+ },
+ {
+  "date": "2024-11-28",
+  "call_vol": 24814,
+  "put_vol": 27734,
+  "call_oi": 25827,
+  "put_oi": 38017,
+  "pcr_vol": 1.1177,
+  "pcr_oi": 1.472
+ },
+ {
+  "date": "2024-11-29",
+  "call_vol": 17302,
+  "put_vol": 18188,
+  "call_oi": 26485,
+  "put_oi": 38290,
+  "pcr_vol": 1.0512,
+  "pcr_oi": 1.4457
+ },
+ {
+  "date": "2024-12-02",
+  "call_vol": 19462,
+  "put_vol": 19355,
+  "call_oi": 27336,
+  "put_oi": 38773,
+  "pcr_vol": 0.9945,
+  "pcr_oi": 1.4184
+ },
+ {
+  "date": "2024-12-03",
+  "call_vol": 15450,
+  "put_vol": 17558,
+  "call_oi": 27578,
+  "put_oi": 39412,
+  "pcr_vol": 1.1364,
+  "pcr_oi": 1.4291
+ },
+ {
+  "date": "2024-12-04",
+  "call_vol": 14132,
+  "put_vol": 14795,
+  "call_oi": 27910,
+  "put_oi": 39234,
+  "pcr_vol": 1.0469,
+  "pcr_oi": 1.4057
+ },
+ {
+  "date": "2024-12-05",
+  "call_vol": 15666,
+  "put_vol": 13223,
+  "call_oi": 28555,
+  "put_oi": 39235,
+  "pcr_vol": 0.8441,
+  "pcr_oi": 1.374
+ },
+ {
+  "date": "2024-12-06",
+  "call_vol": 24164,
+  "put_vol": 22438,
+  "call_oi": 29557,
+  "put_oi": 40138,
+  "pcr_vol": 0.9286,
+  "pcr_oi": 1.358
+ },
+ {
+  "date": "2024-12-09",
+  "call_vol": 19627,
+  "put_vol": 22325,
+  "call_oi": 29806,
+  "put_oi": 41479,
+  "pcr_vol": 1.1375,
+  "pcr_oi": 1.3916
+ },
+ {
+  "date": "2024-12-10",
+  "call_vol": 25432,
+  "put_vol": 21552,
+  "call_oi": 29918,
+  "put_oi": 42313,
+  "pcr_vol": 0.8474,
+  "pcr_oi": 1.4143
+ },
+ {
+  "date": "2024-12-11",
+  "call_vol": 28656,
+  "put_vol": 23180,
+  "call_oi": 30108,
+  "put_oi": 43540,
+  "pcr_vol": 0.8089,
+  "pcr_oi": 1.4461
+ },
+ {
+  "date": "2024-12-12",
+  "call_vol": 20090,
+  "put_vol": 18981,
+  "call_oi": 29867,
+  "put_oi": 45028,
+  "pcr_vol": 0.9448,
+  "pcr_oi": 1.5076
+ },
+ {
+  "date": "2024-12-13",
+  "call_vol": 30549,
+  "put_vol": 21130,
+  "call_oi": 31025,
+  "put_oi": 45053,
+  "pcr_vol": 0.6917,
+  "pcr_oi": 1.4522
+ },
+ {
+  "date": "2024-12-16",
+  "call_vol": 20926,
+  "put_vol": 18647,
+  "call_oi": 33167,
+  "put_oi": 44101,
+  "pcr_vol": 0.8911,
+  "pcr_oi": 1.3297
+ },
+ {
+  "date": "2024-12-17",
+  "call_vol": 15832,
+  "put_vol": 13552,
+  "call_oi": 33090,
+  "put_oi": 44599,
+  "pcr_vol": 0.856,
+  "pcr_oi": 1.3478
+ },
+ {
+  "date": "2024-12-18",
+  "call_vol": 15438,
+  "put_vol": 19170,
+  "call_oi": 33215,
+  "put_oi": 45081,
+  "pcr_vol": 1.2417,
+  "pcr_oi": 1.3572
+ },
+ {
+  "date": "2024-12-19",
+  "call_vol": 26055,
+  "put_vol": 31536,
+  "call_oi": 34573,
+  "put_oi": 46873,
+  "pcr_vol": 1.2104,
+  "pcr_oi": 1.3558
+ },
+ {
+  "date": "2024-12-20",
+  "call_vol": 17665,
+  "put_vol": 27519,
+  "call_oi": 35263,
+  "put_oi": 47844,
+  "pcr_vol": 1.5578,
+  "pcr_oi": 1.3568
+ },
+ {
+  "date": "2024-12-23",
+  "call_vol": 23650,
+  "put_vol": 27242,
+  "call_oi": 35709,
+  "put_oi": 49740,
+  "pcr_vol": 1.1519,
+  "pcr_oi": 1.3929
+ },
+ {
+  "date": "2024-12-24",
+  "call_vol": 14834,
+  "put_vol": 18545,
+  "call_oi": 36220,
+  "put_oi": 49889,
+  "pcr_vol": 1.2502,
+  "pcr_oi": 1.3774
+ },
+ {
+  "date": "2024-12-25",
+  "call_vol": 12057,
+  "put_vol": 18033,
+  "call_oi": 34610,
+  "put_oi": 47757,
+  "pcr_vol": 1.4956,
+  "pcr_oi": 1.3799
+ },
+ {
+  "date": "2024-12-26",
+  "call_vol": 17436,
+  "put_vol": 18274,
+  "call_oi": 36397,
+  "put_oi": 49236,
+  "pcr_vol": 1.0481,
+  "pcr_oi": 1.3527
+ },
+ {
+  "date": "2024-12-27",
+  "call_vol": 24000,
+  "put_vol": 23079,
+  "call_oi": 37961,
+  "put_oi": 49480,
+  "pcr_vol": 0.9616,
+  "pcr_oi": 1.3034
+ },
+ {
+  "date": "2024-12-30",
+  "call_vol": 26361,
+  "put_vol": 25964,
+  "call_oi": 37744,
+  "put_oi": 49878,
+  "pcr_vol": 0.9849,
+  "pcr_oi": 1.3215
+ },
+ {
+  "date": "2024-12-31",
+  "call_vol": 27676,
+  "put_vol": 32845,
+  "call_oi": 37428,
+  "put_oi": 49947,
+  "pcr_vol": 1.1868,
+  "pcr_oi": 1.3345
+ },
+ {
+  "date": "2025-01-02",
+  "call_vol": 16635,
+  "put_vol": 17020,
+  "call_oi": 36497,
+  "put_oi": 49792,
+  "pcr_vol": 1.0231,
+  "pcr_oi": 1.3643
+ },
+ {
+  "date": "2025-01-03",
+  "call_vol": 36025,
+  "put_vol": 35135,
+  "call_oi": 35561,
+  "put_oi": 49953,
+  "pcr_vol": 0.9753,
+  "pcr_oi": 1.4047
+ },
+ {
+  "date": "2025-01-06",
+  "call_vol": 34379,
+  "put_vol": 42804,
+  "call_oi": 35177,
+  "put_oi": 50397,
+  "pcr_vol": 1.2451,
+  "pcr_oi": 1.4327
+ },
+ {
+  "date": "2025-01-07",
+  "call_vol": 45639,
+  "put_vol": 60421,
+  "call_oi": 35677,
+  "put_oi": 51615,
+  "pcr_vol": 1.3239,
+  "pcr_oi": 1.4467
+ },
+ {
+  "date": "2025-01-08",
+  "call_vol": 35783,
+  "put_vol": 39302,
+  "call_oi": 36633,
+  "put_oi": 52528,
+  "pcr_vol": 1.0983,
+  "pcr_oi": 1.4339
+ },
+ {
+  "date": "2025-01-09",
+  "call_vol": 41694,
+  "put_vol": 39322,
+  "call_oi": 36734,
+  "put_oi": 55075,
+  "pcr_vol": 0.9431,
+  "pcr_oi": 1.4993
+ },
+ {
+  "date": "2025-01-10",
+  "call_vol": 53821,
+  "put_vol": 37766,
+  "call_oi": 37920,
+  "put_oi": 58117,
+  "pcr_vol": 0.7017,
+  "pcr_oi": 1.5326
+ },
+ {
+  "date": "2025-01-13",
+  "call_vol": 89046,
+  "put_vol": 66646,
+  "call_oi": 39757,
+  "put_oi": 61704,
+  "pcr_vol": 0.7484,
+  "pcr_oi": 1.552
+ },
+ {
+  "date": "2025-01-14",
+  "call_vol": 50929,
+  "put_vol": 40269,
+  "call_oi": 39282,
+  "put_oi": 61954,
+  "pcr_vol": 0.7907,
+  "pcr_oi": 1.5772
+ },
+ {
+  "date": "2025-01-15",
+  "call_vol": 41999,
+  "put_vol": 47578,
+  "call_oi": 40492,
+  "put_oi": 61659,
+  "pcr_vol": 1.1328,
+  "pcr_oi": 1.5227
+ },
+ {
+  "date": "2025-01-16",
+  "call_vol": 55054,
+  "put_vol": 53102,
+  "call_oi": 39588,
+  "put_oi": 62429,
+  "pcr_vol": 0.9645,
+  "pcr_oi": 1.577
+ },
+ {
+  "date": "2025-01-17",
+  "call_vol": 49561,
+  "put_vol": 52692,
+  "call_oi": 39401,
+  "put_oi": 63101,
+  "pcr_vol": 1.0632,
+  "pcr_oi": 1.6015
+ },
+ {
+  "date": "2025-01-20",
+  "call_vol": 67345,
+  "put_vol": 78338,
+  "call_oi": 40743,
+  "put_oi": 63249,
+  "pcr_vol": 1.1632,
+  "pcr_oi": 1.5524
+ },
+ {
+  "date": "2025-01-21",
+  "call_vol": 65332,
+  "put_vol": 71691,
+  "call_oi": 22320,
+  "put_oi": 29462,
+  "pcr_vol": 1.0973,
+  "pcr_oi": 1.32
+ },
+ {
+  "date": "2025-01-22",
+  "call_vol": 30951,
+  "put_vol": 23070,
+  "call_oi": 25021,
+  "put_oi": 34164,
+  "pcr_vol": 0.7454,
+  "pcr_oi": 1.3654
+ },
+ {
+  "date": "2025-01-23",
+  "call_vol": 19052,
+  "put_vol": 13590,
+  "call_oi": 25712,
+  "put_oi": 35413,
+  "pcr_vol": 0.7133,
+  "pcr_oi": 1.3773
+ },
+ {
+  "date": "2025-01-24",
+  "call_vol": 34823,
+  "put_vol": 21502,
+  "call_oi": 26959,
+  "put_oi": 37511,
+  "pcr_vol": 0.6175,
+  "pcr_oi": 1.3914
+ },
+ {
+  "date": "2025-01-27",
+  "call_vol": 31519,
+  "put_vol": 21376,
+  "call_oi": 29413,
+  "put_oi": 39450,
+  "pcr_vol": 0.6782,
+  "pcr_oi": 1.3412
+ },
+ {
+  "date": "2025-02-05",
+  "call_vol": 26036,
+  "put_vol": 27967,
+  "call_oi": 28697,
+  "put_oi": 41901,
+  "pcr_vol": 1.0742,
+  "pcr_oi": 1.4601
+ },
+ {
+  "date": "2025-02-06",
+  "call_vol": 29237,
+  "put_vol": 27486,
+  "call_oi": 30180,
+  "put_oi": 44883,
+  "pcr_vol": 0.9401,
+  "pcr_oi": 1.4872
+ },
+ {
+  "date": "2025-02-07",
+  "call_vol": 18882,
+  "put_vol": 19463,
+  "call_oi": 31618,
+  "put_oi": 46910,
+  "pcr_vol": 1.0308,
+  "pcr_oi": 1.4836
+ },
+ {
+  "date": "2025-02-10",
+  "call_vol": 39895,
+  "put_vol": 33614,
+  "call_oi": 32444,
+  "put_oi": 52042,
+  "pcr_vol": 0.8426,
+  "pcr_oi": 1.6041
+ },
+ {
+  "date": "2025-02-11",
+  "call_vol": 75873,
+  "put_vol": 45154,
+  "call_oi": 32291,
+  "put_oi": 57709,
+  "pcr_vol": 0.5951,
+  "pcr_oi": 1.7872
+ },
+ {
+  "date": "2025-02-12",
+  "call_vol": 44056,
+  "put_vol": 32160,
+  "call_oi": 35598,
+  "put_oi": 59773,
+  "pcr_vol": 0.73,
+  "pcr_oi": 1.6791
+ },
+ {
+  "date": "2025-02-13",
+  "call_vol": 39939,
+  "put_vol": 36245,
+  "call_oi": 36776,
+  "put_oi": 62360,
+  "pcr_vol": 0.9075,
+  "pcr_oi": 1.6957
+ },
+ {
+  "date": "2025-02-14",
+  "call_vol": 28360,
+  "put_vol": 25197,
+  "call_oi": 37613,
+  "put_oi": 64701,
+  "pcr_vol": 0.8885,
+  "pcr_oi": 1.7202
+ },
+ {
+  "date": "2025-02-17",
+  "call_vol": 53848,
+  "put_vol": 56016,
+  "call_oi": 39593,
+  "put_oi": 66615,
+  "pcr_vol": 1.0403,
+  "pcr_oi": 1.6825
+ },
+ {
+  "date": "2025-02-18",
+  "call_vol": 23079,
+  "put_vol": 31577,
+  "call_oi": 39554,
+  "put_oi": 69297,
+  "pcr_vol": 1.3682,
+  "pcr_oi": 1.752
+ },
+ {
+  "date": "2025-02-19",
+  "call_vol": 38591,
+  "put_vol": 33421,
+  "call_oi": 41203,
+  "put_oi": 72642,
+  "pcr_vol": 0.866,
+  "pcr_oi": 1.763
+ },
+ {
+  "date": "2025-02-20",
+  "call_vol": 29609,
+  "put_vol": 32107,
+  "call_oi": 42348,
+  "put_oi": 73769,
+  "pcr_vol": 1.0844,
+  "pcr_oi": 1.742
+ },
+ {
+  "date": "2025-02-21",
+  "call_vol": 40959,
+  "put_vol": 49971,
+  "call_oi": 44815,
+  "put_oi": 77298,
+  "pcr_vol": 1.22,
+  "pcr_oi": 1.7248
+ },
+ {
+  "date": "2025-02-24",
+  "call_vol": 32498,
+  "put_vol": 40565,
+  "call_oi": 42641,
+  "put_oi": 71458,
+  "pcr_vol": 1.2482,
+  "pcr_oi": 1.6758
+ },
+ {
+  "date": "2025-02-25",
+  "call_vol": 35515,
+  "put_vol": 39572,
+  "call_oi": 43428,
+  "put_oi": 74858,
+  "pcr_vol": 1.1142,
+  "pcr_oi": 1.7237
+ },
+ {
+  "date": "2025-02-26",
+  "call_vol": 54998,
+  "put_vol": 72850,
+  "call_oi": 42720,
+  "put_oi": 77605,
+  "pcr_vol": 1.3246,
+  "pcr_oi": 1.8166
+ },
+ {
+  "date": "2025-02-27",
+  "call_vol": 39400,
+  "put_vol": 61721,
+  "call_oi": 43286,
+  "put_oi": 79672,
+  "pcr_vol": 1.5665,
+  "pcr_oi": 1.8406
+ },
+ {
+  "date": "2025-02-28",
+  "call_vol": 40166,
+  "put_vol": 57975,
+  "call_oi": 44422,
+  "put_oi": 79035,
+  "pcr_vol": 1.4434,
+  "pcr_oi": 1.7792
+ },
+ {
+  "date": "2025-03-03",
+  "call_vol": 52770,
+  "put_vol": 81468,
+  "call_oi": 46236,
+  "put_oi": 76723,
+  "pcr_vol": 1.5438,
+  "pcr_oi": 1.6594
+ },
+ {
+  "date": "2025-03-04",
+  "call_vol": 34175,
+  "put_vol": 48607,
+  "call_oi": 45596,
+  "put_oi": 81359,
+  "pcr_vol": 1.4223,
+  "pcr_oi": 1.7843
+ },
+ {
+  "date": "2025-03-05",
+  "call_vol": 41587,
+  "put_vol": 58880,
+  "call_oi": 46065,
+  "put_oi": 82658,
+  "pcr_vol": 1.4158,
+  "pcr_oi": 1.7944
+ },
+ {
+  "date": "2025-03-06",
+  "call_vol": 35775,
+  "put_vol": 64113,
+  "call_oi": 46893,
+  "put_oi": 82867,
+  "pcr_vol": 1.7921,
+  "pcr_oi": 1.7672
+ },
+ {
+  "date": "2025-03-07",
+  "call_vol": 30852,
+  "put_vol": 47234,
+  "call_oi": 47519,
+  "put_oi": 83524,
+  "pcr_vol": 1.531,
+  "pcr_oi": 1.7577
+ },
+ {
+  "date": "2025-03-10",
+  "call_vol": 38569,
+  "put_vol": 55518,
+  "call_oi": 48209,
+  "put_oi": 84284,
+  "pcr_vol": 1.4394,
+  "pcr_oi": 1.7483
+ },
+ {
+  "date": "2025-03-11",
+  "call_vol": 31693,
+  "put_vol": 48350,
+  "call_oi": 47205,
+  "put_oi": 83882,
+  "pcr_vol": 1.5256,
+  "pcr_oi": 1.777
+ },
+ {
+  "date": "2025-03-12",
+  "call_vol": 22929,
+  "put_vol": 44933,
+  "call_oi": 46040,
+  "put_oi": 82991,
+  "pcr_vol": 1.9597,
+  "pcr_oi": 1.8026
+ },
+ {
+  "date": "2025-03-13",
+  "call_vol": 35984,
+  "put_vol": 60868,
+  "call_oi": 47377,
+  "put_oi": 84527,
+  "pcr_vol": 1.6915,
+  "pcr_oi": 1.7841
+ },
+ {
+  "date": "2025-03-14",
+  "call_vol": 87217,
+  "put_vol": 77289,
+  "call_oi": 48170,
+  "put_oi": 85719,
+  "pcr_vol": 0.8862,
+  "pcr_oi": 1.7795
+ },
+ {
+  "date": "2025-03-17",
+  "call_vol": 47070,
+  "put_vol": 47043,
+  "call_oi": 48883,
+  "put_oi": 84632,
+  "pcr_vol": 0.9994,
+  "pcr_oi": 1.7313
+ },
+ {
+  "date": "2025-03-18",
+  "call_vol": 55190,
+  "put_vol": 58689,
+  "call_oi": 50525,
+  "put_oi": 88221,
+  "pcr_vol": 1.0634,
+  "pcr_oi": 1.7461
+ },
+ {
+  "date": "2025-03-19",
+  "call_vol": 68121,
+  "put_vol": 75279,
+  "call_oi": 49649,
+  "put_oi": 92630,
+  "pcr_vol": 1.1051,
+  "pcr_oi": 1.8657
+ },
+ {
+  "date": "2025-03-20",
+  "call_vol": 55623,
+  "put_vol": 75751,
+  "call_oi": 48864,
+  "put_oi": 91221,
+  "pcr_vol": 1.3619,
+  "pcr_oi": 1.8668
+ },
+ {
+  "date": "2025-03-21",
+  "call_vol": 50200,
+  "put_vol": 75282,
+  "call_oi": 49340,
+  "put_oi": 91042,
+  "pcr_vol": 1.4996,
+  "pcr_oi": 1.8452
+ },
+ {
+  "date": "2025-03-24",
+  "call_vol": 59640,
+  "put_vol": 106341,
+  "call_oi": 49475,
+  "put_oi": 92808,
+  "pcr_vol": 1.783,
+  "pcr_oi": 1.8759
+ },
+ {
+  "date": "2025-03-25",
+  "call_vol": 48237,
+  "put_vol": 78261,
+  "call_oi": 24994,
+  "put_oi": 42074,
+  "pcr_vol": 1.6224,
+  "pcr_oi": 1.6834
+ },
+ {
+  "date": "2025-03-26",
+  "call_vol": 13514,
+  "put_vol": 16657,
+  "call_oi": 27523,
+  "put_oi": 44892,
+  "pcr_vol": 1.2326,
+  "pcr_oi": 1.6311
+ },
+ {
+  "date": "2025-03-27",
+  "call_vol": 13416,
+  "put_vol": 15623,
+  "call_oi": 28995,
+  "put_oi": 46731,
+  "pcr_vol": 1.1645,
+  "pcr_oi": 1.6117
+ },
+ {
+  "date": "2025-03-28",
+  "call_vol": 41947,
+  "put_vol": 32164,
+  "call_oi": 31834,
+  "put_oi": 50722,
+  "pcr_vol": 0.7668,
+  "pcr_oi": 1.5933
+ },
+ {
+  "date": "2025-03-31",
+  "call_vol": 55705,
+  "put_vol": 36788,
+  "call_oi": 36171,
+  "put_oi": 53723,
+  "pcr_vol": 0.6604,
+  "pcr_oi": 1.4853
+ },
+ {
+  "date": "2025-04-01",
+  "call_vol": 68067,
+  "put_vol": 42246,
+  "call_oi": 43677,
+  "put_oi": 57668,
+  "pcr_vol": 0.6207,
+  "pcr_oi": 1.3203
+ },
+ {
+  "date": "2025-04-02",
+  "call_vol": 54589,
+  "put_vol": 32014,
+  "call_oi": 51784,
+  "put_oi": 59960,
+  "pcr_vol": 0.5865,
+  "pcr_oi": 1.1579
+ },
+ {
+  "date": "2025-04-03",
+  "call_vol": 57922,
+  "put_vol": 44798,
+  "call_oi": 54660,
+  "put_oi": 63256,
+  "pcr_vol": 0.7734,
+  "pcr_oi": 1.1573
+ },
+ {
+  "date": "2025-04-07",
+  "call_vol": 47872,
+  "put_vol": 54150,
+  "call_oi": 55834,
+  "put_oi": 58070,
+  "pcr_vol": 1.1311,
+  "pcr_oi": 1.04
+ },
+ {
+  "date": "2025-04-08",
+  "call_vol": 45999,
+  "put_vol": 50047,
+  "call_oi": 58212,
+  "put_oi": 58474,
+  "pcr_vol": 1.088,
+  "pcr_oi": 1.0045
+ },
+ {
+  "date": "2025-04-09",
+  "call_vol": 55793,
+  "put_vol": 40599,
+  "call_oi": 63402,
+  "put_oi": 60642,
+  "pcr_vol": 0.7277,
+  "pcr_oi": 0.9565
+ },
+ {
+  "date": "2025-04-10",
+  "call_vol": 87630,
+  "put_vol": 55443,
+  "call_oi": 63600,
+  "put_oi": 64584,
+  "pcr_vol": 0.6327,
+  "pcr_oi": 1.0155
+ },
+ {
+  "date": "2025-04-11",
+  "call_vol": 98107,
+  "put_vol": 63401,
+  "call_oi": 63916,
+  "put_oi": 71362,
+  "pcr_vol": 0.6462,
+  "pcr_oi": 1.1165
+ },
+ {
+  "date": "2025-04-14",
+  "call_vol": 81806,
+  "put_vol": 51696,
+  "call_oi": 71513,
+  "put_oi": 77996,
+  "pcr_vol": 0.6319,
+  "pcr_oi": 1.0907
+ },
+ {
+  "date": "2025-04-15",
+  "call_vol": 81610,
+  "put_vol": 58210,
+  "call_oi": 72421,
+  "put_oi": 83269,
+  "pcr_vol": 0.7133,
+  "pcr_oi": 1.1498
+ },
+ {
+  "date": "2025-04-16",
+  "call_vol": 82495,
+  "put_vol": 59991,
+  "call_oi": 72278,
+  "put_oi": 87929,
+  "pcr_vol": 0.7272,
+  "pcr_oi": 1.2165
+ },
+ {
+  "date": "2025-04-17",
+  "call_vol": 110219,
+  "put_vol": 71209,
+  "call_oi": 74191,
+  "put_oi": 96988,
+  "pcr_vol": 0.6461,
+  "pcr_oi": 1.3073
+ },
+ {
+  "date": "2025-04-18",
+  "call_vol": 75801,
+  "put_vol": 74567,
+  "call_oi": 77256,
+  "put_oi": 102370,
+  "pcr_vol": 0.9837,
+  "pcr_oi": 1.3251
+ },
+ {
+  "date": "2025-04-21",
+  "call_vol": 77042,
+  "put_vol": 67809,
+  "call_oi": 81444,
+  "put_oi": 110664,
+  "pcr_vol": 0.8802,
+  "pcr_oi": 1.3588
+ },
+ {
+  "date": "2025-04-22",
+  "call_vol": 227975,
+  "put_vol": 127585,
+  "call_oi": 82952,
+  "put_oi": 121758,
+  "pcr_vol": 0.5596,
+  "pcr_oi": 1.4678
+ },
+ {
+  "date": "2025-04-23",
+  "call_vol": 295930,
+  "put_vol": 258782,
+  "call_oi": 101920,
+  "put_oi": 124032,
+  "pcr_vol": 0.8745,
+  "pcr_oi": 1.217
+ },
+ {
+  "date": "2025-04-24",
+  "call_vol": 309850,
+  "put_vol": 272646,
+  "call_oi": 89061,
+  "put_oi": 101023,
+  "pcr_vol": 0.8799,
+  "pcr_oi": 1.1343
+ },
+ {
+  "date": "2025-04-25",
+  "call_vol": 106110,
+  "put_vol": 89141,
+  "call_oi": 89953,
+  "put_oi": 104472,
+  "pcr_vol": 0.8401,
+  "pcr_oi": 1.1614
+ },
+ {
+  "date": "2025-04-28",
+  "call_vol": 129261,
+  "put_vol": 100338,
+  "call_oi": 86311,
+  "put_oi": 108139,
+  "pcr_vol": 0.7762,
+  "pcr_oi": 1.2529
+ },
+ {
+  "date": "2025-04-29",
+  "call_vol": 124611,
+  "put_vol": 72221,
+  "call_oi": 86435,
+  "put_oi": 108277,
+  "pcr_vol": 0.5796,
+  "pcr_oi": 1.2527
+ },
+ {
+  "date": "2025-04-30",
+  "call_vol": 75041,
+  "put_vol": 64016,
+  "call_oi": 86611,
+  "put_oi": 110155,
+  "pcr_vol": 0.8531,
+  "pcr_oi": 1.2718
+ },
+ {
+  "date": "2025-05-06",
+  "call_vol": 75601,
+  "put_vol": 66982,
+  "call_oi": 91697,
+  "put_oi": 111029,
+  "pcr_vol": 0.886,
+  "pcr_oi": 1.2108
+ },
+ {
+  "date": "2025-05-07",
+  "call_vol": 126399,
+  "put_vol": 82424,
+  "call_oi": 91801,
+  "put_oi": 114796,
+  "pcr_vol": 0.6521,
+  "pcr_oi": 1.2505
+ },
+ {
+  "date": "2025-05-08",
+  "call_vol": 98318,
+  "put_vol": 86033,
+  "call_oi": 92837,
+  "put_oi": 113334,
+  "pcr_vol": 0.875,
+  "pcr_oi": 1.2208
+ },
+ {
+  "date": "2025-05-09",
+  "call_vol": 100373,
+  "put_vol": 134125,
+  "call_oi": 93408,
+  "put_oi": 112653,
+  "pcr_vol": 1.3363,
+  "pcr_oi": 1.206
+ },
+ {
+  "date": "2025-05-12",
+  "call_vol": 112043,
+  "put_vol": 113690,
+  "call_oi": 93071,
+  "put_oi": 113932,
+  "pcr_vol": 1.0147,
+  "pcr_oi": 1.2241
+ },
+ {
+  "date": "2025-05-13",
+  "call_vol": 105533,
+  "put_vol": 118120,
+  "call_oi": 97707,
+  "put_oi": 110593,
+  "pcr_vol": 1.1193,
+  "pcr_oi": 1.1319
+ },
+ {
+  "date": "2025-05-14",
+  "call_vol": 75037,
+  "put_vol": 77605,
+  "call_oi": 97535,
+  "put_oi": 111471,
+  "pcr_vol": 1.0342,
+  "pcr_oi": 1.1429
+ },
+ {
+  "date": "2025-05-15",
+  "call_vol": 140594,
+  "put_vol": 198385,
+  "call_oi": 108444,
+  "put_oi": 102126,
+  "pcr_vol": 1.411,
+  "pcr_oi": 0.9417
+ },
+ {
+  "date": "2025-05-16",
+  "call_vol": 128609,
+  "put_vol": 132255,
+  "call_oi": 107126,
+  "put_oi": 109035,
+  "pcr_vol": 1.0283,
+  "pcr_oi": 1.0178
+ },
+ {
+  "date": "2025-05-19",
+  "call_vol": 113607,
+  "put_vol": 120760,
+  "call_oi": 111628,
+  "put_oi": 109974,
+  "pcr_vol": 1.063,
+  "pcr_oi": 0.9852
+ },
+ {
+  "date": "2025-05-20",
+  "call_vol": 83692,
+  "put_vol": 84037,
+  "call_oi": 110886,
+  "put_oi": 110403,
+  "pcr_vol": 1.0041,
+  "pcr_oi": 0.9956
+ },
+ {
+  "date": "2025-05-21",
+  "call_vol": 212206,
+  "put_vol": 151196,
+  "call_oi": 109752,
+  "put_oi": 112273,
+  "pcr_vol": 0.7125,
+  "pcr_oi": 1.023
+ },
+ {
+  "date": "2025-05-22",
+  "call_vol": 183979,
+  "put_vol": 130917,
+  "call_oi": 113492,
+  "put_oi": 117074,
+  "pcr_vol": 0.7116,
+  "pcr_oi": 1.0316
+ },
+ {
+  "date": "2025-05-23",
+  "call_vol": 199174,
+  "put_vol": 175111,
+  "call_oi": 109644,
+  "put_oi": 112888,
+  "pcr_vol": 0.8792,
+  "pcr_oi": 1.0296
+ },
+ {
+  "date": "2025-05-26",
+  "call_vol": 236998,
+  "put_vol": 172400,
+  "call_oi": 58237,
+  "put_oi": 42317,
+  "pcr_vol": 0.7274,
+  "pcr_oi": 0.7266
+ },
+ {
+  "date": "2025-05-27",
+  "call_vol": 34834,
+  "put_vol": 27191,
+  "call_oi": 61951,
+  "put_oi": 47911,
+  "pcr_vol": 0.7806,
+  "pcr_oi": 0.7734
+ },
+ {
+  "date": "2025-05-28",
+  "call_vol": 29135,
+  "put_vol": 30156,
+  "call_oi": 64223,
+  "put_oi": 51308,
+  "pcr_vol": 1.035,
+  "pcr_oi": 0.7989
+ },
+ {
+  "date": "2025-05-29",
+  "call_vol": 41300,
+  "put_vol": 33779,
+  "call_oi": 65502,
+  "put_oi": 53303,
+  "pcr_vol": 0.8179,
+  "pcr_oi": 0.8138
+ },
+ {
+  "date": "2025-05-30",
+  "call_vol": 29154,
+  "put_vol": 31237,
+  "call_oi": 67772,
+  "put_oi": 53975,
+  "pcr_vol": 1.0714,
+  "pcr_oi": 0.7964
+ },
+ {
+  "date": "2025-06-03",
+  "call_vol": 27100,
+  "put_vol": 22550,
+  "call_oi": 68540,
+  "put_oi": 54501,
+  "pcr_vol": 0.8321,
+  "pcr_oi": 0.7952
+ },
+ {
+  "date": "2025-06-04",
+  "call_vol": 30073,
+  "put_vol": 23919,
+  "call_oi": 69430,
+  "put_oi": 56064,
+  "pcr_vol": 0.7954,
+  "pcr_oi": 0.8075
+ },
+ {
+  "date": "2025-06-05",
+  "call_vol": 32999,
+  "put_vol": 23471,
+  "call_oi": 71659,
+  "put_oi": 57210,
+  "pcr_vol": 0.7113,
+  "pcr_oi": 0.7984
+ },
+ {
+  "date": "2025-06-06",
+  "call_vol": 42772,
+  "put_vol": 36054,
+  "call_oi": 71767,
+  "put_oi": 58869,
+  "pcr_vol": 0.8429,
+  "pcr_oi": 0.8203
+ },
+ {
+  "date": "2025-06-09",
+  "call_vol": 43942,
+  "put_vol": 37980,
+  "call_oi": 73790,
+  "put_oi": 59893,
+  "pcr_vol": 0.8643,
+  "pcr_oi": 0.8117
+ },
+ {
+  "date": "2025-06-10",
+  "call_vol": 31776,
+  "put_vol": 27992,
+  "call_oi": 74671,
+  "put_oi": 62085,
+  "pcr_vol": 0.8809,
+  "pcr_oi": 0.8314
+ },
+ {
+  "date": "2025-06-11",
+  "call_vol": 32006,
+  "put_vol": 28600,
+  "call_oi": 75109,
+  "put_oi": 63146,
+  "pcr_vol": 0.8936,
+  "pcr_oi": 0.8407
+ },
+ {
+  "date": "2025-06-12",
+  "call_vol": 57429,
+  "put_vol": 35940,
+  "call_oi": 77185,
+  "put_oi": 64342,
+  "pcr_vol": 0.6258,
+  "pcr_oi": 0.8336
+ },
+ {
+  "date": "2025-06-13",
+  "call_vol": 117081,
+  "put_vol": 59326,
+  "call_oi": 81138,
+  "put_oi": 67043,
+  "pcr_vol": 0.5067,
+  "pcr_oi": 0.8263
+ },
+ {
+  "date": "2025-06-16",
+  "call_vol": 81830,
+  "put_vol": 36101,
+  "call_oi": 82022,
+  "put_oi": 68176,
+  "pcr_vol": 0.4412,
+  "pcr_oi": 0.8312
+ },
+ {
+  "date": "2025-06-17",
+  "call_vol": 63592,
+  "put_vol": 41036,
+  "call_oi": 82503,
+  "put_oi": 68413,
+  "pcr_vol": 0.6453,
+  "pcr_oi": 0.8292
+ },
+ {
+  "date": "2025-06-18",
+  "call_vol": 54846,
+  "put_vol": 32281,
+  "call_oi": 85132,
+  "put_oi": 68584,
+  "pcr_vol": 0.5886,
+  "pcr_oi": 0.8056
+ },
+ {
+  "date": "2025-06-19",
+  "call_vol": 97535,
+  "put_vol": 44138,
+  "call_oi": 89339,
+  "put_oi": 69576,
+  "pcr_vol": 0.4525,
+  "pcr_oi": 0.7788
+ },
+ {
+  "date": "2025-06-20",
+  "call_vol": 61671,
+  "put_vol": 36993,
+  "call_oi": 91281,
+  "put_oi": 70137,
+  "pcr_vol": 0.5998,
+  "pcr_oi": 0.7684
+ },
+ {
+  "date": "2025-06-23",
+  "call_vol": 84374,
+  "put_vol": 57874,
+  "call_oi": 93855,
+  "put_oi": 71997,
+  "pcr_vol": 0.6859,
+  "pcr_oi": 0.7671
+ },
+ {
+  "date": "2025-06-24",
+  "call_vol": 135226,
+  "put_vol": 111203,
+  "call_oi": 78956,
+  "put_oi": 61532,
+  "pcr_vol": 0.8223,
+  "pcr_oi": 0.7793
+ },
+ {
+  "date": "2025-06-25",
+  "call_vol": 41183,
+  "put_vol": 55233,
+  "call_oi": 81227,
+  "put_oi": 63812,
+  "pcr_vol": 1.3412,
+  "pcr_oi": 0.7856
+ },
+ {
+  "date": "2025-06-26",
+  "call_vol": 36276,
+  "put_vol": 48540,
+  "call_oi": 80395,
+  "put_oi": 66276,
+  "pcr_vol": 1.3381,
+  "pcr_oi": 0.8244
+ },
+ {
+  "date": "2025-06-27",
+  "call_vol": 49412,
+  "put_vol": 73696,
+  "call_oi": 82766,
+  "put_oi": 67127,
+  "pcr_vol": 1.4915,
+  "pcr_oi": 0.811
+ },
+ {
+  "date": "2025-06-30",
+  "call_vol": 56107,
+  "put_vol": 73303,
+  "call_oi": 85607,
+  "put_oi": 67652,
+  "pcr_vol": 1.3065,
+  "pcr_oi": 0.7903
+ },
+ {
+  "date": "2025-07-01",
+  "call_vol": 36165,
+  "put_vol": 36467,
+  "call_oi": 85139,
+  "put_oi": 70582,
+  "pcr_vol": 1.0084,
+  "pcr_oi": 0.829
+ },
+ {
+  "date": "2025-07-02",
+  "call_vol": 34844,
+  "put_vol": 31396,
+  "call_oi": 83759,
+  "put_oi": 71451,
+  "pcr_vol": 0.901,
+  "pcr_oi": 0.8531
+ },
+ {
+  "date": "2025-07-03",
+  "call_vol": 35563,
+  "put_vol": 36313,
+  "call_oi": 82530,
+  "put_oi": 72514,
+  "pcr_vol": 1.0211,
+  "pcr_oi": 0.8786
+ },
+ {
+  "date": "2025-07-04",
+  "call_vol": 36005,
+  "put_vol": 37995,
+  "call_oi": 82488,
+  "put_oi": 72944,
+  "pcr_vol": 1.0553,
+  "pcr_oi": 0.8843
+ },
+ {
+  "date": "2025-07-07",
+  "call_vol": 32530,
+  "put_vol": 31082,
+  "call_oi": 82782,
+  "put_oi": 72782,
+  "pcr_vol": 0.9555,
+  "pcr_oi": 0.8792
+ },
+ {
+  "date": "2025-07-08",
+  "call_vol": 32195,
+  "put_vol": 33422,
+  "call_oi": 82247,
+  "put_oi": 73510,
+  "pcr_vol": 1.0381,
+  "pcr_oi": 0.8938
+ },
+ {
+  "date": "2025-07-09",
+  "call_vol": 61907,
+  "put_vol": 86414,
+  "call_oi": 85397,
+  "put_oi": 72091,
+  "pcr_vol": 1.3959,
+  "pcr_oi": 0.8442
+ },
+ {
+  "date": "2025-07-10",
+  "call_vol": 43674,
+  "put_vol": 58774,
+  "call_oi": 83191,
+  "put_oi": 73590,
+  "pcr_vol": 1.3457,
+  "pcr_oi": 0.8846
+ },
+ {
+  "date": "2025-07-11",
+  "call_vol": 43480,
+  "put_vol": 52565,
+  "call_oi": 82133,
+  "put_oi": 73840,
+  "pcr_vol": 1.2089,
+  "pcr_oi": 0.899
+ },
+ {
+  "date": "2025-07-14",
+  "call_vol": 78673,
+  "put_vol": 51856,
+  "call_oi": 82702,
+  "put_oi": 75999,
+  "pcr_vol": 0.6591,
+  "pcr_oi": 0.9189
+ },
+ {
+  "date": "2025-07-15",
+  "call_vol": 56767,
+  "put_vol": 41062,
+  "call_oi": 82266,
+  "put_oi": 76828,
+  "pcr_vol": 0.7233,
+  "pcr_oi": 0.9339
+ },
+ {
+  "date": "2025-07-16",
+  "call_vol": 69220,
+  "put_vol": 59980,
+  "call_oi": 82881,
+  "put_oi": 77089,
+  "pcr_vol": 0.8665,
+  "pcr_oi": 0.9301
+ },
+ {
+  "date": "2025-07-17",
+  "call_vol": 123959,
+  "put_vol": 85433,
+  "call_oi": 83573,
+  "put_oi": 76070,
+  "pcr_vol": 0.6892,
+  "pcr_oi": 0.9102
+ },
+ {
+  "date": "2025-07-18",
+  "call_vol": 84284,
+  "put_vol": 64353,
+  "call_oi": 83457,
+  "put_oi": 74179,
+  "pcr_vol": 0.7635,
+  "pcr_oi": 0.8888
+ },
+ {
+  "date": "2025-07-21",
+  "call_vol": 85228,
+  "put_vol": 79686,
+  "call_oi": 82079,
+  "put_oi": 74020,
+  "pcr_vol": 0.935,
+  "pcr_oi": 0.9018
+ },
+ {
+  "date": "2025-07-22",
+  "call_vol": 99308,
+  "put_vol": 60072,
+  "call_oi": 81691,
+  "put_oi": 71697,
+  "pcr_vol": 0.6049,
+  "pcr_oi": 0.8777
+ },
+ {
+  "date": "2025-07-23",
+  "call_vol": 126368,
+  "put_vol": 68313,
+  "call_oi": 79885,
+  "put_oi": 68830,
+  "pcr_vol": 0.5406,
+  "pcr_oi": 0.8616
+ },
+ {
+  "date": "2025-07-24",
+  "call_vol": 105037,
+  "put_vol": 97818,
+  "call_oi": 79999,
+  "put_oi": 66179,
+  "pcr_vol": 0.9313,
+  "pcr_oi": 0.8272
+ },
+ {
+  "date": "2025-07-25",
+  "call_vol": 60299,
+  "put_vol": 56285,
+  "call_oi": 48960,
+  "put_oi": 30465,
+  "pcr_vol": 0.9334,
+  "pcr_oi": 0.6222
+ },
+ {
+  "date": "2025-07-28",
+  "call_vol": 24403,
+  "put_vol": 17179,
+  "call_oi": 53073,
+  "put_oi": 33458,
+  "pcr_vol": 0.704,
+  "pcr_oi": 0.6304
+ },
+ {
+  "date": "2025-07-29",
+  "call_vol": 23351,
+  "put_vol": 21896,
+  "call_oi": 56001,
+  "put_oi": 36027,
+  "pcr_vol": 0.9377,
+  "pcr_oi": 0.6433
+ },
+ {
+  "date": "2025-07-30",
+  "call_vol": 20038,
+  "put_vol": 19629,
+  "call_oi": 57642,
+  "put_oi": 37743,
+  "pcr_vol": 0.9796,
+  "pcr_oi": 0.6548
+ },
+ {
+  "date": "2025-07-31",
+  "call_vol": 25929,
+  "put_vol": 22670,
+  "call_oi": 59848,
+  "put_oi": 39501,
+  "pcr_vol": 0.8743,
+  "pcr_oi": 0.66
+ },
+ {
+  "date": "2025-08-01",
+  "call_vol": 31815,
+  "put_vol": 17765,
+  "call_oi": 62938,
+  "put_oi": 41423,
+  "pcr_vol": 0.5584,
+  "pcr_oi": 0.6582
+ },
+ {
+  "date": "2025-08-04",
+  "call_vol": 42045,
+  "put_vol": 21625,
+  "call_oi": 67145,
+  "put_oi": 42143,
+  "pcr_vol": 0.5143,
+  "pcr_oi": 0.6276
+ },
+ {
+  "date": "2025-08-05",
+  "call_vol": 31733,
+  "put_vol": 16030,
+  "call_oi": 68214,
+  "put_oi": 43108,
+  "pcr_vol": 0.5052,
+  "pcr_oi": 0.632
+ },
+ {
+  "date": "2025-08-06",
+  "call_vol": 26271,
+  "put_vol": 17476,
+  "call_oi": 70011,
+  "put_oi": 43459,
+  "pcr_vol": 0.6652,
+  "pcr_oi": 0.6207
+ },
+ {
+  "date": "2025-08-07",
+  "call_vol": 25286,
+  "put_vol": 14562,
+  "call_oi": 72358,
+  "put_oi": 44227,
+  "pcr_vol": 0.5759,
+  "pcr_oi": 0.6112
+ },
+ {
+  "date": "2025-08-08",
+  "call_vol": 30842,
+  "put_vol": 15337,
+  "call_oi": 73628,
+  "put_oi": 45489,
+  "pcr_vol": 0.4973,
+  "pcr_oi": 0.6178
+ },
+ {
+  "date": "2025-08-11",
+  "call_vol": 38549,
+  "put_vol": 22939,
+  "call_oi": 74700,
+  "put_oi": 48861,
+  "pcr_vol": 0.5951,
+  "pcr_oi": 0.6541
+ },
+ {
+  "date": "2025-08-12",
+  "call_vol": 28597,
+  "put_vol": 20874,
+  "call_oi": 76972,
+  "put_oi": 49781,
+  "pcr_vol": 0.7299,
+  "pcr_oi": 0.6467
+ },
+ {
+  "date": "2025-08-13",
+  "call_vol": 53890,
+  "put_vol": 26888,
+  "call_oi": 75778,
+  "put_oi": 50391,
+  "pcr_vol": 0.4989,
+  "pcr_oi": 0.665
+ },
+ {
+  "date": "2025-08-14",
+  "call_vol": 29765,
+  "put_vol": 19412,
+  "call_oi": 77199,
+  "put_oi": 51866,
+  "pcr_vol": 0.6522,
+  "pcr_oi": 0.6718
+ },
+ {
+  "date": "2025-08-15",
+  "call_vol": 24125,
+  "put_vol": 30316,
+  "call_oi": 78047,
+  "put_oi": 53743,
+  "pcr_vol": 1.2566,
+  "pcr_oi": 0.6886
+ },
+ {
+  "date": "2025-08-18",
+  "call_vol": 33280,
+  "put_vol": 35208,
+  "call_oi": 82781,
+  "put_oi": 56896,
+  "pcr_vol": 1.0579,
+  "pcr_oi": 0.6873
+ },
+ {
+  "date": "2025-08-19",
+  "call_vol": 23435,
+  "put_vol": 26548,
+  "call_oi": 83398,
+  "put_oi": 58431,
+  "pcr_vol": 1.1328,
+  "pcr_oi": 0.7006
+ },
+ {
+  "date": "2025-08-20",
+  "call_vol": 29832,
+  "put_vol": 41648,
+  "call_oi": 84710,
+  "put_oi": 60037,
+  "pcr_vol": 1.3961,
+  "pcr_oi": 0.7087
+ },
+ {
+  "date": "2025-08-21",
+  "call_vol": 30907,
+  "put_vol": 31214,
+  "call_oi": 84701,
+  "put_oi": 60893,
+  "pcr_vol": 1.0099,
+  "pcr_oi": 0.7189
+ },
+ {
+  "date": "2025-08-22",
+  "call_vol": 32050,
+  "put_vol": 38642,
+  "call_oi": 86966,
+  "put_oi": 62430,
+  "pcr_vol": 1.2057,
+  "pcr_oi": 0.7179
+ },
+ {
+  "date": "2025-08-25",
+  "call_vol": 78227,
+  "put_vol": 65700,
+  "call_oi": 78964,
+  "put_oi": 53950,
+  "pcr_vol": 0.8399,
+  "pcr_oi": 0.6832
+ },
+ {
+  "date": "2025-08-26",
+  "call_vol": 27584,
+  "put_vol": 16425,
+  "call_oi": 81219,
+  "put_oi": 56218,
+  "pcr_vol": 0.5955,
+  "pcr_oi": 0.6922
+ },
+ {
+  "date": "2025-08-27",
+  "call_vol": 26451,
+  "put_vol": 18045,
+  "call_oi": 80647,
+  "put_oi": 57555,
+  "pcr_vol": 0.6822,
+  "pcr_oi": 0.7137
+ },
+ {
+  "date": "2025-08-28",
+  "call_vol": 28614,
+  "put_vol": 20742,
+  "call_oi": 82083,
+  "put_oi": 58528,
+  "pcr_vol": 0.7249,
+  "pcr_oi": 0.713
+ },
+ {
+  "date": "2025-08-29",
+  "call_vol": 40445,
+  "put_vol": 21775,
+  "call_oi": 79647,
+  "put_oi": 59526,
+  "pcr_vol": 0.5384,
+  "pcr_oi": 0.7474
+ },
+ {
+  "date": "2025-09-01",
+  "call_vol": 146551,
+  "put_vol": 54488,
+  "call_oi": 86421,
+  "put_oi": 59391,
+  "pcr_vol": 0.3718,
+  "pcr_oi": 0.6872
+ },
+ {
+  "date": "2025-09-02",
+  "call_vol": 107203,
+  "put_vol": 36891,
+  "call_oi": 87274,
+  "put_oi": 59628,
+  "pcr_vol": 0.3441,
+  "pcr_oi": 0.6832
+ },
+ {
+  "date": "2025-09-03",
+  "call_vol": 122659,
+  "put_vol": 39331,
+  "call_oi": 86508,
+  "put_oi": 61379,
+  "pcr_vol": 0.3207,
+  "pcr_oi": 0.7095
+ },
+ {
+  "date": "2025-09-04",
+  "call_vol": 118966,
+  "put_vol": 41857,
+  "call_oi": 87386,
+  "put_oi": 61179,
+  "pcr_vol": 0.3518,
+  "pcr_oi": 0.7001
+ },
+ {
+  "date": "2025-09-05",
+  "call_vol": 75408,
+  "put_vol": 26906,
+  "call_oi": 86957,
+  "put_oi": 60903,
+  "pcr_vol": 0.3568,
+  "pcr_oi": 0.7004
+ },
+ {
+  "date": "2025-09-08",
+  "call_vol": 102964,
+  "put_vol": 49842,
+  "call_oi": 85974,
+  "put_oi": 63085,
+  "pcr_vol": 0.4841,
+  "pcr_oi": 0.7338
+ },
+ {
+  "date": "2025-09-09",
+  "call_vol": 139451,
+  "put_vol": 61063,
+  "call_oi": 83341,
+  "put_oi": 66700,
+  "pcr_vol": 0.4379,
+  "pcr_oi": 0.8003
+ },
+ {
+  "date": "2025-09-10",
+  "call_vol": 142273,
+  "put_vol": 82078,
+  "call_oi": 86541,
+  "put_oi": 68462,
+  "pcr_vol": 0.5769,
+  "pcr_oi": 0.7911
+ },
+ {
+  "date": "2025-09-11",
+  "call_vol": 85103,
+  "put_vol": 57585,
+  "call_oi": 87953,
+  "put_oi": 69589,
+  "pcr_vol": 0.6767,
+  "pcr_oi": 0.7912
+ },
+ {
+  "date": "2025-09-12",
+  "call_vol": 80653,
+  "put_vol": 60418,
+  "call_oi": 89112,
+  "put_oi": 70727,
+  "pcr_vol": 0.7491,
+  "pcr_oi": 0.7937
+ },
+ {
+  "date": "2025-09-15",
+  "call_vol": 63345,
+  "put_vol": 50446,
+  "call_oi": 90046,
+  "put_oi": 72497,
+  "pcr_vol": 0.7964,
+  "pcr_oi": 0.8051
+ },
+ {
+  "date": "2025-09-16",
+  "call_vol": 87799,
+  "put_vol": 51840,
+  "call_oi": 88768,
+  "put_oi": 74081,
+  "pcr_vol": 0.5904,
+  "pcr_oi": 0.8345
+ },
+ {
+  "date": "2025-09-17",
+  "call_vol": 118976,
+  "put_vol": 82442,
+  "call_oi": 90642,
+  "put_oi": 75386,
+  "pcr_vol": 0.6929,
+  "pcr_oi": 0.8317
+ },
+ {
+  "date": "2025-09-18",
+  "call_vol": 158751,
+  "put_vol": 142815,
+  "call_oi": 91392,
+  "put_oi": 74955,
+  "pcr_vol": 0.8996,
+  "pcr_oi": 0.8201
+ },
+ {
+  "date": "2025-09-19",
+  "call_vol": 88236,
+  "put_vol": 96655,
+  "call_oi": 90318,
+  "put_oi": 76513,
+  "pcr_vol": 1.0954,
+  "pcr_oi": 0.8472
+ },
+ {
+  "date": "2025-09-22",
+  "call_vol": 144021,
+  "put_vol": 113704,
+  "call_oi": 85289,
+  "put_oi": 78483,
+  "pcr_vol": 0.7895,
+  "pcr_oi": 0.9202
+ },
+ {
+  "date": "2025-09-23",
+  "call_vol": 171794,
+  "put_vol": 126853,
+  "call_oi": 81833,
+  "put_oi": 80522,
+  "pcr_vol": 0.7384,
+  "pcr_oi": 0.984
+ },
+ {
+  "date": "2025-09-24",
+  "call_vol": 185112,
+  "put_vol": 151165,
+  "call_oi": 46277,
+  "put_oi": 29553,
+  "pcr_vol": 0.8166,
+  "pcr_oi": 0.6386
+ },
+ {
+  "date": "2025-09-25",
+  "call_vol": 31325,
+  "put_vol": 17003,
+  "call_oi": 48460,
+  "put_oi": 32997,
+  "pcr_vol": 0.5428,
+  "pcr_oi": 0.6809
+ },
+ {
+  "date": "2025-09-26",
+  "call_vol": 31681,
+  "put_vol": 17193,
+  "call_oi": 49498,
+  "put_oi": 34512,
+  "pcr_vol": 0.5427,
+  "pcr_oi": 0.6972
+ },
+ {
+  "date": "2025-09-29",
+  "call_vol": 50298,
+  "put_vol": 19356,
+  "call_oi": 50471,
+  "put_oi": 36154,
+  "pcr_vol": 0.3848,
+  "pcr_oi": 0.7163
+ },
+ {
+  "date": "2025-09-30",
+  "call_vol": 50402,
+  "put_vol": 23942,
+  "call_oi": 53402,
+  "put_oi": 38861,
+  "pcr_vol": 0.475,
+  "pcr_oi": 0.7277
+ },
+ {
+  "date": "2025-10-09",
+  "call_vol": 45515,
+  "put_vol": 38291,
+  "call_oi": 53312,
+  "put_oi": 45070,
+  "pcr_vol": 0.8413,
+  "pcr_oi": 0.8454
+ },
+ {
+  "date": "2025-10-10",
+  "call_vol": 63992,
+  "put_vol": 45109,
+  "call_oi": 56769,
+  "put_oi": 50539,
+  "pcr_vol": 0.7049,
+  "pcr_oi": 0.8903
+ },
+ {
+  "date": "2025-10-13",
+  "call_vol": 91567,
+  "put_vol": 46625,
+  "call_oi": 59268,
+  "put_oi": 52766,
+  "pcr_vol": 0.5092,
+  "pcr_oi": 0.8903
+ },
+ {
+  "date": "2025-10-14",
+  "call_vol": 130778,
+  "put_vol": 60221,
+  "call_oi": 66662,
+  "put_oi": 58809,
+  "pcr_vol": 0.4605,
+  "pcr_oi": 0.8822
+ },
+ {
+  "date": "2025-10-15",
+  "call_vol": 111232,
+  "put_vol": 41071,
+  "call_oi": 72854,
+  "put_oi": 62911,
+  "pcr_vol": 0.3692,
+  "pcr_oi": 0.8635
+ },
+ {
+  "date": "2025-10-16",
+  "call_vol": 135145,
+  "put_vol": 58155,
+  "call_oi": 77618,
+  "put_oi": 69128,
+  "pcr_vol": 0.4303,
+  "pcr_oi": 0.8906
+ },
+ {
+  "date": "2025-10-17",
+  "call_vol": 164831,
+  "put_vol": 70014,
+  "call_oi": 75861,
+  "put_oi": 74969,
+  "pcr_vol": 0.4248,
+  "pcr_oi": 0.9882
+ },
+ {
+  "date": "2025-10-20",
+  "call_vol": 169542,
+  "put_vol": 83502,
+  "call_oi": 85597,
+  "put_oi": 77435,
+  "pcr_vol": 0.4925,
+  "pcr_oi": 0.9046
+ },
+ {
+  "date": "2025-10-21",
+  "call_vol": 150113,
+  "put_vol": 71839,
+  "call_oi": 87143,
+  "put_oi": 79879,
+  "pcr_vol": 0.4786,
+  "pcr_oi": 0.9166
+ },
+ {
+  "date": "2025-10-22",
+  "call_vol": 184008,
+  "put_vol": 134018,
+  "call_oi": 94285,
+  "put_oi": 75495,
+  "pcr_vol": 0.7283,
+  "pcr_oi": 0.8007
+ },
+ {
+  "date": "2025-10-23",
+  "call_vol": 163662,
+  "put_vol": 113364,
+  "call_oi": 97626,
+  "put_oi": 77590,
+  "pcr_vol": 0.6927,
+  "pcr_oi": 0.7948
+ },
+ {
+  "date": "2025-10-24",
+  "call_vol": 116848,
+  "put_vol": 75871,
+  "call_oi": 97208,
+  "put_oi": 79080,
+  "pcr_vol": 0.6493,
+  "pcr_oi": 0.8135
+ },
+ {
+  "date": "2025-10-27",
+  "call_vol": 145014,
+  "put_vol": 108838,
+  "call_oi": 77253,
+  "put_oi": 62073,
+  "pcr_vol": 0.7505,
+  "pcr_oi": 0.8035
+ },
+ {
+  "date": "2025-10-28",
+  "call_vol": 100064,
+  "put_vol": 78429,
+  "call_oi": 87304,
+  "put_oi": 63435,
+  "pcr_vol": 0.7838,
+  "pcr_oi": 0.7266
+ },
+ {
+  "date": "2025-10-29",
+  "call_vol": 88204,
+  "put_vol": 67925,
+  "call_oi": 91876,
+  "put_oi": 65362,
+  "pcr_vol": 0.7701,
+  "pcr_oi": 0.7114
+ },
+ {
+  "date": "2025-10-30",
+  "call_vol": 104444,
+  "put_vol": 65679,
+  "call_oi": 93913,
+  "put_oi": 67827,
+  "pcr_vol": 0.6288,
+  "pcr_oi": 0.7222
+ },
+ {
+  "date": "2025-10-31",
+  "call_vol": 99722,
+  "put_vol": 54370,
+  "call_oi": 93525,
+  "put_oi": 69449,
+  "pcr_vol": 0.5452,
+  "pcr_oi": 0.7426
+ },
+ {
+  "date": "2025-11-03",
+  "call_vol": 89382,
+  "put_vol": 55073,
+  "call_oi": 92621,
+  "put_oi": 71348,
+  "pcr_vol": 0.6162,
+  "pcr_oi": 0.7703
+ },
+ {
+  "date": "2025-11-04",
+  "call_vol": 85188,
+  "put_vol": 49206,
+  "call_oi": 91034,
+  "put_oi": 71198,
+  "pcr_vol": 0.5776,
+  "pcr_oi": 0.7821
+ },
+ {
+  "date": "2025-11-05",
+  "call_vol": 71437,
+  "put_vol": 66470,
+  "call_oi": 92384,
+  "put_oi": 71330,
+  "pcr_vol": 0.9305,
+  "pcr_oi": 0.7721
+ },
+ {
+  "date": "2025-11-06",
+  "call_vol": 51817,
+  "put_vol": 44692,
+  "call_oi": 91321,
+  "put_oi": 70428,
+  "pcr_vol": 0.8625,
+  "pcr_oi": 0.7712
+ },
+ {
+  "date": "2025-11-07",
+  "call_vol": 66277,
+  "put_vol": 42112,
+  "call_oi": 90136,
+  "put_oi": 70302,
+  "pcr_vol": 0.6354,
+  "pcr_oi": 0.78
+ },
+ {
+  "date": "2025-11-10",
+  "call_vol": 121770,
+  "put_vol": 72612,
+  "call_oi": 88946,
+  "put_oi": 71989,
+  "pcr_vol": 0.5963,
+  "pcr_oi": 0.8094
+ },
+ {
+  "date": "2025-11-11",
+  "call_vol": 135489,
+  "put_vol": 57949,
+  "call_oi": 88725,
+  "put_oi": 72697,
+  "pcr_vol": 0.4277,
+  "pcr_oi": 0.8194
+ },
+ {
+  "date": "2025-11-12",
+  "call_vol": 107731,
+  "put_vol": 54839,
+  "call_oi": 91342,
+  "put_oi": 72311,
+  "pcr_vol": 0.509,
+  "pcr_oi": 0.7917
+ },
+ {
+  "date": "2025-11-13",
+  "call_vol": 141230,
+  "put_vol": 68133,
+  "call_oi": 87690,
+  "put_oi": 71548,
+  "pcr_vol": 0.4824,
+  "pcr_oi": 0.8159
+ },
+ {
+  "date": "2025-11-14",
+  "call_vol": 165308,
+  "put_vol": 67048,
+  "call_oi": 90441,
+  "put_oi": 71938,
+  "pcr_vol": 0.4056,
+  "pcr_oi": 0.7954
+ },
+ {
+  "date": "2025-11-17",
+  "call_vol": 158344,
+  "put_vol": 151675,
+  "call_oi": 93771,
+  "put_oi": 69594,
+  "pcr_vol": 0.9579,
+  "pcr_oi": 0.7422
+ },
+ {
+  "date": "2025-11-18",
+  "call_vol": 105843,
+  "put_vol": 107550,
+  "call_oi": 95925,
+  "put_oi": 68397,
+  "pcr_vol": 1.0161,
+  "pcr_oi": 0.713
+ },
+ {
+  "date": "2025-11-19",
+  "call_vol": 167752,
+  "put_vol": 101316,
+  "call_oi": 95092,
+  "put_oi": 70938,
+  "pcr_vol": 0.604,
+  "pcr_oi": 0.746
+ },
+ {
+  "date": "2025-11-20",
+  "call_vol": 151712,
+  "put_vol": 133241,
+  "call_oi": 94848,
+  "put_oi": 70099,
+  "pcr_vol": 0.8782,
+  "pcr_oi": 0.7391
+ },
+ {
+  "date": "2025-11-21",
+  "call_vol": 149034,
+  "put_vol": 161563,
+  "call_oi": 89561,
+  "put_oi": 66994,
+  "pcr_vol": 1.0841,
+  "pcr_oi": 0.748
+ },
+ {
+  "date": "2025-11-24",
+  "call_vol": 131860,
+  "put_vol": 134149,
+  "call_oi": 41019,
+  "put_oi": 25113,
+  "pcr_vol": 1.0174,
+  "pcr_oi": 0.6122
+ },
+ {
+  "date": "2025-11-25",
+  "call_vol": 30564,
+  "put_vol": 18064,
+  "call_oi": 44541,
+  "put_oi": 28681,
+  "pcr_vol": 0.591,
+  "pcr_oi": 0.6439
+ },
+ {
+  "date": "2025-11-26",
+  "call_vol": 44127,
+  "put_vol": 22686,
+  "call_oi": 51503,
+  "put_oi": 31179,
+  "pcr_vol": 0.5141,
+  "pcr_oi": 0.6054
+ },
+ {
+  "date": "2025-11-27",
+  "call_vol": 27166,
+  "put_vol": 14264,
+  "call_oi": 53859,
+  "put_oi": 32674,
+  "pcr_vol": 0.5251,
+  "pcr_oi": 0.6067
+ },
+ {
+  "date": "2025-11-28",
+  "call_vol": 21919,
+  "put_vol": 11199,
+  "call_oi": 55380,
+  "put_oi": 33575,
+  "pcr_vol": 0.5109,
+  "pcr_oi": 0.6063
+ },
+ {
+  "date": "2025-12-01",
+  "call_vol": 61571,
+  "put_vol": 23050,
+  "call_oi": 59630,
+  "put_oi": 34945,
+  "pcr_vol": 0.3744,
+  "pcr_oi": 0.586
+ },
+ {
+  "date": "2025-12-02",
+  "call_vol": 46489,
+  "put_vol": 18785,
+  "call_oi": 62881,
+  "put_oi": 35923,
+  "pcr_vol": 0.4041,
+  "pcr_oi": 0.5713
+ },
+ {
+  "date": "2025-12-03",
+  "call_vol": 43517,
+  "put_vol": 21056,
+  "call_oi": 64727,
+  "put_oi": 36754,
+  "pcr_vol": 0.4839,
+  "pcr_oi": 0.5678
+ },
+ {
+  "date": "2025-12-04",
+  "call_vol": 57044,
+  "put_vol": 20764,
+  "call_oi": 67001,
+  "put_oi": 37658,
+  "pcr_vol": 0.364,
+  "pcr_oi": 0.5621
+ },
+ {
+  "date": "2025-12-05",
+  "call_vol": 38434,
+  "put_vol": 17365,
+  "call_oi": 67904,
+  "put_oi": 37767,
+  "pcr_vol": 0.4518,
+  "pcr_oi": 0.5562
+ },
+ {
+  "date": "2025-12-08",
+  "call_vol": 58014,
+  "put_vol": 22946,
+  "call_oi": 71868,
+  "put_oi": 38993,
+  "pcr_vol": 0.3955,
+  "pcr_oi": 0.5426
+ },
+ {
+  "date": "2025-12-09",
+  "call_vol": 42610,
+  "put_vol": 25872,
+  "call_oi": 71476,
+  "put_oi": 39829,
+  "pcr_vol": 0.6072,
+  "pcr_oi": 0.5572
+ },
+ {
+  "date": "2025-12-10",
+  "call_vol": 48139,
+  "put_vol": 23705,
+  "call_oi": 72771,
+  "put_oi": 40707,
+  "pcr_vol": 0.4924,
+  "pcr_oi": 0.5594
+ },
+ {
+  "date": "2025-12-11",
+  "call_vol": 50725,
+  "put_vol": 28829,
+  "call_oi": 74346,
+  "put_oi": 41770,
+  "pcr_vol": 0.5683,
+  "pcr_oi": 0.5618
+ },
+ {
+  "date": "2025-12-12",
+  "call_vol": 84056,
+  "put_vol": 26885,
+  "call_oi": 77814,
+  "put_oi": 42632,
+  "pcr_vol": 0.3198,
+  "pcr_oi": 0.5479
+ },
+ {
+  "date": "2025-12-15",
+  "call_vol": 150132,
+  "put_vol": 43550,
+  "call_oi": 78823,
+  "put_oi": 43612,
+  "pcr_vol": 0.2901,
+  "pcr_oi": 0.5533
+ },
+ {
+  "date": "2025-12-16",
+  "call_vol": 92029,
+  "put_vol": 29910,
+  "call_oi": 80308,
+  "put_oi": 44071,
+  "pcr_vol": 0.325,
+  "pcr_oi": 0.5488
+ },
+ {
+  "date": "2025-12-17",
+  "call_vol": 112864,
+  "put_vol": 33423,
+  "call_oi": 80715,
+  "put_oi": 44110,
+  "pcr_vol": 0.2961,
+  "pcr_oi": 0.5465
+ },
+ {
+  "date": "2025-12-18",
+  "call_vol": 77910,
+  "put_vol": 26312,
+  "call_oi": 81410,
+  "put_oi": 45496,
+  "pcr_vol": 0.3377,
+  "pcr_oi": 0.5589
+ },
+ {
+  "date": "2025-12-19",
+  "call_vol": 126902,
+  "put_vol": 46782,
+  "call_oi": 83183,
+  "put_oi": 46597,
+  "pcr_vol": 0.3686,
+  "pcr_oi": 0.5602
+ },
+ {
+  "date": "2025-12-22",
+  "call_vol": 140589,
+  "put_vol": 43489,
+  "call_oi": 83881,
+  "put_oi": 48401,
+  "pcr_vol": 0.3093,
+  "pcr_oi": 0.577
+ },
+ {
+  "date": "2025-12-23",
+  "call_vol": 152408,
+  "put_vol": 50720,
+  "call_oi": 80247,
+  "put_oi": 50137,
+  "pcr_vol": 0.3328,
+  "pcr_oi": 0.6248
+ },
+ {
+  "date": "2025-12-24",
+  "call_vol": 145816,
+  "put_vol": 71928,
+  "call_oi": 77648,
+  "put_oi": 50763,
+  "pcr_vol": 0.4933,
+  "pcr_oi": 0.6538
+ },
+ {
+  "date": "2025-12-25",
+  "call_vol": 97653,
+  "put_vol": 60997,
+  "call_oi": 67373,
+  "put_oi": 38739,
+  "pcr_vol": 0.6246,
+  "pcr_oi": 0.575
+ },
+ {
+  "date": "2025-12-26",
+  "call_vol": 64423,
+  "put_vol": 19335,
+  "call_oi": 69901,
+  "put_oi": 41795,
+  "pcr_vol": 0.3001,
+  "pcr_oi": 0.5979
+ },
+ {
+  "date": "2025-12-29",
+  "call_vol": 83534,
+  "put_vol": 27975,
+  "call_oi": 68654,
+  "put_oi": 42676,
+  "pcr_vol": 0.3349,
+  "pcr_oi": 0.6216
+ },
+ {
+  "date": "2025-12-30",
+  "call_vol": 103317,
+  "put_vol": 50637,
+  "call_oi": 66577,
+  "put_oi": 42215,
+  "pcr_vol": 0.4901,
+  "pcr_oi": 0.6341
+ },
+ {
+  "date": "2025-12-31",
+  "call_vol": 65794,
+  "put_vol": 38462,
+  "call_oi": 68531,
+  "put_oi": 42744,
+  "pcr_vol": 0.5846,
+  "pcr_oi": 0.6237
+ },
+ {
+  "date": "2026-01-05",
+  "call_vol": 32610,
+  "put_vol": 17168,
+  "call_oi": 68970,
+  "put_oi": 43441,
+  "pcr_vol": 0.5265,
+  "pcr_oi": 0.6299
+ },
+ {
+  "date": "2026-01-06",
+  "call_vol": 65767,
+  "put_vol": 26483,
+  "call_oi": 70106,
+  "put_oi": 44566,
+  "pcr_vol": 0.4027,
+  "pcr_oi": 0.6357
+ },
+ {
+  "date": "2026-01-07",
+  "call_vol": 64494,
+  "put_vol": 24213,
+  "call_oi": 70557,
+  "put_oi": 45196,
+  "pcr_vol": 0.3754,
+  "pcr_oi": 0.6406
+ },
+ {
+  "date": "2026-01-08",
+  "call_vol": 42475,
+  "put_vol": 29495,
+  "call_oi": 70012,
+  "put_oi": 45855,
+  "pcr_vol": 0.6944,
+  "pcr_oi": 0.655
+ },
+ {
+  "date": "2026-01-09",
+  "call_vol": 43647,
+  "put_vol": 24048,
+  "call_oi": 71627,
+  "put_oi": 46265,
+  "pcr_vol": 0.551,
+  "pcr_oi": 0.6459
+ },
+ {
+  "date": "2026-01-12",
+  "call_vol": 80045,
+  "put_vol": 38048,
+  "call_oi": 69837,
+  "put_oi": 47330,
+  "pcr_vol": 0.4753,
+  "pcr_oi": 0.6777
+ },
+ {
+  "date": "2026-01-13",
+  "call_vol": 83786,
+  "put_vol": 30467,
+  "call_oi": 69315,
+  "put_oi": 48369,
+  "pcr_vol": 0.3636,
+  "pcr_oi": 0.6978
+ },
+ {
+  "date": "2026-01-14",
+  "call_vol": 81509,
+  "put_vol": 30653,
+  "call_oi": 66983,
+  "put_oi": 48955,
+  "pcr_vol": 0.3761,
+  "pcr_oi": 0.7309
+ },
+ {
+  "date": "2026-01-15",
+  "call_vol": 65629,
+  "put_vol": 28017,
+  "call_oi": 65690,
+  "put_oi": 48189,
+  "pcr_vol": 0.4269,
+  "pcr_oi": 0.7336
+ },
+ {
+  "date": "2026-01-16",
+  "call_vol": 45093,
+  "put_vol": 40305,
+  "call_oi": 65300,
+  "put_oi": 47632,
+  "pcr_vol": 0.8938,
+  "pcr_oi": 0.7294
+ },
+ {
+  "date": "2026-01-19",
+  "call_vol": 91103,
+  "put_vol": 64348,
+  "call_oi": 64939,
+  "put_oi": 48151,
+  "pcr_vol": 0.7063,
+  "pcr_oi": 0.7415
+ },
+ {
+  "date": "2026-01-20",
+  "call_vol": 112003,
+  "put_vol": 41923,
+  "call_oi": 65099,
+  "put_oi": 51338,
+  "pcr_vol": 0.3743,
+  "pcr_oi": 0.7886
+ },
+ {
+  "date": "2026-01-21",
+  "call_vol": 303122,
+  "put_vol": 77475,
+  "call_oi": 68267,
+  "put_oi": 54978,
+  "pcr_vol": 0.2556,
+  "pcr_oi": 0.8053
+ },
+ {
+  "date": "2026-01-22",
+  "call_vol": 261724,
+  "put_vol": 81955,
+  "call_oi": 71468,
+  "put_oi": 55044,
+  "pcr_vol": 0.3131,
+  "pcr_oi": 0.7702
+ },
+ {
+  "date": "2026-01-23",
+  "call_vol": 224126,
+  "put_vol": 73627,
+  "call_oi": 64630,
+  "put_oi": 53437,
+  "pcr_vol": 0.3285,
+  "pcr_oi": 0.8268
+ },
+ {
+  "date": "2026-01-26",
+  "call_vol": 212380,
+  "put_vol": 73756,
+  "call_oi": 39992,
+  "put_oi": 23106,
+  "pcr_vol": 0.3473,
+  "pcr_oi": 0.5778
+ },
+ {
+  "date": "2026-01-27",
+  "call_vol": 58084,
+  "put_vol": 28170,
+  "call_oi": 44397,
+  "put_oi": 24761,
+  "pcr_vol": 0.485,
+  "pcr_oi": 0.5577
+ },
+ {
+  "date": "2026-01-28",
+  "call_vol": 86100,
+  "put_vol": 27794,
+  "call_oi": 46071,
+  "put_oi": 27207,
+  "pcr_vol": 0.3228,
+  "pcr_oi": 0.5905
+ },
+ {
+  "date": "2026-01-29",
+  "call_vol": 142970,
+  "put_vol": 37991,
+  "call_oi": 45877,
+  "put_oi": 30813,
+  "pcr_vol": 0.2657,
+  "pcr_oi": 0.6716
+ },
+ {
+  "date": "2026-01-30",
+  "call_vol": 136850,
+  "put_vol": 60773,
+  "call_oi": 52348,
+  "put_oi": 32084,
+  "pcr_vol": 0.4441,
+  "pcr_oi": 0.6129
+ },
+ {
+  "date": "2026-02-02",
+  "call_vol": 133670,
+  "put_vol": 114103,
+  "call_oi": 61562,
+  "put_oi": 31701,
+  "pcr_vol": 0.8536,
+  "pcr_oi": 0.5149
+ },
+ {
+  "date": "2026-02-03",
+  "call_vol": 105519,
+  "put_vol": 74797,
+  "call_oi": 67019,
+  "put_oi": 32287,
+  "pcr_vol": 0.7088,
+  "pcr_oi": 0.4818
+ },
+ {
+  "date": "2026-02-04",
+  "call_vol": 118154,
+  "put_vol": 45055,
+  "call_oi": 65633,
+  "put_oi": 36202,
+  "pcr_vol": 0.3813,
+  "pcr_oi": 0.5516
+ },
+ {
+  "date": "2026-02-05",
+  "call_vol": 114294,
+  "put_vol": 80817,
+  "call_oi": 67019,
+  "put_oi": 38164,
+  "pcr_vol": 0.7071,
+  "pcr_oi": 0.5695
+ },
+ {
+  "date": "2026-02-06",
+  "call_vol": 96178,
+  "put_vol": 68432,
+  "call_oi": 68759,
+  "put_oi": 37681,
+  "pcr_vol": 0.7115,
+  "pcr_oi": 0.548
+ },
+ {
+  "date": "2026-02-09",
+  "call_vol": 92390,
+  "put_vol": 50647,
+  "call_oi": 69663,
+  "put_oi": 40679,
+  "pcr_vol": 0.5482,
+  "pcr_oi": 0.5839
+ },
+ {
+  "date": "2026-02-10",
+  "call_vol": 69448,
+  "put_vol": 39293,
+  "call_oi": 68032,
+  "put_oi": 40586,
+  "pcr_vol": 0.5658,
+  "pcr_oi": 0.5966
+ },
+ {
+  "date": "2026-02-11",
+  "call_vol": 66095,
+  "put_vol": 37690,
+  "call_oi": 69253,
+  "put_oi": 41279,
+  "pcr_vol": 0.5702,
+  "pcr_oi": 0.5961
+ },
+ {
+  "date": "2026-02-12",
+  "call_vol": 76918,
+  "put_vol": 42949,
+  "call_oi": 64629,
+  "put_oi": 40183,
+  "pcr_vol": 0.5584,
+  "pcr_oi": 0.6217
+ },
+ {
+  "date": "2026-02-13",
+  "call_vol": 90284,
+  "put_vol": 73217,
+  "call_oi": 50816,
+  "put_oi": 28395,
+  "pcr_vol": 0.811,
+  "pcr_oi": 0.5588
+ },
+ {
+  "date": "2026-02-24",
+  "call_vol": 29416,
+  "put_vol": 16002,
+  "call_oi": 50027,
+  "put_oi": 28822,
+  "pcr_vol": 0.544,
+  "pcr_oi": 0.5761
+ },
+ {
+  "date": "2026-02-25",
+  "call_vol": 33792,
+  "put_vol": 19828,
+  "call_oi": 51620,
+  "put_oi": 32621,
+  "pcr_vol": 0.5868,
+  "pcr_oi": 0.6319
+ },
+ {
+  "date": "2026-02-26",
+  "call_vol": 32003,
+  "put_vol": 12826,
+  "call_oi": 52652,
+  "put_oi": 34377,
+  "pcr_vol": 0.4008,
+  "pcr_oi": 0.6529
+ },
+ {
+  "date": "2026-02-27",
+  "call_vol": 30801,
+  "put_vol": 17175,
+  "call_oi": 53937,
+  "put_oi": 35862,
+  "pcr_vol": 0.5576,
+  "pcr_oi": 0.6649
+ },
+ {
+  "date": "2026-03-02",
+  "call_vol": 96729,
+  "put_vol": 27009,
+  "call_oi": 54823,
+  "put_oi": 37807,
+  "pcr_vol": 0.2792,
+  "pcr_oi": 0.6896
+ },
+ {
+  "date": "2026-03-03",
+  "call_vol": 85660,
+  "put_vol": 39753,
+  "call_oi": 52988,
+  "put_oi": 39473,
+  "pcr_vol": 0.4641,
+  "pcr_oi": 0.7449
+ },
+ {
+  "date": "2026-03-04",
+  "call_vol": 71881,
+  "put_vol": 58929,
+  "call_oi": 55261,
+  "put_oi": 39024,
+  "pcr_vol": 0.8198,
+  "pcr_oi": 0.7062
+ },
+ {
+  "date": "2026-03-05",
+  "call_vol": 40326,
+  "put_vol": 32846,
+  "call_oi": 56176,
+  "put_oi": 39910,
+  "pcr_vol": 0.8145,
+  "pcr_oi": 0.7104
+ },
+ {
+  "date": "2026-03-06",
+  "call_vol": 35143,
+  "put_vol": 37064,
+  "call_oi": 55668,
+  "put_oi": 39860,
+  "pcr_vol": 1.0547,
+  "pcr_oi": 0.716
+ },
+ {
+  "date": "2026-03-09",
+  "call_vol": 79433,
+  "put_vol": 45591,
+  "call_oi": 57576,
+  "put_oi": 40256,
+  "pcr_vol": 0.574,
+  "pcr_oi": 0.6992
+ },
+ {
+  "date": "2026-03-10",
+  "call_vol": 45938,
+  "put_vol": 23799,
+  "call_oi": 58632,
+  "put_oi": 41051,
+  "pcr_vol": 0.5181,
+  "pcr_oi": 0.7001
+ },
+ {
+  "date": "2026-03-11",
+  "call_vol": 52373,
+  "put_vol": 20168,
+  "call_oi": 59976,
+  "put_oi": 42140,
+  "pcr_vol": 0.3851,
+  "pcr_oi": 0.7026
+ },
+ {
+  "date": "2026-03-12",
+  "call_vol": 42191,
+  "put_vol": 23185,
+  "call_oi": 59137,
+  "put_oi": 42974,
+  "pcr_vol": 0.5495,
+  "pcr_oi": 0.7267
+ },
+ {
+  "date": "2026-03-13",
+  "call_vol": 40529,
+  "put_vol": 29344,
+  "call_oi": 58945,
+  "put_oi": 43590,
+  "pcr_vol": 0.724,
+  "pcr_oi": 0.7395
+ },
+ {
+  "date": "2026-03-16",
+  "call_vol": 56132,
+  "put_vol": 63719,
+  "call_oi": 59647,
+  "put_oi": 43492,
+  "pcr_vol": 1.1352,
+  "pcr_oi": 0.7292
+ },
+ {
+  "date": "2026-03-17",
+  "call_vol": 46472,
+  "put_vol": 41738,
+  "call_oi": 59515,
+  "put_oi": 43682,
+  "pcr_vol": 0.8981,
+  "pcr_oi": 0.734
+ },
+ {
+  "date": "2026-03-18",
+  "call_vol": 43526,
+  "put_vol": 38048,
+  "call_oi": 60866,
+  "put_oi": 45566,
+  "pcr_vol": 0.8741,
+  "pcr_oi": 0.7486
+ },
+ {
+  "date": "2026-03-19",
+  "call_vol": 96785,
+  "put_vol": 101359,
+  "call_oi": 65625,
+  "put_oi": 43278,
+  "pcr_vol": 1.0473,
+  "pcr_oi": 0.6595
+ },
+ {
+  "date": "2026-03-20",
+  "call_vol": 129098,
+  "put_vol": 130782,
+  "call_oi": 70709,
+  "put_oi": 43575,
+  "pcr_vol": 1.013,
+  "pcr_oi": 0.6163
+ },
+ {
+  "date": "2026-03-23",
+  "call_vol": 172093,
+  "put_vol": 201838,
+  "call_oi": 79395,
+  "put_oi": 42643,
+  "pcr_vol": 1.1728,
+  "pcr_oi": 0.5371
+ },
+ {
+  "date": "2026-03-24",
+  "call_vol": 174083,
+  "put_vol": 188788,
+  "call_oi": 76131,
+  "put_oi": 43001,
+  "pcr_vol": 1.0845,
+  "pcr_oi": 0.5648
+ },
+ {
+  "date": "2026-03-25",
+  "call_vol": 175282,
+  "put_vol": 134683,
+  "call_oi": 38187,
+  "put_oi": 18591,
+  "pcr_vol": 0.7684,
+  "pcr_oi": 0.4868
+ },
+ {
+  "date": "2026-03-26",
+  "call_vol": 27733,
+  "put_vol": 20469,
+  "call_oi": 40939,
+  "put_oi": 21260,
+  "pcr_vol": 0.7381,
+  "pcr_oi": 0.5193
+ },
+ {
+  "date": "2026-03-27",
+  "call_vol": 31876,
+  "put_vol": 22837,
+  "call_oi": 42604,
+  "put_oi": 22225,
+  "pcr_vol": 0.7164,
+  "pcr_oi": 0.5217
+ },
+ {
+  "date": "2026-03-30",
+  "call_vol": 60130,
+  "put_vol": 27839,
+  "call_oi": 46247,
+  "put_oi": 23630,
+  "pcr_vol": 0.463,
+  "pcr_oi": 0.511
+ },
+ {
+  "date": "2026-03-31",
+  "call_vol": 54927,
+  "put_vol": 22912,
+  "call_oi": 47369,
+  "put_oi": 25159,
+  "pcr_vol": 0.4171,
+  "pcr_oi": 0.5311
+ },
+ {
+  "date": "2026-04-01",
+  "call_vol": 52723,
+  "put_vol": 20635,
+  "call_oi": 49115,
+  "put_oi": 27151,
+  "pcr_vol": 0.3914,
+  "pcr_oi": 0.5528
+ },
+ {
+  "date": "2026-04-02",
+  "call_vol": 79361,
+  "put_vol": 41842,
+  "call_oi": 49026,
+  "put_oi": 28293,
+  "pcr_vol": 0.5272,
+  "pcr_oi": 0.5771
+ },
+ {
+  "date": "2026-04-03",
+  "call_vol": 57014,
+  "put_vol": 29289,
+  "call_oi": 50016,
+  "put_oi": 29888,
+  "pcr_vol": 0.5137,
+  "pcr_oi": 0.5976
+ },
+ {
+  "date": "2026-04-07",
+  "call_vol": 18246,
+  "put_vol": 10670,
+  "call_oi": 50994,
+  "put_oi": 30624,
+  "pcr_vol": 0.5848,
+  "pcr_oi": 0.6005
+ },
+ {
+  "date": "2026-04-08",
+  "call_vol": 49398,
+  "put_vol": 31460,
+  "call_oi": 51997,
+  "put_oi": 31373,
+  "pcr_vol": 0.6369,
+  "pcr_oi": 0.6034
+ },
+ {
+  "date": "2026-04-09",
+  "call_vol": 45510,
+  "put_vol": 18701,
+  "call_oi": 52029,
+  "put_oi": 32443,
+  "pcr_vol": 0.4109,
+  "pcr_oi": 0.6236
+ },
+ {
+  "date": "2026-04-10",
+  "call_vol": 35948,
+  "put_vol": 17358,
+  "call_oi": 53378,
+  "put_oi": 34122,
+  "pcr_vol": 0.4829,
+  "pcr_oi": 0.6393
+ },
+ {
+  "date": "2026-04-13",
+  "call_vol": 39599,
+  "put_vol": 22532,
+  "call_oi": 54600,
+  "put_oi": 35580,
+  "pcr_vol": 0.569,
+  "pcr_oi": 0.6516
+ },
+ {
+  "date": "2026-04-14",
+  "call_vol": 39733,
+  "put_vol": 20044,
+  "call_oi": 56117,
+  "put_oi": 36278,
+  "pcr_vol": 0.5045,
+  "pcr_oi": 0.6465
+ },
+ {
+  "date": "2026-04-15",
+  "call_vol": 72600,
+  "put_vol": 25513,
+  "call_oi": 56874,
+  "put_oi": 37725,
+  "pcr_vol": 0.3514,
+  "pcr_oi": 0.6633
+ },
+ {
+  "date": "2026-04-16",
+  "call_vol": 42852,
+  "put_vol": 17014,
+  "call_oi": 58635,
+  "put_oi": 39190,
+  "pcr_vol": 0.397,
+  "pcr_oi": 0.6684
+ },
+ {
+  "date": "2026-04-17",
+  "call_vol": 48057,
+  "put_vol": 27696,
+  "call_oi": 60143,
+  "put_oi": 40212,
+  "pcr_vol": 0.5763,
+  "pcr_oi": 0.6686
+ },
+ {
+  "date": "2026-04-20",
+  "call_vol": 77452,
+  "put_vol": 38246,
+  "call_oi": 62058,
+  "put_oi": 41623,
+  "pcr_vol": 0.4938,
+  "pcr_oi": 0.6707
+ },
+ {
+  "date": "2026-04-21",
+  "call_vol": 51921,
+  "put_vol": 35479,
+  "call_oi": 63776,
+  "put_oi": 43320,
+  "pcr_vol": 0.6833,
+  "pcr_oi": 0.6793
+ },
+ {
+  "date": "2026-04-22",
+  "call_vol": 68702,
+  "put_vol": 68316,
+  "call_oi": 65588,
+  "put_oi": 43753,
+  "pcr_vol": 0.9944,
+  "pcr_oi": 0.6671
+ },
+ {
+  "date": "2026-04-23",
+  "call_vol": 73208,
+  "put_vol": 82951,
+  "call_oi": 67901,
+  "put_oi": 44724,
+  "pcr_vol": 1.1331,
+  "pcr_oi": 0.6587
+ },
+ {
+  "date": "2026-04-24",
+  "call_vol": 85519,
+  "put_vol": 88131,
+  "call_oi": 52916,
+  "put_oi": 30681,
+  "pcr_vol": 1.0305,
+  "pcr_oi": 0.5798
+ },
+ {
+  "date": "2026-04-27",
+  "call_vol": 32306,
+  "put_vol": 20706,
+  "call_oi": 53714,
+  "put_oi": 30613,
+  "pcr_vol": 0.6409,
+  "pcr_oi": 0.5699
+ },
+ {
+  "date": "2026-04-28",
+  "call_vol": 36407,
+  "put_vol": 31425,
+  "call_oi": 54569,
+  "put_oi": 31995,
+  "pcr_vol": 0.8632,
+  "pcr_oi": 0.5863
+ },
+ {
+  "date": "2026-04-29",
+  "call_vol": 35365,
+  "put_vol": 40257,
+  "call_oi": 57210,
+  "put_oi": 34187,
+  "pcr_vol": 1.1383,
+  "pcr_oi": 0.5976
+ },
+ {
+  "date": "2026-04-30",
+  "call_vol": 46778,
+  "put_vol": 48507,
+  "call_oi": 59371,
+  "put_oi": 36357,
+  "pcr_vol": 1.037,
+  "pcr_oi": 0.6124
+ },
+ {
+  "date": "2026-05-06",
+  "call_vol": 32366,
+  "put_vol": 22818,
+  "call_oi": 60019,
+  "put_oi": 38082,
+  "pcr_vol": 0.705,
+  "pcr_oi": 0.6345
+ },
+ {
+  "date": "2026-05-07",
+  "call_vol": 61015,
+  "put_vol": 25535,
+  "call_oi": 61272,
+  "put_oi": 39449,
+  "pcr_vol": 0.4185,
+  "pcr_oi": 0.6438
+ },
+ {
+  "date": "2026-05-08",
+  "call_vol": 74341,
+  "put_vol": 35298,
+  "call_oi": 61602,
+  "put_oi": 41721,
+  "pcr_vol": 0.4748,
+  "pcr_oi": 0.6773
+ },
+ {
+  "date": "2026-05-11",
+  "call_vol": 68258,
+  "put_vol": 54997,
+  "call_oi": 64404,
+  "put_oi": 43288,
+  "pcr_vol": 0.8057,
+  "pcr_oi": 0.6721
+ },
+ {
+  "date": "2026-05-12",
+  "call_vol": 78966,
+  "put_vol": 48607,
+  "call_oi": 64147,
+  "put_oi": 43935,
+  "pcr_vol": 0.6155,
+  "pcr_oi": 0.6849
+ },
+ {
+  "date": "2026-05-13",
+  "call_vol": 58076,
+  "put_vol": 56597,
+  "call_oi": 65337,
+  "put_oi": 45196,
+  "pcr_vol": 0.9745,
+  "pcr_oi": 0.6917
+ },
+ {
+  "date": "2026-05-14",
+  "call_vol": 66609,
+  "put_vol": 52957,
+  "call_oi": 68408,
+  "put_oi": 46369,
+  "pcr_vol": 0.795,
+  "pcr_oi": 0.6778
+ },
+ {
+  "date": "2026-05-15",
+  "call_vol": 99922,
+  "put_vol": 89258,
+  "call_oi": 67096,
+  "put_oi": 46456,
+  "pcr_vol": 0.8933,
+  "pcr_oi": 0.6924
+ },
+ {
+  "date": "2026-05-18",
+  "call_vol": 80551,
+  "put_vol": 100112,
+  "call_oi": 67994,
+  "put_oi": 48313,
+  "pcr_vol": 1.2428,
+  "pcr_oi": 0.7105
+ },
+ {
+  "date": "2026-05-19",
+  "call_vol": 71663,
+  "put_vol": 75851,
+  "call_oi": 65769,
+  "put_oi": 50189,
+  "pcr_vol": 1.0584,
+  "pcr_oi": 0.7631
+ },
+ {
+  "date": "2026-05-20",
+  "call_vol": 83071,
+  "put_vol": 113091,
+  "call_oi": 66897,
+  "put_oi": 51821,
+  "pcr_vol": 1.3614,
+  "pcr_oi": 0.7746
+ },
+ {
+  "date": "2026-05-21",
+  "call_vol": 102450,
+  "put_vol": 104419,
+  "call_oi": 66509,
+  "put_oi": 51370,
+  "pcr_vol": 1.0192,
+  "pcr_oi": 0.7724
+ },
+ {
+  "date": "2026-05-22",
+  "call_vol": 91268,
+  "put_vol": 115577,
+  "call_oi": 67449,
+  "put_oi": 51660,
+  "pcr_vol": 1.2663,
+  "pcr_oi": 0.7659
+ },
+ {
+  "date": "2026-05-25",
+  "call_vol": 122308,
+  "put_vol": 110357,
+  "call_oi": 30217,
+  "put_oi": 18356,
+  "pcr_vol": 0.9023,
+  "pcr_oi": 0.6075
+ },
+ {
+  "date": "2026-05-26",
+  "call_vol": 12485,
+  "put_vol": 9968,
+  "call_oi": 32198,
+  "put_oi": 20869,
+  "pcr_vol": 0.7984,
+  "pcr_oi": 0.6481
+ },
+ {
+  "date": "2026-05-27",
+  "call_vol": 13462,
+  "put_vol": 13505,
+  "call_oi": 33463,
+  "put_oi": 22279,
+  "pcr_vol": 1.0032,
+  "pcr_oi": 0.6658
+ },
+ {
+  "date": "2026-05-28",
+  "call_vol": 33981,
+  "put_vol": 38668,
+  "call_oi": 36780,
+  "put_oi": 24915,
+  "pcr_vol": 1.1379,
+  "pcr_oi": 0.6774
+ },
+ {
+  "date": "2026-05-29",
+  "call_vol": 34000,
+  "put_vol": 29571,
+  "call_oi": 37521,
+  "put_oi": 26266,
+  "pcr_vol": 0.8697,
+  "pcr_oi": 0.7
+ },
+ {
+  "date": "2026-06-01",
+  "call_vol": 48205,
+  "put_vol": 27352,
+  "call_oi": 38773,
+  "put_oi": 27060,
+  "pcr_vol": 0.5674,
+  "pcr_oi": 0.6979
+ },
+ {
+  "date": "2026-06-02",
+  "call_vol": 34037,
+  "put_vol": 32897,
+  "call_oi": 39777,
+  "put_oi": 26739,
+  "pcr_vol": 0.9665,
+  "pcr_oi": 0.6722
+ },
+ {
+  "date": "2026-06-03",
+  "call_vol": 22050,
+  "put_vol": 20659,
+  "call_oi": 41312,
+  "put_oi": 27537,
+  "pcr_vol": 0.9369,
+  "pcr_oi": 0.6666
+ },
+ {
+  "date": "2026-06-04",
+  "call_vol": 26327,
+  "put_vol": 27103,
+  "call_oi": 42541,
+  "put_oi": 28191,
+  "pcr_vol": 1.0295,
+  "pcr_oi": 0.6627
+ },
+ {
+  "date": "2026-06-05",
+  "call_vol": 38285,
+  "put_vol": 33933,
+  "call_oi": 43757,
+  "put_oi": 29906,
+  "pcr_vol": 0.8863,
+  "pcr_oi": 0.6835
+ },
+ {
+  "date": "2026-06-08",
+  "call_vol": 63998,
+  "put_vol": 63725,
+  "call_oi": 48412,
+  "put_oi": 31083,
+  "pcr_vol": 0.9957,
+  "pcr_oi": 0.6421
+ },
+ {
+  "date": "2026-06-09",
+  "call_vol": 28687,
+  "put_vol": 26040,
+  "call_oi": 49123,
+  "put_oi": 31487,
+  "pcr_vol": 0.9077,
+  "pcr_oi": 0.641
+ },
+ {
+  "date": "2026-06-10",
+  "call_vol": 65339,
+  "put_vol": 71286,
+  "call_oi": 53242,
+  "put_oi": 32809,
+  "pcr_vol": 1.091,
+  "pcr_oi": 0.6162
+ },
+ {
+  "date": "2026-06-11",
+  "call_vol": 80904,
+  "put_vol": 92492,
+  "call_oi": 59915,
+  "put_oi": 33513,
+  "pcr_vol": 1.1432,
+  "pcr_oi": 0.5593
+ },
+ {
+  "date": "2026-06-12",
+  "call_vol": 62279,
+  "put_vol": 59886,
+  "call_oi": 59816,
+  "put_oi": 34643,
+  "pcr_vol": 0.9616,
+  "pcr_oi": 0.5792
+ },
+ {
+  "date": "2026-06-15",
+  "call_vol": 73664,
+  "put_vol": 51650,
+  "call_oi": 58652,
+  "put_oi": 36496,
+  "pcr_vol": 0.7012,
+  "pcr_oi": 0.6222
+ },
+ {
+  "date": "2026-06-16",
+  "call_vol": 59385,
+  "put_vol": 38269,
+  "call_oi": 58008,
+  "put_oi": 38366,
+  "pcr_vol": 0.6444,
+  "pcr_oi": 0.6614
+ },
+ {
+  "date": "2026-06-17",
+  "call_vol": 45999,
+  "put_vol": 43153,
+  "call_oi": 59071,
+  "put_oi": 39920,
+  "pcr_vol": 0.9381,
+  "pcr_oi": 0.6758
+ },
+ {
+  "date": "2026-06-18",
+  "call_vol": 91101,
+  "put_vol": 69542,
+  "call_oi": 59726,
+  "put_oi": 40584,
+  "pcr_vol": 0.7634,
+  "pcr_oi": 0.6795
+ },
+ {
+  "date": "2026-06-22",
+  "call_vol": 39436,
+  "put_vol": 44577,
+  "call_oi": 60645,
+  "put_oi": 39285,
+  "pcr_vol": 1.1304,
+  "pcr_oi": 0.6478
+ },
+ {
+  "date": "2026-06-23",
+  "call_vol": 78299,
+  "put_vol": 89314,
+  "call_oi": 61867,
+  "put_oi": 38978,
+  "pcr_vol": 1.1407,
+  "pcr_oi": 0.63
+ },
+ {
+  "date": "2026-06-24",
+  "call_vol": 113503,
+  "put_vol": 132189,
+  "call_oi": 49023,
+  "put_oi": 27429,
+  "pcr_vol": 1.1646,
+  "pcr_oi": 0.5595
+ },
+ {
+  "date": "2026-06-25",
+  "call_vol": 57732,
+  "put_vol": 71147,
+  "call_oi": 53022,
+  "put_oi": 30642,
+  "pcr_vol": 1.2324,
+  "pcr_oi": 0.5779
+ },
+ {
+  "date": "2026-06-26",
+  "call_vol": 62227,
+  "put_vol": 57367,
+  "call_oi": 56253,
+  "put_oi": 32781,
+  "pcr_vol": 0.9219,
+  "pcr_oi": 0.5827
+ },
+ {
+  "date": "2026-06-29",
+  "call_vol": 61791,
+  "put_vol": 42468,
+  "call_oi": 57563,
+  "put_oi": 33835,
+  "pcr_vol": 0.6873,
+  "pcr_oi": 0.5878
+ },
+ {
+  "date": "2026-06-30",
+  "call_vol": 65841,
+  "put_vol": 64038,
+  "call_oi": 61177,
+  "put_oi": 35461,
+  "pcr_vol": 0.9726,
+  "pcr_oi": 0.5796
+ },
+ {
+  "date": "2026-07-01",
+  "call_vol": 52324,
+  "put_vol": 50522,
+  "call_oi": 62600,
+  "put_oi": 36780,
+  "pcr_vol": 0.9656,
+  "pcr_oi": 0.5875
+ },
+ {
+  "date": "2026-07-02",
+  "call_vol": 98794,
+  "put_vol": 61271,
+  "call_oi": 63486,
+  "put_oi": 38939,
+  "pcr_vol": 0.6202,
+  "pcr_oi": 0.6133
+ },
+ {
+  "date": "2026-07-03",
+  "call_vol": 112952,
+  "put_vol": 65354,
+  "call_oi": 64179,
+  "put_oi": 41301,
+  "pcr_vol": 0.5786,
+  "pcr_oi": 0.6435
+ },
+ {
+  "date": "2026-07-06",
+  "call_vol": 60124,
+  "put_vol": 42175,
+  "call_oi": 64225,
+  "put_oi": 41172,
+  "pcr_vol": 0.7015,
+  "pcr_oi": 0.6411
+ },
+ {
+  "date": "2026-07-07",
+  "call_vol": 45190,
+  "put_vol": 39108,
+  "call_oi": 64673,
+  "put_oi": 41855,
+  "pcr_vol": 0.8654,
+  "pcr_oi": 0.6472
+ },
+ {
+  "date": "2026-07-08",
+  "call_vol": 58281,
+  "put_vol": 53027,
+  "call_oi": 64977,
+  "put_oi": 42488,
+  "pcr_vol": 0.9099,
+  "pcr_oi": 0.6539
+ },
+ {
+  "date": "2026-07-09",
+  "call_vol": 83696,
+  "put_vol": 94252,
+  "call_oi": 66887,
+  "put_oi": 42543,
+  "pcr_vol": 1.1261,
+  "pcr_oi": 0.636
+ },
+ {
+  "date": "2026-07-10",
+  "call_vol": 64162,
+  "put_vol": 56356,
+  "call_oi": 67766,
+  "put_oi": 44361,
+  "pcr_vol": 0.8783,
+  "pcr_oi": 0.6546
+ },
+ {
+  "date": "2026-07-13",
+  "call_vol": 64164,
+  "put_vol": 75234,
+  "call_oi": 70577,
+  "put_oi": 43711,
+  "pcr_vol": 1.1725,
+  "pcr_oi": 0.6193
+ },
+ {
+  "date": "2026-07-14",
+  "call_vol": 64895,
+  "put_vol": 85970,
+  "call_oi": 74073,
+  "put_oi": 43869,
+  "pcr_vol": 1.3248,
+  "pcr_oi": 0.5922
+ },
+ {
+  "date": "2026-07-15",
+  "call_vol": 75660,
+  "put_vol": 68529,
+  "call_oi": 74663,
+  "put_oi": 43940,
+  "pcr_vol": 0.9057,
+  "pcr_oi": 0.5885
+ },
+ {
+  "date": "2026-07-16",
+  "call_vol": 68360,
+  "put_vol": 73246,
+  "call_oi": 76688,
+  "put_oi": 44903,
+  "pcr_vol": 1.0715,
+  "pcr_oi": 0.5855
+ },
+ {
+  "date": "2026-07-17",
+  "call_vol": 87256,
+  "put_vol": 105908,
+  "call_oi": 77493,
+  "put_oi": 44321,
+  "pcr_vol": 1.2138,
+  "pcr_oi": 0.5719
+ },
+ {
+  "date": "2026-07-20",
+  "call_vol": 90799,
+  "put_vol": 80289,
+  "call_oi": 77261,
+  "put_oi": 44627,
+  "pcr_vol": 0.8842,
+  "pcr_oi": 0.5776
+ },
+ {
+  "date": "2026-07-21",
+  "call_vol": 104235,
+  "put_vol": 76396,
+  "call_oi": 74382,
+  "put_oi": 45163,
+  "pcr_vol": 0.7329,
+  "pcr_oi": 0.6072
+ },
+ {
+  "date": "2026-07-22",
+  "call_vol": 182177,
+  "put_vol": 87466,
+  "call_oi": 74746,
+  "put_oi": 47658,
+  "pcr_vol": 0.4801,
+  "pcr_oi": 0.6376
+ },
+ {
+  "date": "2026-07-23",
+  "call_vol": 204781,
+  "put_vol": 89389,
+  "call_oi": 78680,
+  "put_oi": 47242,
+  "pcr_vol": 0.4365,
+  "pcr_oi": 0.6004
+ },
+ {
+  "date": "2026-07-24",
+  "call_vol": 126807,
+  "put_vol": 130858,
+  "call_oi": 78232,
+  "put_oi": 46781,
+  "pcr_vol": 1.0319,
+  "pcr_oi": 0.598
+ },
+ {
+  "date": "2026-07-27",
+  "call_vol": 144343,
+  "put_vol": 93210,
+  "call_oi": 33610,
+  "put_oi": 16516,
+  "pcr_vol": 0.6458,
+  "pcr_oi": 0.4914
+ },
+ {
+  "date": "2026-07-28",
+  "call_vol": 23515,
+  "put_vol": 13993,
+  "call_oi": 36961,
+  "put_oi": 19050,
+  "pcr_vol": 0.5951,
+  "pcr_oi": 0.5154
+ },
+ {
+  "date": "2026-07-29",
+  "call_vol": 28424,
+  "put_vol": 23027,
+  "call_oi": 40616,
+  "put_oi": 20900,
+  "pcr_vol": 0.8101,
+  "pcr_oi": 0.5146
+ },
+ {
+  "date": "2026-07-30",
+  "call_vol": 51018,
+  "put_vol": 44950,
+  "call_oi": 43735,
+  "put_oi": 22723,
+  "pcr_vol": 0.8811,
+  "pcr_oi": 0.5196
+ },
+ {
+  "date": "2026-07-31",
+  "call_vol": 56085,
+  "put_vol": 32364,
+  "call_oi": 45092,
+  "put_oi": 24750,
+  "pcr_vol": 0.5771,
+  "pcr_oi": 0.5489
+ },
+ {
+  "date": "2026-08-03",
+  "call_vol": 43281,
+  "put_vol": 28219,
+  "call_oi": 47574,
+  "put_oi": 25430,
+  "pcr_vol": 0.652,
+  "pcr_oi": 0.5345
+ },
+ {
+  "date": "2026-08-04",
+  "call_vol": 34310,
+  "put_vol": 24529,
+  "call_oi": 49212,
+  "put_oi": 26287,
+  "pcr_vol": 0.7149,
+  "pcr_oi": 0.5342
+ },
+ {
+  "date": "2026-08-05",
+  "call_vol": 110161,
+  "put_vol": 48039,
+  "call_oi": 54495,
+  "put_oi": 29100,
+  "pcr_vol": 0.4361,
+  "pcr_oi": 0.534
+ },
+ {
+  "date": "2026-08-06",
+  "call_vol": 178111,
+  "put_vol": 71175,
+  "call_oi": 55654,
+  "put_oi": 31645,
+  "pcr_vol": 0.3996,
+  "pcr_oi": 0.5686
+ },
+ {
+  "date": "2026-08-07",
+  "call_vol": 146104,
+  "put_vol": 57254,
+  "call_oi": 61306,
+  "put_oi": 33849,
+  "pcr_vol": 0.3919,
+  "pcr_oi": 0.5521
+ },
+ {
+  "date": "2026-08-10",
+  "call_vol": 157705,
+  "put_vol": 58373,
+  "call_oi": 63113,
+  "put_oi": 36410,
+  "pcr_vol": 0.3701,
+  "pcr_oi": 0.5769
+ },
+ {
+  "date": "2026-08-11",
+  "call_vol": 162369,
+  "put_vol": 61871,
+  "call_oi": 63855,
+  "put_oi": 38134,
+  "pcr_vol": 0.3811,
+  "pcr_oi": 0.5972
+ },
+ {
+  "date": "2026-08-12",
+  "call_vol": 111991,
+  "put_vol": 48415,
+  "call_oi": 67463,
+  "put_oi": 40074,
+  "pcr_vol": 0.4323,
+  "pcr_oi": 0.594
+ },
+ {
+  "date": "2026-08-13",
+  "call_vol": 142196,
+  "put_vol": 75757,
+  "call_oi": 66582,
+  "put_oi": 41592,
+  "pcr_vol": 0.5328,
+  "pcr_oi": 0.6247
+ },
+ {
+  "date": "2026-08-14",
+  "call_vol": 118456,
+  "put_vol": 86868,
+  "call_oi": 66700,
+  "put_oi": 40761,
+  "pcr_vol": 0.7333,
+  "pcr_oi": 0.6111
+ },
+ {
+  "date": "2026-08-17",
+  "call_vol": 113578,
+  "put_vol": 66441,
+  "call_oi": 67460,
+  "put_oi": 42915,
+  "pcr_vol": 0.585,
+  "pcr_oi": 0.6362
+ },
+ {
+  "date": "2026-08-18",
+  "call_vol": 132100,
+  "put_vol": 75092,
+  "call_oi": 68943,
+  "put_oi": 45771,
+  "pcr_vol": 0.5684,
+  "pcr_oi": 0.6639
+ },
+ {
+  "date": "2026-08-19",
+  "call_vol": 143235,
+  "put_vol": 107006,
+  "call_oi": 75392,
+  "put_oi": 48851,
+  "pcr_vol": 0.7471,
+  "pcr_oi": 0.648
+ },
+ {
+  "date": "2026-08-20",
+  "call_vol": 241251,
+  "put_vol": 130728,
+  "call_oi": 74720,
+  "put_oi": 53209,
+  "pcr_vol": 0.5419,
+  "pcr_oi": 0.7121
+ },
+ {
+  "date": "2026-08-21",
+  "call_vol": 218284,
+  "put_vol": 115500,
+  "call_oi": 75612,
+  "put_oi": 54849,
+  "pcr_vol": 0.5291,
+  "pcr_oi": 0.7254
+ },
+ {
+  "date": "2026-08-24",
+  "call_vol": 294995,
+  "put_vol": 141677,
+  "call_oi": 77169,
+  "put_oi": 57970,
+  "pcr_vol": 0.4803,
+  "pcr_oi": 0.7512
+ },
+ {
+  "date": "2026-08-25",
+  "call_vol": 268458,
+  "put_vol": 175131,
+  "call_oi": 57799,
+  "put_oi": 35036,
+  "pcr_vol": 0.6524,
+  "pcr_oi": 0.6062
+ },
+ {
+  "date": "2026-08-26",
+  "call_vol": 104598,
+  "put_vol": 62737,
+  "call_oi": 60388,
+  "put_oi": 39813,
+  "pcr_vol": 0.5998,
+  "pcr_oi": 0.6593
+ },
+ {
+  "date": "2026-08-27",
+  "call_vol": 100624,
+  "put_vol": 52724,
+  "call_oi": 62268,
+  "put_oi": 40697,
+  "pcr_vol": 0.524,
+  "pcr_oi": 0.6536
+ },
+ {
+  "date": "2026-08-28",
+  "call_vol": 97113,
+  "put_vol": 58854,
+  "call_oi": 67052,
+  "put_oi": 42244,
+  "pcr_vol": 0.606,
+  "pcr_oi": 0.63
+ },
+ {
+  "date": "2026-08-31",
+  "call_vol": 228624,
+  "put_vol": 141455,
+  "call_oi": 75069,
+  "put_oi": 42677,
+  "pcr_vol": 0.6187,
+  "pcr_oi": 0.5685
+ },
+ {
+  "date": "2026-09-01",
+  "call_vol": 88313,
+  "put_vol": 50856,
+  "call_oi": 78345,
+  "put_oi": 43763,
+  "pcr_vol": 0.5759,
+  "pcr_oi": 0.5586
+ },
+ {
+  "date": "2026-09-02",
+  "call_vol": 156379,
+  "put_vol": 115011,
+  "call_oi": 84566,
+  "put_oi": 45186,
+  "pcr_vol": 0.7355,
+  "pcr_oi": 0.5343
+ },
+ {
+  "date": "2026-09-03",
+  "call_vol": 189783,
+  "put_vol": 72729,
+  "call_oi": 86348,
+  "put_oi": 47172,
+  "pcr_vol": 0.3832,
+  "pcr_oi": 0.5463
+ },
+ {
+  "date": "2026-09-04",
+  "call_vol": 159533,
+  "put_vol": 65010,
+  "call_oi": 88231,
+  "put_oi": 48850,
+  "pcr_vol": 0.4075,
+  "pcr_oi": 0.5537
+ },
+ {
+  "date": "2026-09-07",
+  "call_vol": 154824,
+  "put_vol": 100851,
+  "call_oi": 89971,
+  "put_oi": 49276,
+  "pcr_vol": 0.6514,
+  "pcr_oi": 0.5477
+ },
+ {
+  "date": "2026-09-08",
+  "call_vol": 99693,
+  "put_vol": 53816,
+  "call_oi": 89405,
+  "put_oi": 49747,
+  "pcr_vol": 0.5398,
+  "pcr_oi": 0.5564
+ },
+ {
+  "date": "2026-09-09",
+  "call_vol": 93353,
+  "put_vol": 63400,
+  "call_oi": 92735,
+  "put_oi": 49453,
+  "pcr_vol": 0.6791,
+  "pcr_oi": 0.5333
+ },
+ {
+  "date": "2026-09-10",
+  "call_vol": 147717,
+  "put_vol": 85561,
+  "call_oi": 92151,
+  "put_oi": 51791,
+  "pcr_vol": 0.5792,
+  "pcr_oi": 0.562
+ },
+ {
+  "date": "2026-09-11",
+  "call_vol": 131832,
+  "put_vol": 109164,
+  "call_oi": 95278,
+  "put_oi": 51312,
+  "pcr_vol": 0.8281,
+  "pcr_oi": 0.5386
+ },
+ {
+  "date": "2026-09-14",
+  "call_vol": 158674,
+  "put_vol": 111936,
+  "call_oi": 99166,
+  "put_oi": 53077,
+  "pcr_vol": 0.7054,
+  "pcr_oi": 0.5352
+ },
+ {
+  "date": "2026-09-15",
+  "call_vol": 120451,
+  "put_vol": 109021,
+  "call_oi": 101891,
+  "put_oi": 54524,
+  "pcr_vol": 0.9051,
+  "pcr_oi": 0.5351
+ },
+ {
+  "date": "2026-09-16",
+  "call_vol": 165800,
+  "put_vol": 95533,
+  "call_oi": 106961,
+  "put_oi": 56696,
+  "pcr_vol": 0.5762,
+  "pcr_oi": 0.5301
+ },
+ {
+  "date": "2026-09-17",
+  "call_vol": 272029,
+  "put_vol": 146362,
+  "call_oi": 113671,
+  "put_oi": 59823,
+  "pcr_vol": 0.538,
+  "pcr_oi": 0.5263
+ },
+ {
+  "date": "2026-09-18",
+  "call_vol": 228277,
+  "put_vol": 125150,
+  "call_oi": 107370,
+  "put_oi": 58705,
+  "pcr_vol": 0.5482,
+  "pcr_oi": 0.5468
+ },
+ {
+  "date": "2026-09-21",
+  "call_vol": 172901,
+  "put_vol": 109691,
+  "call_oi": 108077,
+  "put_oi": 57719,
+  "pcr_vol": 0.6344,
+  "pcr_oi": 0.5341
+ },
+ {
+  "date": "2026-09-22",
+  "call_vol": 180420,
+  "put_vol": 139053,
+  "call_oi": 102234,
+  "put_oi": 56329,
+  "pcr_vol": 0.7707,
+  "pcr_oi": 0.551
+ },
+ {
+  "date": "2026-09-23",
+  "call_vol": 153430,
+  "put_vol": 119226,
+  "call_oi": 42503,
+  "put_oi": 17526,
+  "pcr_vol": 0.7771,
+  "pcr_oi": 0.4123
+ },
+ {
+  "date": "2026-09-24",
+  "call_vol": 44745,
+  "put_vol": 22601,
+  "call_oi": 48105,
+  "put_oi": 22580,
+  "pcr_vol": 0.5051,
+  "pcr_oi": 0.4694
+ },
+ {
+  "date": "2026-09-28",
+  "call_vol": 31223,
+  "put_vol": 23310,
+  "call_oi": 50419,
+  "put_oi": 23812,
+  "pcr_vol": 0.7466,
+  "pcr_oi": 0.4723
+ },
+ {
+  "date": "2026-09-29",
+  "call_vol": 48294,
+  "put_vol": 38560,
+  "call_oi": 55071,
+  "put_oi": 25551,
+  "pcr_vol": 0.7984,
+  "pcr_oi": 0.464
+ },
+ {
+  "date": "2026-09-30",
+  "call_vol": 43337,
+  "put_vol": 22977,
+  "call_oi": 57781,
+  "put_oi": 26519,
+  "pcr_vol": 0.5302,
+  "pcr_oi": 0.459
+ }
+]
