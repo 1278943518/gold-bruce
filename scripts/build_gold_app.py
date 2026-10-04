@@ -83,6 +83,18 @@ def main():
         for basis in ("net", "long", "short"):
             data["w_%s_%s" % (cat, basis)] = [c[cat + "_" + basis] for c in cot]
 
+    # 净头寸的统计特征：用来在页面上回答「绿线（商业）为什么长期为负」
+    # —— 净头寸＝多−空，商业是产业套保盘，天然净空，是数据真相而非取数错误。
+    def netstat(cat):
+        v = [c[cat + "_net"] for c in cot]
+        longs = [x[cat + "_long"] for x in cot]
+        shorts = [x[cat + "_short"] for x in cot]
+        return {"n": len(v),
+                "neg_pct": round(100.0 * sum(1 for x in v if x < 0) / len(v), 1),
+                "mean": round(sum(v) / len(v)), "min": round(min(v)), "max": round(max(v)),
+                "long": round(longs[-1]), "short": round(shorts[-1]), "net": round(v[-1])}
+    data["net_stats"] = {c: netstat(c) for c in ("prod", "mm", "other", "swap")}
+
     payload = json.dumps(data, ensure_ascii=False, separators=(",", ":"))
 
     def asset_b64(name):
@@ -136,6 +148,7 @@ svg{width:100%;height:auto;display:block}
 .detail h2{font-size:15px;margin:14px 0 6px;padding-top:10px;border-top:1px dashed var(--line)}
 .detail h2:first-child{margin-top:0;border-top:0;padding-top:0}
 .detail p{margin:6px 0}
+.warnnote{background:rgba(198,40,40,.06);border-left:3px solid #c62828;border-radius:0 8px 8px 0;padding:8px 10px;line-height:1.6}
 .detail li{margin:4px 0}
 .detail table{width:100%;border-collapse:collapse;font-size:11.5px;margin:7px 0}
 .detail th,.detail td{border:1px solid var(--line);padding:4px 6px;text-align:left}
@@ -163,7 +176,7 @@ border-radius:8px;padding:6px 9px;font-size:12px;box-shadow:0 3px 12px rgba(0,0,
 <div class="card"><div class="ct"><b>② 黄金期权 PCR</b><span>持仓量口径 + BB(20,2)（上期所）</span></div>
 <svg id="s2" viewBox="0 0 750 140"></svg></div>
 
-<div class="card"><div class="ct"><b>③ CFTC 分类净持仓</b><span>周频　<span class="sw" style="background:var(--c-prod)"></span>商业 <span class="sw" style="background:var(--c-mm)"></span>管理基金 <span class="sw" style="background:var(--c-other)"></span>散户</span></div>
+<div class="card"><div class="ct"><b>③ CFTC 分类净持仓</b><span>净头寸＝多−空·<b>可为负</b>　<span class="sw" style="background:var(--c-prod)"></span>商业 <span class="sw" style="background:var(--c-mm)"></span>管理基金 <span class="sw" style="background:var(--c-other)"></span>散户</span></div>
 <svg id="s3" viewBox="0 0 750 130"></svg></div>
 
 <div class="card"><div class="ct"><b>④ COT「购买速度」指数</b><span>0~1，≥0.90＝打顶</span></div>
@@ -179,6 +192,7 @@ border-radius:8px;padding:6px 9px;font-size:12px;box-shadow:0 3px 12px rgba(0,0,
 <p><b>① 价格 + 布林通道 BB(20,2)</b>——蜡烛红涨绿跌（国内习惯）。他口播里的信号：<b>破上轨＝顶部（开空）、击穿下轨＝底部（做多）、通道内＝空仓等待</b>。图上的圆点是他视频里明确说过的信号位，可核对是否印证。</p>
 <p><b>② 黄金期权 PCR（持仓量口径）</b>——看通道位置而不是绝对值：PCR %B 触到下轨（≤0）≈ 看多情绪极端，短中期易反弹；冲到上轨（≥100）≈ 偏空。橙线为成交量口径对照。注意 PCR 是<b>短中期</b>尺度（实证约 20 日兑现）。</p>
 <p><b>③ CFTC 分类净持仓</b>——他 09-19 视频的口径：<span style="color:var(--c-prod)"><b>绿线</b></span>＝商业头寸「整个市场最大的资金」、<span style="color:var(--c-mm)"><b>蓝线</b></span>＝管理基金「华尔街大型投机机构」、<span style="color:var(--c-other)"><b>红线</b></span>＝其他可报告「散户小机构」、灰虚线＝互换商（他未指定颜色）。周频数据阶跃对齐到日轴。</p>
+<p id="netNote" class="warnnote"></p>
 <p><b>④ COT「购买速度」指数（他自编公式的复原）</b>——
 speed＝(买量<sub>t</sub> − 买量<sub>t−13</sub>) ÷ 13，再算 speed 在近 52 周中的相对位置（0~1）。
 <span style="color:var(--c-prod)"><b>绿线打顶（≥0.90）</b></span>＝他说「最大资金加速买入到顶」；<span style="color:var(--c-mm)"><b>蓝线打顶</b></span>＝「投机资金加速衰减」。公式经他视频画面读数校准（2026-08-25 绿线 0.9109 vs 画面 0.908，差 0.3%）。</p>
@@ -405,6 +419,19 @@ function drawAll(){
 }
 
 function fillDetail(){
+  // ③ 净持仓：为什么绿线（商业）长期为负 —— 用真实统计回答，避免被误当成取数错误
+  const S=D.net_stats,NN=document.getElementById('netNote');
+  if(S&&NN){const N=S.prod,M=S.mm,W=S.swap,th=x=>Math.round(x).toLocaleString();
+    NN.innerHTML='<b>⚠ 绿线（商业）为什么几乎一直在负区？这不是取数错误。</b><br>'
+      +'「净头寸」＝多头 − 空头，<b>本身就可以是负数</b>。商业头寸（Prod_Merc）是<b>产业套保盘</b>'
+      +'——金矿商、精炼商、贸易商、工业用户在期货上<b>卖出</b>来锁定未来的售价/成本，天生是空头。'
+      +'最新一周（'+D.w_dates[D.w_dates.length-1]+'）商业 多 '+th(N.long)+' / 空 '+th(N.short)
+      +' → 净 <b>'+th(N.net)+'</b>（空是多头的 '+(N.short/N.long).toFixed(1)+' 倍）。'
+      +'自 '+D.cot_first+' 起共 '+N.n+' 周，商业净头寸 <b>'+N.neg_pct+'% 为负</b>，区间 '+th(N.min)+' ~ '+th(N.max)+'。'
+      +'互换商同理（'+W.neg_pct+'% 为负），而管理基金是投机盘、长期净多（最新净 +'+th(M.net)+'）。'
+      +'<br><b>所以这张图天生就是「一条在下面、一条在上面」——那是持仓结构本身，不是画错。</b>'
+      +'它回答的是「谁站在哪一边」；要回答「谁在加速买」，看 ④ 那张 0~1 的速度指数。'
+      +'两张图都用了绿/蓝配色，但<b>量纲完全不同，别混着比</b>。';}
   // 共振/矛盾实证表
   const BD=D.cross.by_direction;
   function xrow(k,label,hint){const s=BD[k];if(!s||!s.n)return '';
