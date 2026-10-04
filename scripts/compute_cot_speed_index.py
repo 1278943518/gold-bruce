@@ -23,12 +23,21 @@
 """
 import json, os
 
+# ⚠ 本文件在本机另有一份副本：C:/Users/Leo/WorkBuddy/抖音博主蒸馏/scripts/
+# 两份**故意不同**：此处 BASE 按脚本位置推导（GitHub Actions 用），抖音那份写死本机路径。
+# 同步时只同步「算法与口径」部分，不要整文件覆盖，否则会把可移植路径冲掉（2026-10-05 踩过）。
 BASE = os.path.dirname(os.path.dirname(os.path.abspath(__file__)))
 MKT = os.path.join(BASE, "data", "market")
 OUT = os.path.join(MKT, "cot_speed_index.json")
 
 K = 13       # 速度窗口（周）
 N = 52       # 归一化窗口（周）
+# 口径＝毛多头寸 long（2026-10-05 复核后确定，别再改回 net）。
+# 反证：布鲁斯 2026-08-25 画面绿线读数 0.908，全部 12 条候选口径（商业/管理基金/散户 × 多/空/净）
+# 里只有 prod_long 对得上（本模型 0.9109，差 0.3%）；改成 net 会变成 0.158，差 75%，直接否掉。
+# net 能让绿蓝相关性从 +0.09 变成 −0.74（看起来"一上一下"），但代价是绿线读数彻底对不上他画面，
+# 且回测信号同时变弱（蓝线打顶超额 +25.5pp → +5.7pp）。「他那种一上一下」是视觉/坐标轴效应，
+# 不是口径效应 —— 在 prod_long 约束下，蓝线换任何口径相关性都在 −0.11~+0.26 之间，做不出负相关。
 BASIS = "long"
 CATS = [("prod", "绿线·商业头寸（市场最大资金）"),
         ("mm", "蓝线·管理基金（华尔街投机资金）"),
@@ -56,7 +65,7 @@ def main():
     dates = [c["date"] for c in cot]
 
     out = {"params": {"speed_weeks": K, "norm_weeks": N, "basis": BASIS},
-           "formula": "speed=(long_t - long_{t-K})/K ; idx=(speed-min_N)/(max_N-min_N)",
+           "formula": "speed=(%s_t - %s_{t-K})/K ; idx=(speed-min_N)/(max_N-min_N)" % (BASIS, BASIS),
            "dates": dates, "lines": {}}
     for key, label in CATS:
         v = [c[key + "_" + BASIS] for c in cot]

@@ -261,6 +261,9 @@ function buildData(){
   for(let i=0;i<N;i++){const p=D.pcr[V.dates[i]];if(p)lo=p.oi;PO[i]=lo;}
   const B=bbArr(PO,20,2);PO_UP=B[1];PO_DN=B[2];
   const K=13,Nn=52,wk={};
+  // ④ 口径＝毛多头寸 long。2026-10-05 试过改 net（想让蓝绿「一上一下」更明显），
+  // 但净头寸下 2026-08-25 绿线读数=0.158、他画面=0.908（差 75%），校准点直接否掉；
+  // 全部 12 条候选口径里只有 prod_long 对得上（0.9109 vs 0.908）。故维持 long。
   CATS.forEach(c=>wk[c]=stochW(deltaW(D['w_'+c+'_long'],K),Nn));
   const B4=bbArr(wk.mm,20,2);
   C4={wk:wk,dl:{},mid:toDaily(B4[0]),up:toDaily(B4[1]),dn:toDaily(B4[2])};
@@ -411,21 +414,38 @@ function fillDetail(){
     +xrow('矛盾·COT多/PCR空','COT多/PCR空','听 PCR 短线')
     +xrow('矛盾·COT空/PCR多','COT空/PCR多','抢反弹不重仓')
     +'</table><p style="font-size:11px;color:var(--sub)">⚠ 重叠滚动观测，n 不是独立事件数，只看方向。</p>';
-  // 回测块
-  const b=D.bt,avg=a=>a.length?a.reduce((s,x)=>s+x[2],0)/a.length:null;
-  let sh='<table><tr><th>持有期</th><th>基准上涨率</th><th>绿线打顶后</th><th>蓝线打顶后</th></tr>';
-  D.sens.holds.forEach(r=>{const ap=avg(r.prod),am=avg(r.mm);
-    sh+='<tr><td>'+r.w+' 周</td><td>'+D.sens.base_up[r.w]+'%</td>'
-      +'<td class="'+(ap>0?'up':'down')+'">'+(ap>0?'+':'')+ap.toFixed(2)+'%（'+r.prod.length+'）</td>'
-      +'<td class="'+(am>0?'up':'down')+'">'+(am>0?'+':'')+am.toFixed(2)+'%（'+r.mm.length+'）</td></tr>';});
+  // 回测块：所有数字都从 cot_speed_backtest.json / cot_speed_sens.json 现算，
+  // 换口径（long↔net）时文字与数字自动跟随，杜绝旧版写死 −11.2pp/+25.5pp 过期的问题。
+  const b=D.bt,B=b.params||{},avg=a=>a.length?a.reduce((s,x)=>s+x[2],0)/a.length:null;
+  const BASIS_CN={long:'毛多头寸（多头买量）',net:'净头寸（多−空）',short:'毛空头寸'}[B.basis]||B.basis;
+  const judge=e=>e>=10?'成立':(e>=3?'弱成立':(e>-3?'基本无效':'反向'));
+  const sig=x=>x>0?'up':'down',sgn=x=>(x>0?'+':'')+x;
+  // 每个持有期现算：事件 = [日期, 读数, 后 N 周收益]，命中率＝方向一致占比（含亏损，与基准同口径）
+  function rowOf(r,w,key,wantUp){
+    const ev=(r&&r[key])||[];if(!ev.length)return null;
+    const bDir=wantUp?D.sens.base_up[w]:100-D.sens.base_up[w];
+    const win=ev.filter(e=>(e[2]>0)===wantUp).length;
+    return {n:ev.length,hit:win/ev.length*100,bDir:bDir,exc:win/ev.length*100-bDir,avg:avg(ev)};
+  }
+  const cell=x=>x?('<b>'+fmt(x.hit,0)+'%</b> <span class="'+sig(x.exc)+'">'+sgn(x.exc)+'pp</span>'
+    +'<br><span style="font-size:10px;color:var(--sub)">均'+sgn(x.avg)+'%（n='+x.n+'）</span>'):'—';
+  let sh='<table><tr><th>持有期</th><th>基准<br>上涨率</th><th>绿线打顶后</th><th>蓝线打顶后</th></tr>';
+  D.sens.holds.forEach(r=>{sh+='<tr><td>'+r.w+' 周</td><td>'+D.sens.base_up[r.w]+'%</td>'
+    +'<td>'+cell(rowOf(r,r.w,'prod',true))+'</td><td>'+cell(rowOf(r,r.w,'mm',false))+'</td></tr>';});
   sh+='</table>';
+  const H=D.sens.holds,p0=rowOf(H[0],H[0].w,'prod',true),pL=rowOf(H[H.length-1],H[H.length-1].w,'prod',true);
+  const m0=rowOf(H[0],H[0].w,'mm',false),mL=rowOf(H[H.length-1],H[H.length-1].w,'mm',false);
+  const trend=(a,z)=>!a||!z?'':(z.exc>a.exc+3?'，且随持有期拉长走强':(z.exc<a.exc-3?'，且随持有期拉长走弱':'，各持有期基本一致'));
   document.getElementById('btBlock').innerHTML=
-    '<p>口径：多头买量 / K=13 / N=52，打顶＝读数≥0.90，事件按 4 周去重。样本：COT '+D.cot_n+' 周，基准 '+b.base.n+' 次滚动观测（基准上涨率 '+b.base.up_rate+'%）。</p>'
+    '<p>口径：<b>'+BASIS_CN+'</b> / K='+B.speed_weeks+' / N='+B.norm_weeks+'，打顶＝读数≥0.90，事件按 4 周去重。样本：COT '+D.cot_n+' 周，基准 '+b.base.n+' 次滚动观测（基准上涨率 '+b.base.up_rate+'% / 平均 '+sgn(b.base.avg_ret)+'%）。</p>'
     +'<table><tr><th>信号</th><th>事件</th><th>命中率</th><th>基准</th><th>超额</th></tr>'
-    +'<tr><td>绿线打顶＝买点</td><td>'+b.prod.n+'</td><td><b>'+b.prod.hit_rate+'%</b></td><td>'+b.prod.base_dir_rate+'%</td><td class="down">'+b.prod.excess_pp+'pp → 不成立</td></tr>'
-    +'<tr><td>蓝线打顶＝衰减</td><td>'+b.mm.n+'</td><td><b>'+b.mm.hit_rate+'%</b></td><td>'+b.mm.base_dir_rate+'%</td><td class="up">+'+b.mm.excess_pp+'pp → 成立(短期)</td></tr></table>'
+    +'<tr><td>绿线打顶＝买点</td><td>'+b.prod.n+'</td><td><b>'+b.prod.hit_rate+'%</b></td><td>'+b.prod.base_dir_rate+'%</td><td class="'+sig(b.prod.excess_pp)+'">'+sgn(b.prod.excess_pp)+'pp → '+judge(b.prod.excess_pp)+'</td></tr>'
+    +'<tr><td>蓝线打顶＝衰减</td><td>'+b.mm.n+'</td><td><b>'+b.mm.hit_rate+'%</b></td><td>'+b.mm.base_dir_rate+'%</td><td class="'+sig(b.mm.excess_pp)+'">'+sgn(b.mm.excess_pp)+'pp → '+judge(b.mm.excess_pp)+'</td></tr></table>'
     +sh
-    +'<p><b>结论</b>：① 绿线打顶后买入<b>跑输什么都不做</b>（−11.2pp）；② 蓝线打顶后短期（4~8 周）确实易跌易横（+25.5pp），但 20 周后回到正收益——是「牛市回调」不是反转；③ 上一版只有 1 个样本时结论正好相反——<b>小样本结论不可信</b>。</p>';
+    +'<p><b>结论（'+BASIS_CN+'）</b>：① 绿线打顶后 8 周命中率 '+b.prod.hit_rate+'%、较基准 '+sgn(b.prod.excess_pp)+'pp（<b>'+judge(b.prod.excess_pp)+'</b>）'+(trend(p0,pL)||'')+'；'
+    +'② 蓝线打顶后 8 周命中率 '+b.mm.hit_rate+'%、较基准 '+sgn(b.mm.excess_pp)+'pp（<b>'+judge(b.mm.excess_pp)+'</b>）'+(trend(m0,mL)||'')+'；'
+    +'③ 事件只有 '+b.prod.n+' / '+b.mm.n+' 个，单点差异随时会翻盘——这套速度指数<b>适合看形态，不宜单条当交易信号</b>。</p>'
+    +'<p style="font-size:11px;color:var(--sub)">口径溯源：绿线读数取自商业头寸<b>毛多</b>——2026-08-25 本模型 0.9109、他画面 0.908（差 0.3%），是全部 12 条候选口径里唯一对得上的；若改用净头寸，同日读数变成 0.158（差 75%），校准点直接否掉净头寸口径。两条线「一上一下」是<b>视觉现象</b>（毛多口径下两者相关性仅 +0.09，几乎互不相干；换成净头寸虽能做出 −0.74 的镜像感，但绿线读数就对不上他了），不是数据层面的负相关。</p>';
 }
 
 buildData();
