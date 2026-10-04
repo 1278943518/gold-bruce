@@ -425,8 +425,9 @@ document.getElementById('builtAt').textContent='构建 '+D.built_at;
    取不到（离线 / CDN 不通）就保留内置快照，页面永远有内容。 */
 (function(){
   var SRC=[
-    'https://cdn.jsdelivr.net/gh/1278943518/gold-bruce@main/data.json',
-    'https://raw.githubusercontent.com/1278943518/gold-bruce/main/data.json'
+    'https://1278943518.github.io/gold-bruce/data.json',
+    'https://raw.githubusercontent.com/1278943518/gold-bruce/main/data.json',
+    'https://cdn.jsdelivr.net/gh/1278943518/gold-bruce@main/data.json'
   ];
   var i=0;
   function next(){
