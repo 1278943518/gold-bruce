@@ -217,13 +217,13 @@ speed＝(买量<sub>t</sub> − 买量<sub>t−13</sub>) ÷ 13，再算 speed �
 </div>
 
 <script>
-const D=__DATA__;
+var D=__DATA__;
 const W=750,ML=42,MR=8,MT=8,MB=16;
 const IDS=['s1','s2','s3','s4'];
 const CATS=['prod','mm','other'];
 const tip=document.getElementById('tip');
 let N=0,WMAP=[],PO=[],PO_UP=[],PO_DN=[],C4=null;
-const V=D.view;
+var V=D.view;
 
 function fmt(v,d){return v==null?'—':Number(v).toFixed(d==null?1:d);}
 function el(t,a){const e=document.createElementNS('http://www.w3.org/2000/svg',t);for(const k in a)e.setAttribute(k,a[k]);return e;}
@@ -420,6 +420,37 @@ updateCards();
 fillDetail();
 document.getElementById('updDate').textContent=V.dates[N-1];
 document.getElementById('builtAt').textContent='构建 '+D.built_at;
+
+/* 云端自更新：页面加载后去 GitHub 取最新数据，取到且比内置快照新就整体重绘。
+   取不到（离线 / CDN 不通）就保留内置快照，页面永远有内容。 */
+(function(){
+  var SRC=[
+    'https://cdn.jsdelivr.net/gh/1278943518/gold-bruce@main/data.json',
+    'https://raw.githubusercontent.com/1278943518/gold-bruce/main/data.json'
+  ];
+  var i=0;
+  function next(){
+    if(i>=SRC.length){
+      document.getElementById('builtAt').textContent='构建 '+D.built_at+' · 离线快照';
+      return;
+    }
+    var u=SRC[i++];
+    fetch(u,{cache:'no-store'}).then(function(r){
+      if(!r.ok)throw 0;return r.json();
+    }).then(function(j){
+      if(!j||!j.built_at||!j.view)throw 0;
+      if(j.built_at<=D.built_at){
+        document.getElementById('builtAt').textContent='构建 '+D.built_at+' · 已是最新';
+        return;
+      }
+      D=j;V=j.view;
+      buildData();drawAll();updateCards();fillDetail();
+      document.getElementById('updDate').textContent=V.dates[N-1];
+      document.getElementById('builtAt').textContent='云端更新 '+j.built_at;
+    }).catch(next);
+  }
+  next();
+})();
 </script></body></html>"""
 
     html = (HTML.replace("__DATA__", payload)
@@ -431,6 +462,13 @@ document.getElementById('builtAt').textContent='构建 '+D.built_at;
                 .replace("__BUILT__", data["built_at"]))
     os.makedirs(OUTDIR, exist_ok=True)
     open(OUT, "w", encoding="utf-8").write(html)
+
+    # 同时产出一份 data.json，放在仓库根目录。
+    # 页面会在加载时从这里拉最新数据（GitHub Pages / jsDelivr 都带 CORS），
+    # 于是已发布的页面无需重新部署即可自己更新。
+    data_json = os.path.join(BASE, "data.json")
+    open(data_json, "w", encoding="utf-8").write(payload)
+    print("  云端数据: %s | %.1f KB" % (data_json, len(payload) / 1024.0))
 
     # logo 套装复制到发布目录
     adir = os.path.join(OUTDIR, "assets")
