@@ -114,6 +114,14 @@ def main():
 <meta name="viewport" content="width=device-width,initial-scale=1,viewport-fit=cover">
 <title>布鲁斯黄金看盘 · COT × PCR × 价格</title>
 <link rel="icon" href="data:image/png;base64,__FAV__">
+<!-- iOS「添加到主屏幕」：必须用**不透明的 180×180 PNG 文件**（不能是 data URI、不能带 alpha）。
+     图标由 scripts/make_ios_icons.py 用 logo 自身底色 #141418 填平透明区后生成。
+     用相对路径 assets/… 是因为页面在 GitHub Pages 下位于子路径 /gold-bruce/，
+     写 /apple-touch-icon.png 会 404。 -->
+<link rel="apple-touch-icon" sizes="180x180" href="assets/apple-touch-icon.png">
+<link rel="manifest" href="manifest.webmanifest">
+<meta name="apple-mobile-web-app-title" content="布鲁斯黄金看盘">
+<meta name="theme-color" content="#141418">
 <style>
 :root{--bg:#f5f6f8;--card:#fff;--ink:#1b1f24;--sub:#67717d;--line:#e6e9ee;--grid:#eef1f4;
 --red:#c62828;--green:#1b7a4b;--amber:#a06a00;--blue:#1f5fbf;
@@ -548,6 +556,35 @@ document.addEventListener('mousedown',function(e){
         src = os.path.join(ASSETS, f)
         if os.path.exists(src):
             shutil.copy2(src, os.path.join(adir, f))
+
+    # iOS「添加到主屏幕」图标 + web app manifest。
+    # 页面在 GitHub Pages 上位于 /gold-bruce/ 子路径、在 WorkBuddy 上位于根路径，
+    # 两处引用的都是相对路径 assets/xxx 与 manifest.webmanifest，
+    # 所以**仓库根**与**发布目录**两边都要各放一份（否则有一边会 404）。
+    manifest = {
+        "name": "布鲁斯黄金看盘 · COT × PCR × 价格",
+        "short_name": "布鲁斯黄金看盘",
+        "description": "COT 持仓 · 期权 PCR · 价格通道三层合并的黄金中长线看板",
+        "start_url": "./", "scope": "./",
+        # display 用 browser：保留 Safari 地址栏与下拉刷新（数据每日变，能刷新很关键）。
+        # 想要全屏应用感（无地址栏）把它改成 standalone 即可，但下拉刷新会失效。
+        "display": "browser",
+        "background_color": "#f5f6f8", "theme_color": "#141418",
+        "icons": [{"src": "assets/icon-192.png", "sizes": "192x192", "type": "image/png"},
+                  {"src": "assets/icon-512.png", "sizes": "512x512", "type": "image/png"}],
+    }
+    mf = json.dumps(manifest, ensure_ascii=False, indent=1)
+    IOS_ASSETS = ("apple-touch-icon.png", "icon-192.png", "icon-512.png")
+    for root in (BASE, OUTDIR):
+        os.makedirs(os.path.join(root, "assets"), exist_ok=True)
+        with open(os.path.join(root, "manifest.webmanifest"), "w", encoding="utf-8") as fh:
+            fh.write(mf)
+        for f in IOS_ASSETS:
+            src = os.path.join(ASSETS, f)
+            if not os.path.exists(src):
+                raise SystemExit("缺少 iOS 图标资源: %s（先跑 scripts/make_ios_icons.py）" % f)
+            shutil.copy2(src, os.path.join(root, "assets", f))
+    print("  iOS 图标: apple-touch-icon.png / icon-192.png / icon-512.png + manifest.webmanifest")
 
     print("手机版已生成:", OUT, "| %.1f KB" % (os.path.getsize(OUT) / 1024.0))
     print("  时间轴 %s ~ %s（%d 交易日）| COT %d 周 | PCR %d 天"

@@ -1,0 +1,22 @@
+{
+ "name": "布鲁斯黄金看盘 · COT × PCR × 价格",
+ "short_name": "布鲁斯黄金看盘",
+ "description": "COT 持仓 · 期权 PCR · 价格通道三层合并的黄金中长线看板",
+ "start_url": "./",
+ "scope": "./",
+ "display": "browser",
+ "background_color": "#f5f6f8",
+ "theme_color": "#141418",
+ "icons": [
+  {
+   "src": "assets/icon-192.png",
+   "sizes": "192x192",
+   "type": "image/png"
+  },
+  {
+   "src": "assets/icon-512.png",
+   "sizes": "512x512",
+   "type": "image/png"
+  }
+ ]
+}
