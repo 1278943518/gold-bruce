@@ -81,11 +81,11 @@ def main():
             "bt": bt, "sens": sens, "cross": cross,
             "valid_from": load("cot_speed_index.json")["valid_from"],
             "built_at": datetime.datetime.now().strftime("%Y-%m-%d %H:%M")}
-    # 只输出页面用到的四类，顺序＝绘制顺序（配色对齐 tradingster）：
-    # M_Money 管理基金 / Swap 互换商 / Prod_Merc 商业 / NonRept 散户（官方口径的非报告头寸）
-    for cat in ("mm", "swap", "prod", "nonrept"):
-        for basis in ("net", "long", "short"):
-            data["w_%s_%s" % (cat, basis)] = [c[cat + "_" + basis] for c in cot]
+    # 只输出页面画的三条线（＝博主图上那三条，配色也照他）：
+    # 绿＝M_Money 管理基金 / 蓝＝Prod_Merc 商业 / 红＝NonRept 散户
+    # 互换商 Swap、其他可报告 Other_Rept 他图上没有，不画也不传。
+    for cat in ("mm", "prod", "nonrept"):
+        data["w_%s_net" % cat] = [c[cat + "_net"] for c in cot]
 
     # 净头寸的统计特征：用来在页面上回答「深灰线（商业）为什么长期为负」
     # —— 净头寸＝多−空，商业是产业套保盘，天然净空，是数据真相而非取数错误。
@@ -97,7 +97,7 @@ def main():
                 "neg_pct": round(100.0 * sum(1 for x in v if x < 0) / len(v), 1),
                 "mean": round(sum(v) / len(v)), "min": round(min(v)), "max": round(max(v)),
                 "long": round(longs[-1]), "short": round(shorts[-1]), "net": round(v[-1])}
-    data["net_stats"] = {c: netstat(c) for c in ("mm", "swap", "prod", "nonrept")}
+    data["net_stats"] = {c: netstat(c) for c in ("mm", "prod", "nonrept")}
 
     payload = json.dumps(data, ensure_ascii=False, separators=(",", ":"))
 
@@ -129,7 +129,7 @@ def main():
 <style>
 :root{--bg:#f5f6f8;--card:#fff;--ink:#1b1f24;--sub:#67717d;--line:#e6e9ee;--grid:#eef1f4;
 --red:#c62828;--green:#1b7a4b;--amber:#a06a00;--blue:#1f5fbf;
---c-mm:#26a65b;--c-swap:#19b5fe;--c-prod:#444444;--c-nonrept:#cf000f}
+--c-mm:#26a65b;--c-prod:#19b5fe;--c-nonrept:#cf000f}
 *{box-sizing:border-box;-webkit-tap-highlight-color:transparent;
 -webkit-touch-callout:none;-webkit-user-select:none;-moz-user-select:none;-ms-user-select:none;user-select:none}
 body{margin:0;background:var(--bg);color:var(--ink);
@@ -191,31 +191,31 @@ border-radius:8px;padding:6px 9px;font-size:12px;box-shadow:0 3px 12px rgba(0,0,
 <div class="card"><div class="ct"><b>② 黄金期权 PCR</b><span>持仓量口径 + BB(20,2)（上期所）</span></div>
 <svg id="s2" viewBox="0 0 750 140"></svg></div>
 
-<div class="card"><div class="ct"><b>③ CFTC 分类净持仓</b><span>净头寸＝多−空·<b>可为负</b>　<span class="sw" style="background:var(--c-mm)"></span>管理基金 <span class="sw" style="background:var(--c-swap)"></span>互换商 <span class="sw" style="background:var(--c-prod)"></span>商业 <span class="sw" style="background:var(--c-nonrept)"></span>散户</span></div>
+<div class="card"><div class="ct"><b>③ CFTC 分类净持仓</b><span>净头寸＝多−空·<b>可为负</b>　<span class="sw" style="background:var(--c-mm)"></span>管理基金 <span class="sw" style="background:var(--c-prod)"></span>商业 <span class="sw" style="background:var(--c-nonrept)"></span>散户</span></div>
 <svg id="s3" viewBox="0 0 750 130"></svg></div>
 
-<div class="card"><div class="ct"><b>④ COT「购买速度」指数</b><span>0~1，≥0.90＝打顶</span></div>
+<div class="card"><div class="ct"><b>④ COT Index（博主原版口径）</b><span>净头寸 26 周随机指标　0~100，≥90＝打顶</span></div>
 <svg id="s4" viewBox="0 0 750 140"></svg></div>
 
 <a class="more" href="#manual">▼ 详细说明 · 使用手册（怎么看 / 为什么这么设计）</a>
 
 <div class="detail" id="manual">
 <h2>一、这是什么</h2>
-<p>把抖音博主「布鲁斯」讲的中长线黄金分析框架做成可视化看板。他的优先级：<b>COT 持仓 ＞ 升贴水 ＞ 期权 PCR ＞ 技术分析</b>。本页把其中可量化、有免费官方数据源的三层（COT、PCR、价格通道）接入真实数据，四张图共用同一条日频时间轴。</p>
+<p>把抖音博主「布鲁斯」讲的中长线黄金分析框架做成可视化看板。他的优先级：<b>COT 持仓 ＞ 升贴水 ＞ 期权 PCR ＞ 技术分析</b>。其中<b>升贴水那一层还没接</b>（免费数据源不好找），本页先把他图上那三块（COT 净持仓、COT Index、期权 PCR＋价格通道）接入真实数据，四张图共用同一条日频时间轴。</p>
 
 <h2>二、四张图怎么看（逐图手册）</h2>
 <p><b>① 价格 + 布林通道 BB(20,2)</b>——蜡烛红涨绿跌（国内习惯）。他口播里的信号：<b>破上轨＝顶部（开空）、击穿下轨＝底部（做多）、通道内＝空仓等待</b>。图上的圆点是他视频里明确说过的信号位，可核对是否印证。</p>
 <p><b>② 黄金期权 PCR（持仓量口径）</b>——看通道位置而不是绝对值：PCR %B 触到下轨（≤0）≈ 看多情绪极端，短中期易反弹；冲到上轨（≥100）≈ 偏空。橙线为成交量口径对照。注意 PCR 是<b>短中期</b>尺度（实证约 20 日兑现）。</p>
-<p><b>③ CFTC 分类净持仓</b>——四类均为官方 Disaggregated 报告原始字段，配色与类别取自 tradingster：<span style="color:var(--c-mm)"><b>绿线</b></span>＝管理基金 M_Money「华尔街大型投机机构」、<span style="color:var(--c-swap)"><b>蓝线</b></span>＝互换商 Swap Dealers、<span style="color:var(--c-prod)"><b>深灰线</b></span>＝商业 Prod_Merc「产业套保盘」、<span style="color:var(--c-nonrept)"><b>红线</b></span>＝散户 NonRept「非报告头寸」。周频数据阶跃对齐到日轴。</p>
+<p><b>③ CFTC 分类净持仓</b>——三类均为官方 Disaggregated 报告原始字段，配色直接照博主视频画面：<span style="color:var(--c-mm)"><b>绿线</b></span>＝管理基金 M_Money「投机资金」、<span style="color:var(--c-prod)"><b>蓝线</b></span>＝商业 Producer/Merchant「产业套保盘」、<span style="color:var(--c-nonrept)"><b>红线</b></span>＝散户 Non-Reportable「非报告头寸」。周频数据阶跃对齐到日轴。（互换商 Swap Dealers、其他可报告 Other Reportable 他图上没有，本页也不画。）</p>
 <p id="netNote" class="warnnote"></p>
-<p><b>④ COT「购买速度」指数（他自编公式的复原）</b>——
-speed＝(买量<sub>t</sub> − 买量<sub>t−13</sub>) ÷ 13，再算 speed 在近 52 周中的相对位置（0~1）。
-公式经他视频画面读数锁定口径＝<b>毛多头寸</b>。<b>校准锚点</b>：他 2026-08-25 画面那条读数 0.908 的线，本模型对得上的是<b>商业头寸</b>（0.9109，差 0.3%）——按 tradingster 配色它现在是<span style="color:var(--c-prod)"><b>深灰线</b></span>；<span style="color:var(--c-mm)"><b>绿线（管理基金）</b></span>与<span style="color:var(--c-swap)"><b>蓝线（互换商）</b></span>打顶＝投机/套保资金加速异动。<b>注意：他视频里说的「绿线」是商业那条，本页绿线给了他图里的管理基金，对读数时请认类别不要只认颜色。</b></p>
+<p><b>④ COT Index（他图上第三栏那条，逐像素反解复原）</b>——
+idx＝(净头寸<sub>t</sub> − 近 26 周最低) ÷ (近 26 周最高 − 最低) × 100，即最经典的 COT Index：
+<b>净头寸口径、26 周窗口、不做任何速度差分</b>，输出 0~100。<b>校准</b>：把 2026-09-19 视频截图里那条<span style="color:var(--c-prod)"><b>蓝线</b></span>逐列取出与本地 CFTC 数据做滑动相关，153 种口径组合里 r=<b>0.886</b> 排第一的就是「商业 Producer/Merchant 净头寸 + 26 周」。所以<b>他说的蓝线＝商业</b>（2026-02 干到 100，金价随后大跌一大波），<span style="color:var(--c-mm)"><b>绿线</b></span>＝管理基金（2026-08 干到 100，他说这个位置是阶段底部）。</p>
 
 <h2>三、顶部六个信息块</h2>
 <li><b>现货金价</b>：COMEX GC 最新价（隔夜报价快照，每日构建时更新）与前一交易日收盘的涨跌。</li>
 <li><b>价格 %B / PCR %B</b>：各自在 BB(20,2) 通道中的位置，&gt;100 破上轨、&lt;0 破下轨、通道内无信号。</li>
-<li><b>④ 四条速度线</b>：管理基金(绿) / 互换商(蓝) / 商业(深灰) / 散户(红) 的最新读数与状态（已打顶 / 打底 / 中性）。</li>
+<li><b>④ 三条 COT Index 线</b>：商业(蓝) / 管理基金(绿) / 散户(红) 的最新读数与状态（≥90 已打顶 / ≤10 打底 / 其余中性）。</li>
 <li><b>当下结论</b>：按他的规则综合给出的当前状态。</li>
 
 <h2>四、COT × PCR 矛盾时怎么办（三条原则）</h2>
@@ -231,14 +231,14 @@ speed＝(买量<sub>t</sub> − 买量<sub>t−13</sub>) ÷ 13，再算 speed �
 <li>COT：美国 CFTC 官网 Disaggregated 报告（周频，每周六凌晨更新，__COTN__ 周，__COTFIRST__ 起）。</li>
 <li>PCR：上期所黄金期权日行情（持仓量口径，2024-03-21 起）。</li>
 <li>价格：新浪财经 COMEX GC 日线 + 隔夜实时报价快照。</li>
-<li>④ 需 64 周预热，__VALIDFROM__ 起有效；主图为 COMEX（与 COT 同市场，口径自洽）。</li>
+<li>④ 需 26 周预热，__VALIDFROM__ 起有效；主图为 COMEX（与 COT 同市场，口径自洽）。</li>
 <li>本页每日早上自动重抓数据并重新构建发布；COT 实际变化每周一次，PCR 与价格每日更新。</li>
 
 <h2>七、为什么这么设计</h2>
 <li><b>四图同轴联动</b>：他的体系是「多层信号互相验证」，分开看容易漏掉共振/矛盾。</li>
 <li><b>PCR 用持仓量而非成交量</b>：与他截图同款口径（经 2026-08-24 读数 0.7512 四位小数精确匹配确认）。</li>
 <li><b>主图用 COMEX 而非沪金</b>：COT 是 COMEX 头寸，价格与持仓必须同市场；国内合约作副口径。</li>
-<li><b>④ 用「速度」而非「持仓多少」</b>：他反复强调"资金加速买入"而非"资金多"；随机指标化后与他画面读数误差最小。</li>
+<li><b>④ 用「净头寸的 26 周相对位置」而非绝对值</b>：他口播讲的是"大资金抢着买"，但落到图上指标就是经典 COT Index；逐像素反解证明这条口径与他画面误差最小（r=0.886）。</li>
 
 <div class="warn"><b>免责声明</b>：本页是对博主公开口播内容的量化复盘，全部数据来自公开官方渠道，仅作方法论研究，<b>不构成投资建议</b>。回测含重叠观测、样本有限，历史规律不代表未来。</div>
 </div>
@@ -251,7 +251,7 @@ speed＝(买量<sub>t</sub> − 买量<sub>t−13</sub>) ÷ 13，再算 speed �
 var D=__DATA__;
 const W=750,ML=42,MR=8,MT=8,MB=16;
 const IDS=['s1','s2','s3','s4'];
-const CATS=['mm','swap','prod','nonrept'];
+const CATS=['mm','prod','nonrept'];
 const tip=document.getElementById('tip');
 let N=0,WMAP=[],PO=[],PO_UP=[],PO_DN=[],C4=null;
 var V=D.view;
@@ -270,16 +270,14 @@ function bbArr(v,n,k){const mid=[],up=[],dn=[];
     mid.push(m);up.push(m+k*sd);dn.push(m-k*sd);}
   return[mid,up,dn];}
 function toDaily(wk){const o=new Array(N);for(let i=0;i<N;i++){const j=WMAP[i];o[i]=(j<0)?null:wk[j];}return o;}
-function deltaW(v,k){const o=new Array(v.length).fill(null);
-  for(let i=k;i<v.length;i++)o[i]=(v[i]-v[i-k])/k;return o;}
 function stochW(v,n){const o=new Array(v.length).fill(null);
   for(let i=n-1;i<v.length;i++){const w=v.slice(i-n+1,i+1);
     if(w.some(x=>x==null)||v[i]==null)continue;
     const lo=Math.min(...w),hi=Math.max(...w);
     o[i]=(hi===lo)?null:(v[i]-lo)/(hi-lo);}
   return o;}
-function catColor(c){return c==='mm'?'var(--c-mm)':(c==='swap'?'var(--c-swap)':(c==='prod'?'var(--c-prod)':'var(--c-nonrept)'));}
-const CATCN={mm:'管理基金',swap:'互换商',prod:'商业',nonrept:'散户'};
+function catColor(c){return c==='mm'?'var(--c-mm)':(c==='prod'?'var(--c-prod)':'var(--c-nonrept)');}
+const CATCN={mm:'管理基金',prod:'商业',nonrept:'散户'};
 function iOfSig(d){let best=-1;for(let i=0;i<N;i++){if(V.dates[i]<=d)best=i;else break;}return best;}
 
 function buildData(){
@@ -290,13 +288,16 @@ function buildData(){
   PO=new Array(N);let lo=null;
   for(let i=0;i<N;i++){const p=D.pcr[V.dates[i]];if(p)lo=p.oi;PO[i]=lo;}
   const B=bbArr(PO,20,2);PO_UP=B[1];PO_DN=B[2];
-  const K=13,Nn=52,wk={};
-  // ④ 口径＝毛多头寸 long。2026-10-05 试过改 net（想让蓝绿「一上一下」更明显），
-  // 但净头寸下 2026-08-25 绿线读数=0.158、他画面=0.908（差 75%），校准点直接否掉；
-  // 全部 12 条候选口径里只有 prod_long 对得上（0.9109 vs 0.908）。故维持 long。
-  CATS.forEach(c=>wk[c]=stochW(deltaW(D['w_'+c+'_long'],K),Nn));
-  const B4=bbArr(wk.mm,20,2);
-  C4={wk:wk,dl:{},mid:toDaily(B4[0]),up:toDaily(B4[1]),dn:toDaily(B4[2])};
+  /* ④ ＝博主图上第三栏那条 "COT-index"：经典 COT Index
+       idx = (净头寸_t − 近 26 周最低) / (近 26 周最高 − 最低) × 100
+     作用在【净头寸】上、26 周窗口、没有速度差分。
+     2026-10-08 把 2026-09-19 视频截图里那条蓝线逐像素取出（1379 个有效列）
+     与本地 CFTC 数据做滑动相关：153 种口径组合里排第一的是
+     「商业 Producer/Merchant 净头寸 + 26 周 + 无差分」，r=0.886（前五名全是它）。
+     所以蓝线＝商业。旧版 (毛多_t−毛多_{t−13})/13 再 52 周归一化已弃用。 */
+  const N4=26,wk={};
+  CATS.forEach(c=>wk[c]=stochW(D['w_'+c+'_net'],N4).map(v=>v==null?null:v*100));
+  C4={wk:wk,dl:{}};
   CATS.forEach(c=>C4.dl[c]=toDaily(wk[c]));
 }
 
@@ -305,7 +306,8 @@ function drawChart(id,h,cfg){
   const all=[];cfg.candles&&cfg.candles.forEach(c=>all.push(c.h,c.l));
   cfg.lines.forEach(s=>all.push(s.data));
   if(cfg.band)all.push(cfg.band.up,cfg.band.dn);
-  const[lo,hi]=rng(all);
+  let[lo,hi]=rng(all);
+  if(cfg.yfix){lo=cfg.yfix[0];hi=cfg.yfix[1];}   // ④ 是固定 0~100 的指标，锁死纵轴才和他画面一致
   const ph=h-MT-MB,Y=v=>MT+ph*(hi-v)/(hi-lo);
   for(let t=0;t<=3;t++){const v=lo+(hi-lo)*t/3,y=Y(v);
     svg.appendChild(el('line',{x1:ML,y1:y,x2:W-MR,y2:y,stroke:'var(--grid)'}));
@@ -368,7 +370,7 @@ function paint(i,cy,cx){
   const pbP=(PO_UP[i]!=null&&PO_DN[i]!=null)?((PO[i]-PO_DN[i])/(PO_UP[i]-PO_DN[i])*100):null;
   let cot='';CATS.forEach(c=>{const v=(j<0)?null:D['w_'+c+'_net'][j];
     cot+='<br><span style="color:'+catColor(c)+'">■</span>'+CATCN[c]+'净 '+
-    (v==null?'—':Math.round(v).toLocaleString())+'　速 '+fmt(C4.dl[c][i],2);});
+    (v==null?'—':Math.round(v).toLocaleString())+'　指数 '+fmt(C4.dl[c][i],0);});
   tip.innerHTML='<b>'+V.dates[i]+'</b>'+(j>=0?'（'+D.w_dates[j]+'周报）':'')+'<br>'
     +'GC 收 '+fmt(V.c[i],1)+' <span style="color:var(--sub)">价格 %B '+fmt(pbI,0)+'%</span>'
     +'<br>PCR '+fmt(PO[i],3)+' <span style="color:var(--sub)">PCR %B '+fmt(pbP,0)+'%</span>'
@@ -379,25 +381,27 @@ function paint(i,cy,cx){
   tip.style.top=Math.max(4,Math.min(cy-14,window.innerHeight-tip.offsetHeight-8))+'px';
 }
 
-function state4(v){return v==null?'—':(v>=0.90?'<span style="color:var(--c-nonrept)">已打顶</span>':(v<=0.10?'打底':'中性'));}
+function state4(v){return v==null?'—':(v>=90?'<span style="color:var(--c-nonrept)">已打顶</span>':(v<=10?'打底':'中性'));}
 function last4(c){for(let k=N-1;k>=0;k--)if(C4.dl[c][k]!=null)return C4.dl[c][k];return null;}
 
 function updateCards(){
   const i=N-1;
   const pb=(V.up[i]!=null&&V.dn[i]!=null)?(V.c[i]-V.dn[i])/(V.up[i]-V.dn[i])*100:null;
   const pob=(PO_UP[i]!=null&&PO_DN[i]!=null)?(PO[i]-PO_DN[i])/(PO_UP[i]-PO_DN[i])*100:null;
-  const lp=last4('prod'),lm=last4('mm'),ls=last4('swap');
+  const lp=last4('prod'),lm=last4('mm');
   const live=D.live.GC||{},chg=live.prev_settle?((+live.price-+live.prev_settle)/+live.prev_settle*100):null;
   const c=[
     ['现货金价（GC）','<span class="'+(chg>0?'up':(chg<0?'down':''))+'">'+(live.price?+live.price:'—')+'</span>',
      (chg==null?'':(chg>0?'+':'')+chg.toFixed(2)+'%')+'　'+(live.date||'')],
     ['价格 %B',fmt(pb,0)+'%',pb>100?'破上轨→偏空':(pb<0?'破下轨→偏多':'通道内')],
     ['PCR·持仓量',fmt(PO[i],3),'%B '+fmt(pob,0)+'%'],
-    ['④ 绿线·管理基金','<span style="color:var(--c-mm)">'+fmt(lm,3)+'</span>',state4(lm)+'（投机盘异动）'],
-    ['④ 蓝线·互换商','<span style="color:var(--c-swap)">'+fmt(ls,3)+'</span>',state4(ls)+'（套保盘异动）'],
+    ['④ 蓝线·商业','<span style="color:var(--c-prod)">'+fmt(lp,0)+'</span>',state4(lp)+'（他：打顶＝行情衰减）'],
+    ['④ 绿线·管理基金','<span style="color:var(--c-mm)">'+fmt(lm,0)+'</span>',state4(lm)+'（他：打顶＝阶段底部）'],
   ];
   // 当下结论
-  let cotd=0;if(lp!=null&&lp>=0.90)cotd=1;else if(lm!=null&&lm>=0.90)cotd=-1;
+  /* 博主原话规则：蓝线（商业）干到顶 → 行情衰减/回调 → 看空；
+     绿线（管理基金）干到顶 → 已到阶段底部 → 看多。 */
+  let cotd=0;if(lp!=null&&lp>=90)cotd=-1;else if(lm!=null&&lm>=90)cotd=1;
   let pcrd=0;if(pob!=null){if(pob>=100)pcrd=-1;else if(pob<=0)pcrd=1;}
   let st,vc;
   if(cotd&&pcrd&&cotd===pcrd){st='<span class="tag" style="background:#e6f4ec;color:#1b7a4b">共振·'+(cotd>0?'看多':'看空')+'</span>';
@@ -423,31 +427,30 @@ function drawAll(){
     sigAt:i=>PO[i],yfmt:v=>v.toFixed(2)});
   drawChart('s3',130,{candles:null,
     lines:[{data:toDaily(D.w_mm_net),color:'var(--c-mm)',w:1.5},
-           {data:toDaily(D.w_swap_net),color:'var(--c-swap)',w:1.5},
-           {data:toDaily(D.w_prod_net),color:'var(--c-prod)',w:1.2},
-           {data:toDaily(D.w_nonrept_net),color:'var(--c-nonrept)',w:1.2}],
+           {data:toDaily(D.w_prod_net),color:'var(--c-prod)',w:1.5},
+           {data:toDaily(D.w_nonrept_net),color:'var(--c-nonrept)',w:1.4}],
     zero:0,yfmt:v=>Math.round(v/1000)+'k'});
-  drawChart('s4',140,{candles:null,
-    band:{up:C4.up,dn:C4.dn,fill:'var(--c-mm)'},
-    refs:[{v:0.90,color:'var(--c-nonrept)',label:'0.90 打顶'},{v:0.10,color:'var(--c-swap)',label:'0.10'}],
+  drawChart('s4',140,{candles:null,yfix:[0,100],
+    refs:[{v:90,color:'var(--c-nonrept)',label:'90 打顶'},{v:50,color:'var(--sub)',label:'50'},
+          {v:10,color:'var(--c-prod)',label:'10'}],
     lines:CATS.map(c=>({data:C4.dl[c],color:catColor(c),w:1.5})),
-    yfmt:v=>v.toFixed(1)});
+    yfmt:v=>v.toFixed(0)});
 }
 
 function fillDetail(){
-  // ③ 净持仓：为什么深灰线（商业）长期为负 —— 用真实统计回答，避免被误当成取数错误
+  // ③ 净持仓：为什么蓝线（商业）长期为负 —— 用真实统计回答，避免被误当成取数错误
   const S=D.net_stats,NN=document.getElementById('netNote');
-  if(S&&NN){const N=S.prod,M=S.mm,W=S.nonrept,X=S.swap,th=x=>Math.round(x).toLocaleString();
-    NN.innerHTML='<b>⚠ 深灰线（商业）为什么几乎一直在负区？这不是取数错误。</b><br>'
-      +'「净头寸」＝多头 − 空头，<b>本身就可以是负数</b>。商业头寸（Prod_Merc）是<b>产业套保盘</b>'
+  if(S&&NN){const P=S.prod,M=S.mm,W=S.nonrept,th=x=>Math.round(x).toLocaleString();
+    NN.innerHTML='<b>⚠ 蓝线（商业）为什么几乎一直在负区？这不是取数错误。</b><br>'
+      +'「净头寸」＝多头 − 空头，<b>本身就可以是负数</b>。商业（Producer/Merchant）是<b>产业套保盘</b>'
       +'——金矿商、精炼商、贸易商、工业用户在期货上<b>卖出</b>来锁定未来的售价/成本，天生是空头。'
-      +'最新一周（'+D.w_dates[D.w_dates.length-1]+'）商业 多 '+th(N.long)+' / 空 '+th(N.short)
-      +' → 净 <b>'+th(N.net)+'</b>（空是多头的 '+(N.short/N.long).toFixed(1)+' 倍）。'
-      +'自 '+D.cot_first+' 起共 '+N.n+' 周，商业净头寸 <b>'+N.neg_pct+'% 为负</b>，区间 '+th(N.min)+' ~ '+th(N.max)+'。'
-      +'互换商（Swap）是另一条长期空头（'+X.neg_pct+'% 的周为负）；散户（NonRept）结构相反，最新净 '+th(W.net)+'；只有管理基金是投机盘、长期净多（最新净 +'+th(M.net)+'）。'
-      +'<br><b>所以这张图天生就是「一条在下面、一条在上面」——那是持仓结构本身，不是画错。</b>'
-      +'它回答的是「谁站在哪一边」；要回答「谁在加速买」，看 ④ 那张 0~1 的速度指数。'
-      +'③④ 两张图配色与类别完全一致，但<b>量纲完全不同（水平 vs 速度），别混着比</b>。';}
+      +'最新一周（'+D.w_dates[D.w_dates.length-1]+'）商业 多 '+th(P.long)+' / 空 '+th(P.short)
+      +' → 净 <b>'+th(P.net)+'</b>（空是多头的 '+(P.short/P.long).toFixed(1)+' 倍）。'
+      +'自 '+D.cot_first+' 起共 '+P.n+' 周，商业净头寸 <b>'+P.neg_pct+'% 为负</b>，区间 '+th(P.min)+' ~ '+th(P.max)+'。'
+      +'散户（Non-Reportable）结构相反，最新净 '+th(W.net)+'；管理基金（M_Money）是投机盘、长期净多，最新净 +'+th(M.net)+'。'
+      +'<br><b>所以这张图天生就是「蓝线在下面、绿线在上面」——那是持仓结构本身，不是画错。</b>'
+      +'它回答的是「谁站在哪一边」；要回答「谁在抢着买」，看 ④ 那张 0~100 的 COT Index。'
+      +'③④ 两张图配色与类别完全一致，但<b>量纲完全不同（持仓水平 vs 相对位置），别混着比</b>。';}
   // 共振/矛盾实证表
   const BD=D.cross.by_direction;
   function xrow(k,label,hint){const s=BD[k];if(!s||!s.n)return '';
@@ -472,23 +475,24 @@ function fillDetail(){
   }
   const cell=x=>x?('<b>'+fmt(x.hit,0)+'%</b> <span class="'+sig(x.exc)+'">'+sgn(x.exc,1)+'pp</span>'
     +'<br><span style="font-size:10px;color:var(--sub)">均'+sgn(x.avg,2)+'%（n='+x.n+'）</span>'):'—';
-  let sh='<table><tr><th>持有期</th><th>基准<br>上涨率</th><th>商业(深灰)打顶后</th><th>管理基金(绿)打顶后</th></tr>';
+  let sh='<table><tr><th>持有期</th><th>基准<br>上涨率</th><th>蓝线·商业<br>打顶后</th><th>绿线·管理基金<br>打顶后</th></tr>';
   D.sens.holds.forEach(r=>{sh+='<tr><td>'+r.w+' 周</td><td>'+D.sens.base_up[r.w]+'%</td>'
-    +'<td>'+cell(rowOf(r,r.w,'prod',true))+'</td><td>'+cell(rowOf(r,r.w,'mm',false))+'</td></tr>';});
+    +'<td>'+cell(rowOf(r,r.w,'prod',false))+'</td><td>'+cell(rowOf(r,r.w,'mm',true))+'</td></tr>';});
   sh+='</table>';
-  const H=D.sens.holds,p0=rowOf(H[0],H[0].w,'prod',true),pL=rowOf(H[H.length-1],H[H.length-1].w,'prod',true);
-  const m0=rowOf(H[0],H[0].w,'mm',false),mL=rowOf(H[H.length-1],H[H.length-1].w,'mm',false);
+  const H=D.sens.holds,p0=rowOf(H[0],H[0].w,'prod',false),pL=rowOf(H[H.length-1],H[H.length-1].w,'prod',false);
+  const m0=rowOf(H[0],H[0].w,'mm',true),mL=rowOf(H[H.length-1],H[H.length-1].w,'mm',true);
   const trend=(a,z)=>!a||!z?'':(z.exc>a.exc+3?'，且随持有期拉长走强':(z.exc<a.exc-3?'，且随持有期拉长走弱':'，各持有期基本一致'));
   document.getElementById('btBlock').innerHTML=
-    '<p>口径：<b>'+BASIS_CN+'</b> / K='+B.speed_weeks+' / N='+B.norm_weeks+'，打顶＝读数≥0.90，事件按 4 周去重。样本：COT '+D.cot_n+' 周，基准 '+b.base.n+' 次滚动观测（基准上涨率 '+b.base.up_rate+'% / 平均 '+sgn(b.base.avg_ret,2)+'%）。</p>'
+    '<p>口径：<b>'+BASIS_CN+'</b> / N='+B.norm_weeks+' 周窗口 / 无速度差分，打顶＝读数≥90，事件按 4 周去重。样本：COT '+D.cot_n+' 周，基准 '+b.base.n+' 次滚动观测（基准上涨率 '+b.base.up_rate+'% / 平均 '+sgn(b.base.avg_ret,2)+'%）。</p>'
     +'<table><tr><th>信号</th><th>事件</th><th>命中率</th><th>基准</th><th>超额</th></tr>'
-    +'<tr><td>商业(深灰)打顶＝买点</td><td>'+b.prod.n+'</td><td><b>'+b.prod.hit_rate+'%</b></td><td>'+b.prod.base_dir_rate+'%</td><td class="'+sig(b.prod.excess_pp)+'">'+sgn(b.prod.excess_pp,1)+'pp → '+judge(b.prod.excess_pp)+'</td></tr>'
-    +'<tr><td>管理基金(绿)打顶＝衰减</td><td>'+b.mm.n+'</td><td><b>'+b.mm.hit_rate+'%</b></td><td>'+b.mm.base_dir_rate+'%</td><td class="'+sig(b.mm.excess_pp)+'">'+sgn(b.mm.excess_pp,1)+'pp → '+judge(b.mm.excess_pp)+'</td></tr></table>'
+    +'<tr><td>蓝线·商业打顶＝看空</td><td>'+b.prod.n+'</td><td><b>'+b.prod.hit_rate+'%</b></td><td>'+b.prod.base_dir_rate+'%</td><td class="'+sig(b.prod.excess_pp)+'">'+sgn(b.prod.excess_pp,1)+'pp → '+judge(b.prod.excess_pp)+'</td></tr>'
+    +'<tr><td>绿线·管理基金打顶＝看多</td><td>'+b.mm.n+'</td><td><b>'+b.mm.hit_rate+'%</b></td><td>'+b.mm.base_dir_rate+'%</td><td class="'+sig(b.mm.excess_pp)+'">'+sgn(b.mm.excess_pp,1)+'pp → '+judge(b.mm.excess_pp)+'</td></tr></table>'
     +sh
-    +'<p><b>结论（'+BASIS_CN+'）</b>：① 商业(深灰)打顶后 8 周命中率 '+b.prod.hit_rate+'%、较基准 '+sgn(b.prod.excess_pp,1)+'pp（<b>'+judge(b.prod.excess_pp)+'</b>）'+(trend(p0,pL)||'')+'；'
-    +'② 管理基金(绿)打顶后 8 周命中率 '+b.mm.hit_rate+'%、较基准 '+sgn(b.mm.excess_pp,1)+'pp（<b>'+judge(b.mm.excess_pp)+'</b>）'+(trend(m0,mL)||'')+'；'
-    +'③ 事件只有 '+b.prod.n+' / '+b.mm.n+' 个，单点差异随时会翻盘——这套速度指数<b>适合看形态，不宜单条当交易信号</b>。</p>'
-    +'<p style="font-size:11px;color:var(--sub)">口径溯源：绿线读数取自商业头寸<b>毛多</b>——2026-08-25 本模型 0.9109、他画面 0.908（差 0.3%），是全部 12 条候选口径里唯一对得上的；若改用净头寸，同日读数变成 0.158（差 75%），校准点直接否掉净头寸口径。两条线「一上一下」是<b>视觉现象</b>（毛多口径下两者相关性仅 +0.09，几乎互不相干；换成净头寸虽能做出 −0.74 的镜像感，但绿线读数就对不上他了），不是数据层面的负相关。</p>';
+    +'<p><b>结论（'+BASIS_CN+'）</b>：① 蓝线·商业打顶后 8 周命中率 '+b.prod.hit_rate+'%、较基准 '+sgn(b.prod.excess_pp,1)+'pp（<b>'+judge(b.prod.excess_pp)+'</b>）'+(trend(p0,pL)||'')+'；'
+    +'② 绿线·管理基金打顶后 8 周命中率 '+b.mm.hit_rate+'%、较基准 '+sgn(b.mm.excess_pp,1)+'pp（<b>'+judge(b.mm.excess_pp)+'</b>）'+(trend(m0,mL)||'')+'；'
+    +'③ 事件只有 '+b.prod.n+' / '+b.mm.n+' 个，单点差异随时会翻盘——这套指数<b>适合看形态，不宜单条当交易信号</b>。</p>'
+    +'<p style="font-size:11px;color:var(--sub)">口径溯源（2026-10-08 由截图逐像素反解重定）：博主 09-19 那期画面第三栏写的是 <b>COT-index comm/large/specs</b>，Y 轴 0~100、中间一条 50 虚线。把那条<b>蓝线</b>逐列取出（1379 个有效列）与本地 CFTC 数据做滑动相关，153 种口径组合里排第一的是「<b>商业 Producer/Merchant 净头寸 + 26 周 + 无速度差分</b>」，相关系数 <b>r=0.886</b>（前五名全是它，第二名 0.828；管理基金(net,26) 只有 0.402，毛多/速度口径全部 &lt;0.70）。→ <b>他图上的蓝线＝商业、绿线＝管理基金</b>，公式就是最经典的 COT Index。旧版「毛多 13 周速度 + 52 周归一化」是拿 8/25 画面读数 0.908 去凑商业毛多 0.9109 才选中的，属于巧合，已弃用。</p>'
+    +'<p style="font-size:11px;color:var(--sub)">「规则方向」依据他 09-19 口播：蓝线（商业）干到顶 → <b>行情衰减、可横盘或直接回调</b>（2026-02-03 商业 =100，金价随后从 5217 跌到 4021）；绿线（管理基金）干到顶 → <b>已到阶段底部</b>，可分批接。</p>';
 }
 
 buildData();

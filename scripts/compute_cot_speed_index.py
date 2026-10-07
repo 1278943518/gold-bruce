@@ -1,25 +1,38 @@
 # -*- coding: utf-8 -*-
-"""④ 正式公式：COT「购买速度」指数（2026-10-04 反解锁定）
+"""④ 正式公式：经典 COT Index（2026-10-08 由博主视频截图反解锁定）
 
-博主 09-19 原话：
-  "看这些资金变化的速率……我每个月买进 100 单，这个月突然买了 200 单，
-   它买得有点急了因为它看涨……在总量上变化不大，
-   但相对时间内的量能变化会显露出来，把这个细微变化放大"
+博主 2026-09-19 视频画面里的第三栏指示器叫 `COT-index comm/large/specs`，
+右边 Y 轴 0 ~ 100、一条 50 虚线 —— 这是经典的 COT Index：
 
-落成公式：
-  speed(t) = (多头持仓(t) − 多头持仓(t−K)) / K        # 每周平均【买入速度】
-  idx(t)   = (speed(t) − min_N(speed)) / (max_N(speed) − min_N(speed))   ∈ [0,1]
-             ↑ "把量能的细微变化放大" → 归一化成 0~1 摆荡指标（"干到顶部"＝接近 1）
+    idx(t) = (net_t − min_N(net)) / (max_N(net) − min_N(net)) × 100
 
-默认参数：K=13 周（一个季度）、N=52 周（一年）、持仓口径=多头持仓（他说的"买量"）
-三条线（他视频配色）：绿=商业头寸 蓝=管理基金 红=其他可报告（散户小机构）
+即 **作用在【净头寸】上、窗口 N 周、没有速度差分** 的随机指标（0~100）。
 
-锁定依据：
-  1) 数值锚点：2026-08-25 绿线 = 0.9109 vs 他画面 0.908（差 0.3%）
-  2) 取值区间：2026 年 0.36~1.00 vs 他画面 0.35~1.1
-  3) 叙事①：蓝线 2026-01-20 = 0.900 打顶 → 金价 5217 跌到 4021（他说"26年2月干顶后跌了一大波"）
-  4) 叙事②：绿线 2026-06-30 = 0.906 打顶 → 金价 4021 涨到 4716（他说"绿线干顶＝底部，4000→4600"）
-  5) 叙事③：8/25 蓝线 0.972 且连涨（他说"蓝线涨了两个月，到顶差不多了"）
+锁定依据（2026-10-08，逐像素反解）
+--------------------------------
+把截图第三栏那条「蓝线」按像素逐列取出（1379 个有效列），再拿本地 CFTC 真实数据
+做滑动相关，在 5.4~6.6 px/周 × 13 种序列 × 4 种窗口 × 3 种算法 里比：
+
+    蓝线 ×「商业 Producer/Merchant 净头寸 + 26 周 + 无差分」→ r = 0.886
+    （第 1 名；前 5 名全是这一条，第 2 名 0.828）
+
+对照：管理基金(net,26) r=0.402、其他类(net,52) r=0.445，毛多头寸 / 速度差分的
+所有组合都 < 0.70。→ **博主图上的蓝线＝商业（Producer/Merchant）**。
+
+同源核对：蓝线在 2026-02-02 十字线处读数 ≈ 90~93；
+本模型商业 index 2026-02-03 = 100、2026-02-24 = 94 ✓
+他口播「蓝线最近一次干到顶是 26 年 2 月」= 商业净头寸当时处在 26 周最高位 ✓
+
+⚠⚠ 旧的 (毛多_t − 毛多_{t−13})/13 再 52 周归一化 **是错的，已弃用**。
+它唯一的"证据"是 2026-08-25 画面读数 0.908 ≈ 商业毛多 0.9109 ——
+现在看是巧合：正确口径下该点商业 = 0、管理基金 = 100。
+
+配色与类别（与博主画面一致）
+--------------------------
+    绿线 = 管理基金 Managed Money（投机资金）
+    蓝线 = 商业 Producer/Merchant（产业套保）
+    红线 = 散户 Non-Reportable
+    互换商 Swap Dealers / 其他 Other Reportable 他图上没有，本页也不画。
 """
 import json, os
 
@@ -30,33 +43,22 @@ BASE = os.path.dirname(os.path.dirname(os.path.abspath(__file__)))
 MKT = os.path.join(BASE, "data", "market")
 OUT = os.path.join(MKT, "cot_speed_index.json")
 
-K = 13       # 速度窗口（周）
-N = 52       # 归一化窗口（周）
-# 口径＝毛多头寸 long（2026-10-05 复核后确定，别再改回 net）。
-# 反证：布鲁斯 2026-08-25 画面绿线读数 0.908，全部 12 条候选口径（商业/管理基金/散户 × 多/空/净）
-# 里只有 prod_long 对得上（本模型 0.9109，差 0.3%）；改成 net 会变成 0.158，差 75%，直接否掉。
-# net 能让绿蓝相关性从 +0.09 变成 −0.74（看起来"一上一下"），但代价是绿线读数彻底对不上他画面，
-# 且回测信号同时变弱（蓝线打顶超额 +25.5pp → +5.7pp）。「他那种一上一下」是视觉/坐标轴效应，
-# 不是口径效应 —— 在 prod_long 约束下，蓝线换任何口径相关性都在 −0.11~+0.26 之间，做不出负相关。
-BASIS = "long"
-CATS = [("mm", "绿线·管理基金（华尔街投机资金）"),
-        ("swap", "蓝线·互换商（Swap Dealers）"),
-        ("prod", "深灰线·商业头寸（产业套保盘）"),
-        ("nonrept", "红线·散户（非报告头寸 NonRept）")]
-
-
-def delta(v, k):
-    return [None] * k + [(v[i] - v[i - k]) / k for i in range(k, len(v))]
+N = 26        # 归一化窗口（周）—— 由截图反解
+BASIS = "net"  # 口径＝净头寸（多 − 空）。别再改成 long：截图反解已否掉毛多。
+CATS = [("mm", "绿线·管理基金（Managed Money｜投机资金）"),
+        ("prod", "蓝线·商业（Producer/Merchant｜产业套保）"),
+        ("nonrept", "红线·散户（Non-Reportable）")]
 
 
 def stoch(v, n):
+    """经典 COT Index：v 在近 n 期中的相对位置，输出 0~100"""
     o = [None] * len(v)
     for i in range(n - 1, len(v)):
         w = [x for x in v[i - n + 1:i + 1] if x is not None]
         if len(w) < n or v[i] is None:
             continue
         lo, hi = min(w), max(w)
-        o[i] = None if hi == lo else (v[i] - lo) / (hi - lo)
+        o[i] = None if hi == lo else (v[i] - lo) / (hi - lo) * 100.0
     return o
 
 
@@ -65,34 +67,40 @@ def main():
     cot.sort(key=lambda c: c["date"])
     dates = [c["date"] for c in cot]
 
-    out = {"params": {"speed_weeks": K, "norm_weeks": N, "basis": BASIS},
-           "formula": "speed=(%s_t - %s_{t-K})/K ; idx=(speed-min_N)/(max_N-min_N)" % (BASIS, BASIS),
+    out = {"params": {"norm_weeks": N, "basis": BASIS, "speed_weeks": None},
+           "formula": "idx = (net_t - min_N(net)) / (max_N(net) - min_N(net)) * 100",
            "dates": dates, "lines": {}}
     for key, label in CATS:
         v = [c[key + "_" + BASIS] for c in cot]
-        sp = delta(v, K)
-        out["lines"][key] = {"label": label, "speed": sp, "idx": stoch(sp, N)}
-        out[key + "_idx"] = stoch(sp, N)
+        idx = stoch(v, N)
+        out["lines"][key] = {"label": label, "idx": idx}
+        out[key + "_idx"] = idx
 
-    # 有效区间（预热 = K + N - 1 周）
-    warm = K + N - 1
+    warm = N - 1
     out["valid_from"] = dates[warm]
     json.dump(out, open(OUT, "w", encoding="utf-8"), ensure_ascii=False, indent=1)
 
-    print("COT 购买速度指数已生成:", OUT)
-    print("公式 speed=(long_t−long_{t−%d})/%d ；idx= stochastic_%d(speed)" % (K, K, N))
+    print("COT Index 已生成:", OUT)
+    print("公式 idx = (净头寸 − 近 %d 周最低) / (近 %d 周最高 − 最低) × 100" % (N, N))
     print("有效区间 %s ~ %s（预热 %d 周）" % (dates[warm], dates[-1], warm))
-    i = dates.index("2026-08-25")
-    for key, label in CATS:
-        val = out[key + "_idx"][i]
-        print("  %-28s 8/25 = %s" % (label, ("%.4f" % val) if val is not None else "—"))
-    print()
-    print("最近 8 周读数：")
+
+    print("\n最近 8 周读数：")
     keys = [k for k, _ in CATS]
     print("  %-12s" % "date" + "".join("%-10s" % k for k in keys))
     for j in range(len(dates) - 8, len(dates)):
-        f = lambda v: ("%.3f" % v) if v is not None else "—"
+        f = lambda v: ("%.0f" % v) if v is not None else "—"
         print("  %-12s" % dates[j] + "".join("%-10s" % f(out[k + "_idx"][j]) for k in keys))
+
+    print("\n关键锚点（对照博主 2026-09-19 口播）：")
+    for d in ("2026-02-03", "2026-02-10", "2026-08-25", "2026-09-29"):
+        if d not in dates:
+            continue
+        i = dates.index(d)
+        print("  %s  商业(蓝)=%s  管理基金(绿)=%s  散户(红)=%s"
+              % (d,
+                 "%.0f" % out["prod_idx"][i] if out["prod_idx"][i] is not None else "—",
+                 "%.0f" % out["mm_idx"][i] if out["mm_idx"][i] is not None else "—",
+                 "%.0f" % out["nonrept_idx"][i] if out["nonrept_idx"][i] is not None else "—"))
 
 
 if __name__ == "__main__":

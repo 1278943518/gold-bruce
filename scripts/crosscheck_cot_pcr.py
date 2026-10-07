@@ -22,9 +22,9 @@ BASE = os.path.dirname(os.path.dirname(os.path.abspath(__file__)))
 MKT = os.path.join(BASE, "data", "market")
 OUT = os.path.join(MKT, "cot_pcr_crosscheck.json")
 
-TOP = 0.90
-COT_GREEN_WEEKS = 8      # 绿线打顶后按实证 8 周最有效
-COT_BLUE_WEEKS = 20      # 蓝线打顶后按实证 20 周才兑现
+TOP = 90                 # ④ COT Index 为 0~100 口径
+COT_GREEN_WEEKS = 8      # 绿线（管理基金）打顶后按实证 8 周最有效
+COT_BLUE_WEEKS = 20      # 蓝线（商业）打顶后按实证 20 周才兑现
 PCR_DAYS = 20
 FWD_DAYS = 20
 START = "2024-01-01"
@@ -86,7 +86,8 @@ def main():
     wd = sg["dates"]
     cot_sig = {}
     for i, w in enumerate(wd):
-        g, b = sg["prod_idx"][i], sg["mm_idx"][i]
+        # 绿线＝管理基金（投机）打顶 → 看多；蓝线＝商业（套保）打顶 → 看空
+        g, b = sg["mm_idx"][i], sg["prod_idx"][i]
         if g is not None and g >= TOP:
             s, weeks = 1, COT_GREEN_WEEKS
         elif b is not None and b >= TOP:

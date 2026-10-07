@@ -1,13 +1,16 @@
 # -*- coding: utf-8 -*-
-"""回测 ④「COT 购买速度指数」
+"""回测 ④ COT Index（经典口径：净头寸 / 26 周 / 0~100）
 
-触发：读数 ≥ TOP（默认 0.90，即"干到顶部"）
-  绿线（商业头寸·最大资金）打顶 → 他＝买点 / 看多
-  蓝线（管理基金·投机资金）打顶 → 他＝行情衰减 / 看空
+触发：读数 ≥ TOP（默认 90，即他说的"干到顶部"）
+  蓝线（商业 Producer/Merchant·产业套保）打顶 → 他＝行情衰减 / 看空
+  绿线（管理基金 Managed Money·投机资金）打顶 → 他＝阶段底部 / 看多
+
+⚠ 2026-10-08 修正：原先把规则挂反了（旧文写成"绿线＝商业"），
+   截图反解已确认 蓝线＝商业、绿线＝管理基金，方向随之对调。
 
 ★ 三个必避的坑：
 1. 必须有 base rate：2025-2026 黄金是大牛市，无脑看多胜率本来就高
-2. 事件要去重：读数连续多周 ≥0.9 是同一波行情，连算＝重复计分
+2. 事件要去重：读数连续多周 ≥90 是同一波行情，连算＝重复计分
 3. 分母统一：胜率 = 方向一致次数 / 全部事件（含亏损），与基准同口径
 """
 import datetime, json, os
@@ -17,7 +20,7 @@ MKT = os.path.join(BASE, "data", "market")
 OUT = os.path.join(MKT, "cot_speed_backtest.json")
 
 HOLD_WEEKS = 8
-TOP = 0.90
+TOP = 90        # 0~100 口径下的"打顶"阈值
 
 
 def load(n):
@@ -63,8 +66,9 @@ def main():
            "valid_from": valid_from,
            "base": {"n": len(base_ret), "up_rate": round(base_up, 1), "avg_ret": round(base_avg, 2)}}
 
-    SPEC = (("prod", "绿线·商业头寸（最大资金）打顶", "他＝买点/看多", True),
-            ("mm", "蓝线·管理基金（投机资金）打顶", "他＝行情衰减/看空", False))
+    # 规则方向来自博主口播：蓝线(商业)打顶＝行情衰减→看空；绿线(管理基金)打顶＝底部→看多
+    SPEC = (("prod", "蓝线·商业（Producer/Merchant）打顶", "他＝行情衰减/看空", False),
+            ("mm", "绿线·管理基金（Managed Money）打顶", "他＝阶段底部/看多", True))
 
     for key, label, rule, want_up in SPEC:
         arr = sg[key + "_idx"]
