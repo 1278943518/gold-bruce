@@ -488,7 +488,7 @@ drawAll();
 updateCards();
 fillDetail();
 document.getElementById('updDate').textContent=V.dates[N-1];
-document.getElementById('builtAt').textContent='构建 '+D.built_at;
+document.getElementById('builtAt').textContent='数据 '+D.built_at;
 
 /* 弹窗保留策略：点图表以外的区域才收起（触屏与鼠标都生效） */
 document.addEventListener('touchstart',function(e){
@@ -498,36 +498,83 @@ document.addEventListener('mousedown',function(e){
   if(!e.target.closest||!e.target.closest('svg'))hideTip();
 });
 
-/* 云端自更新：页面加载后去 GitHub 取最新数据，取到且比内置快照新就整体重绘。
-   取不到（离线 / CDN 不通）就保留内置快照，页面永远有内容。 */
+/* 云端自更新：并发拉取多个源（同源 → GitHub Pages → 国内镜像 → CDN 兜底），
+   谁先回来先用谁、后到的更新自动覆盖；全部失败则静默保留内置数据，
+   并在页面停留期间按递增间隔自动重试，网络一恢复就更新。
+   不再显示任何兜底状态字样——数据时间戳本身就是唯一的状态标识。 */
 (function(){
-  var SRC=[
-    'https://1278943518.github.io/gold-bruce/data.json',
-    'https://raw.githubusercontent.com/1278943518/gold-bruce/main/data.json',
-    'https://cdn.jsdelivr.net/gh/1278943518/gold-bruce@main/data.json'
+  var RAW='https://raw.githubusercontent.com/1278943518/gold-bruce/main/data.json';
+  var BATCH=[
+    ['./data.json',
+     'https://1278943518.github.io/gold-bruce/data.json',
+     'https://ghfast.top/'+RAW],
+    ['https://cdn.jsdelivr.net/gh/1278943518/gold-bruce@main/data.json',
+     'https://fastly.jsdelivr.net/gh/1278943518/gold-bruce@main/data.json',
+     'https://ghproxy.net/'+RAW]
   ];
-  var i=0;
-  function next(){
-    if(i>=SRC.length){
-      document.getElementById('builtAt').textContent='构建 '+D.built_at+' · 离线快照';
-      return;
-    }
-    var u=SRC[i++];
-    fetch(u,{cache:'no-store'}).then(function(r){
-      if(!r.ok)throw 0;return r.json();
-    }).then(function(j){
-      if(!j||!j.built_at||!j.view)throw 0;
-      if(j.built_at<=D.built_at){
-        document.getElementById('builtAt').textContent='构建 '+D.built_at+' · 已是最新';
-        return;
-      }
-      D=j;V=j.view;
-      buildData();drawAll();updateCards();fillDetail();
-      document.getElementById('updDate').textContent=V.dates[N-1];
-      document.getElementById('builtAt').textContent='云端更新 '+j.built_at;
-    }).catch(next);
+  var RETRY=[30000,90000,180000,300000];   /* 全失败后的重试间隔(ms) */
+  var applied=D.built_at,busy=false,round=0;
+
+  function show(){document.getElementById('builtAt').textContent='数据 '+D.built_at;}
+
+  function apply(j){
+    if(!j||!j.built_at||!j.view)return;
+    if(j.built_at<=applied)return;
+    applied=j.built_at;D=j;V=j.view;
+    buildData();drawAll();updateCards();fillDetail();
+    document.getElementById('updDate').textContent=V.dates[N-1];
+    show();
   }
-  next();
+
+  function timedFetch(u,ms){
+    return new Promise(function(res,rej){
+      var done=false,ctl=null;
+      var t=setTimeout(function(){
+        if(done)return;done=true;
+        if(ctl){try{ctl.abort();}catch(e){}}
+        rej(0);
+      },ms);
+      var opt={cache:'no-store'};
+      if(typeof AbortController!=='undefined'){ctl=new AbortController();opt.signal=ctl.signal;}
+      fetch(u,opt).then(function(r){
+        if(!r.ok)throw 0;return r.json();
+      }).then(function(j){
+        if(done)return;done=true;clearTimeout(t);res(j);
+      }).catch(function(){
+        if(done)return;done=true;clearTimeout(t);
+        if(ctl){try{ctl.abort();}catch(e){}}
+        rej(0);
+      });
+    });
+  }
+
+  function pull(list){
+    return Promise.all(list.map(function(u){
+      return timedFetch(u,8000).then(function(j){apply(j);return 1;},function(){return 0;});
+    })).then(function(rs){
+      var n=0;for(var k=0;k<rs.length;k++)n+=rs[k];return n;
+    });
+  }
+
+  function run(){
+    if(busy)return;busy=true;
+    pull(BATCH[0]).then(function(n0){
+      if(n0>0)return n0;
+      return pull(BATCH[1]);
+    }).then(function(n){
+      busy=false;show();
+      if(n>0){round=0;return;}
+      if(round<RETRY.length){var d=RETRY[round];round++;setTimeout(run,d);}
+    }).catch(function(){busy=false;show();});
+  }
+
+  /* 从后台切回前台时立刻补一次（手机常见的「放着不动→回来还是旧数据」） */
+  document.addEventListener('visibilitychange',function(){
+    if(!document.hidden&&!busy){round=0;run();}
+  });
+
+  show();
+  run();
 })();
 </script></body></html>"""
 
