@@ -68,9 +68,13 @@ def parse_cot(text):
             "swap_long": n("Swap_Positions_Long_All"), "swap_short": n("Swap__Positions_Short_All"),
             "mm_long": n("M_Money_Positions_Long_All"), "mm_short": n("M_Money_Positions_Short_All"),
             "other_long": n("Other_Rept_Positions_Long_All"), "other_short": n("Other_Rept_Positions_Short_All"),
+            # NonRept＝非报告头寸，官方口径里的「散户」。
+            # ⚠ 列名是**大写 R** 的 NonRept_Positions_*，写成 Nonrept_* 会取不到（返回 None）。
+            "nonrept_long": n("NonRept_Positions_Long_All"), "nonrept_short": n("NonRept_Positions_Short_All"),
         }
         for a, b in (("prod", ("prod_long", "prod_short")), ("swap", ("swap_long", "swap_short")),
-                     ("mm", ("mm_long", "mm_short")), ("other", ("other_long", "other_short"))):
+                     ("mm", ("mm_long", "mm_short")), ("other", ("other_long", "other_short")),
+                     ("nonrept", ("nonrept_long", "nonrept_short"))):
             v1, v2 = rec[b[0]], rec[b[1]]
             rec[a + "_net"] = None if (v1 is None or v2 is None) else v1 - v2
         out.append(rec)

@@ -39,9 +39,10 @@ N = 52       # 归一化窗口（周）
 # 且回测信号同时变弱（蓝线打顶超额 +25.5pp → +5.7pp）。「他那种一上一下」是视觉/坐标轴效应，
 # 不是口径效应 —— 在 prod_long 约束下，蓝线换任何口径相关性都在 −0.11~+0.26 之间，做不出负相关。
 BASIS = "long"
-CATS = [("prod", "绿线·商业头寸（市场最大资金）"),
-        ("mm", "蓝线·管理基金（华尔街投机资金）"),
-        ("other", "红线·其他可报告（散户小机构）")]
+CATS = [("mm", "绿线·管理基金（华尔街投机资金）"),
+        ("swap", "蓝线·互换商（Swap Dealers）"),
+        ("prod", "深灰线·商业头寸（产业套保盘）"),
+        ("nonrept", "红线·散户（非报告头寸 NonRept）")]
 
 
 def delta(v, k):
@@ -87,11 +88,11 @@ def main():
         print("  %-28s 8/25 = %s" % (label, ("%.4f" % val) if val is not None else "—"))
     print()
     print("最近 8 周读数：")
-    print("  %-12s %-8s %-8s %-8s" % ("date", "绿", "蓝", "红"))
+    keys = [k for k, _ in CATS]
+    print("  %-12s" % "date" + "".join("%-10s" % k for k in keys))
     for j in range(len(dates) - 8, len(dates)):
         f = lambda v: ("%.3f" % v) if v is not None else "—"
-        print("  %-12s %-8s %-8s %-8s" % (dates[j], f(out["prod_idx"][j]),
-                                          f(out["mm_idx"][j]), f(out["other_idx"][j])))
+        print("  %-12s" % dates[j] + "".join("%-10s" % f(out[k + "_idx"][j]) for k in keys))
 
 
 if __name__ == "__main__":
