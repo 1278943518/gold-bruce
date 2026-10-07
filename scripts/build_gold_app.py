@@ -75,6 +75,8 @@ def main():
     data = {"view": view, "pcr": pcr, "w_dates": w_dates,
             "signals": [{"date": d, "kind": k, "dir": dr} for d, k, dr in SIGNALS],
             "live": live, "cot_last": cot[-1]["date"],
+            # 右上角两行时间戳：金价与 PCR 各自的数据最新日期（两者常常不同）
+            "gold_last": max(x["d"] for x in gc), "pcr_last": pcr_end,
             "cot_n": len(w_dates), "cot_first": cot[0]["date"],
             "bt": bt, "sens": sens, "cross": cross,
             "valid_from": load("cot_speed_index.json")["valid_from"],
@@ -135,8 +137,9 @@ font:14px/1.55 -apple-system,BlinkMacSystemFont,"Segoe UI","PingFang SC","Micros
 .hd img{width:38px;height:38px;border-radius:9px}
 .hd h1{font-size:16.5px;margin:0;line-height:1.25}
 .hd .sub{font-size:11px;color:var(--sub)}
-.upd{font-size:10.5px;color:var(--sub);text-align:right;margin-left:auto;line-height:1.4}
-.upd b{color:var(--blue);font-size:11px;display:block}
+.upd{font-size:10.5px;color:var(--sub);text-align:right;margin-left:auto;line-height:1.45}
+.upd span{display:block;white-space:nowrap}
+.upd b{color:var(--blue);font-size:11px}
 .grid6{display:grid;grid-template-columns:repeat(3,1fr);gap:6px;margin:2px 0 8px}
 .kv{background:var(--card);border:1px solid var(--line);border-radius:9px;padding:6px 8px;min-width:0}
 .kv .k{font-size:10px;color:var(--sub);white-space:nowrap;overflow:hidden;text-overflow:ellipsis}
@@ -172,7 +175,7 @@ border-radius:8px;padding:6px 9px;font-size:12px;box-shadow:0 3px 12px rgba(0,0,
 <div class="hd">
 <img src="data:image/png;base64,__LOGO__" alt="logo">
 <div><h1>布鲁斯黄金看盘</h1><div class="sub">COT 持仓 × 期权 PCR × 价格通道 · 四维联动</div></div>
-<div class="upd">数据更新至<b id="updDate">—</b><span id="builtAt"></span></div>
+<div class="upd"><span>PCR <b id="updPcr">—</b></span><span>金价 <b id="updGold">—</b></span></div>
 </div>
 
 <div class="grid6" id="cards"></div>
@@ -487,8 +490,12 @@ buildData();
 drawAll();
 updateCards();
 fillDetail();
-document.getElementById('updDate').textContent=V.dates[N-1];
-document.getElementById('builtAt').textContent='数据 '+D.built_at;
+/* 右上角两行时间戳：PCR 与金价各自的数据日期，互不影响，不显示任何同步状态 */
+function stamps(){
+  document.getElementById('updPcr').textContent=D.pcr_last||V.dates[N-1];
+  document.getElementById('updGold').textContent=D.gold_last||V.dates[N-1];
+}
+stamps();
 
 /* 弹窗保留策略：点图表以外的区域才收起（触屏与鼠标都生效） */
 document.addEventListener('touchstart',function(e){
@@ -515,14 +522,13 @@ document.addEventListener('mousedown',function(e){
   var RETRY=[30000,90000,180000,300000];   /* 全失败后的重试间隔(ms) */
   var applied=D.built_at,busy=false,round=0;
 
-  function show(){document.getElementById('builtAt').textContent='数据 '+D.built_at;}
+  function show(){stamps();}
 
   function apply(j){
     if(!j||!j.built_at||!j.view)return;
     if(j.built_at<=applied)return;
     applied=j.built_at;D=j;V=j.view;
     buildData();drawAll();updateCards();fillDetail();
-    document.getElementById('updDate').textContent=V.dates[N-1];
     show();
   }
 
