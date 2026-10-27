@@ -8,15 +8,15 @@
  "pcr_days": 20,
  "range": [
   "2024-01-02",
-  "2026-10-21"
+  "2026-10-26"
  ],
- "n_days": 725,
+ "n_days": 728,
  "buckets": {
   "单边": {
-   "n": 220,
-   "avg_ret": 3.22,
-   "median": 2.63,
-   "win_rate": 70.5
+   "n": 222,
+   "avg_ret": 3.18,
+   "median": 2.58,
+   "win_rate": 69.8
   },
   "无信号": {
    "n": 22,
@@ -25,30 +25,30 @@
    "win_rate": 100.0
   },
   "矛盾": {
-   "n": 312,
+   "n": 313,
    "avg_ret": 1.42,
    "median": 1.88,
-   "win_rate": 62.8
+   "win_rate": 62.9
   },
   "共振": {
    "n": 170,
-   "avg_ret": 1.54,
+   "avg_ret": 1.19,
    "median": 1.06,
-   "win_rate": 55.3
+   "win_rate": 52.4
   }
  },
  "by_direction": {
   "矛盾·COT空/PCR多": {
-   "n": 168,
-   "avg_ret": 1.77,
-   "median": 1.67,
-   "win_rate": 60.7
+   "n": 169,
+   "avg_ret": 1.76,
+   "median": 1.52,
+   "win_rate": 60.9
   },
   "共振·看多": {
    "n": 71,
-   "avg_ret": 1.25,
-   "median": -0.21,
-   "win_rate": 45.1
+   "avg_ret": 0.42,
+   "median": -0.94,
+   "win_rate": 38.0
   },
   "矛盾·COT多/PCR空": {
    "n": 144,
@@ -1935,6 +1935,12 @@
    "cot": 1,
    "pcr": -1,
    "fwd": -5.19
+  },
+  {
+   "date": "2026-10-23",
+   "cot": -1,
+   "pcr": 1,
+   "fwd": 0.53
   }
  ]
 }

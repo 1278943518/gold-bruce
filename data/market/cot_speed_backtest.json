@@ -10,7 +10,7 @@
  "base": {
   "n": 107,
   "up_rate": 62.6,
-  "avg_ret": 1.71
+  "avg_ret": 1.7
  },
  "prod": {
   "label": "蓝线·商业（Producer/Merchant）打顶",
@@ -20,7 +20,7 @@
   "avg_ret": 1.23,
   "base_dir_rate": 37.4,
   "excess_pp": 8.6,
-  "excess_ret": -0.48,
+  "excess_ret": -0.47,
   "events": [
    [
     "2016-11-22",
@@ -232,7 +232,7 @@
    [
     "2016-09-06",
     97.529,
-    1.7
+    1.57
    ],
    [
     "2017-04-25",
