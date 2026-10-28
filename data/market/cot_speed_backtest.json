@@ -10,7 +10,7 @@
  "base": {
   "n": 107,
   "up_rate": 62.6,
-  "avg_ret": 1.7
+  "avg_ret": 1.69
  },
  "prod": {
   "label": "蓝线·商业（Producer/Merchant）打顶",
@@ -20,7 +20,7 @@
   "avg_ret": 1.23,
   "base_dir_rate": 37.4,
   "excess_pp": 8.6,
-  "excess_ret": -0.47,
+  "excess_ret": -0.46,
   "events": [
    [
     "2016-11-22",
@@ -214,7 +214,7 @@
   "rule": "他＝阶段底部/看多",
   "n": 35,
   "hit_rate": 54.3,
-  "avg_ret": 1.79,
+  "avg_ret": 1.77,
   "base_dir_rate": 62.6,
   "excess_pp": -8.3,
   "excess_ret": 0.08,
@@ -232,7 +232,7 @@
    [
     "2016-09-06",
     97.529,
-    1.57
+    1.03
    ],
    [
     "2017-04-25",
