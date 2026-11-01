@@ -9,8 +9,8 @@
  "valid_from": "2016-06-28",
  "base": {
   "n": 107,
-  "up_rate": 62.6,
-  "avg_ret": 1.69
+  "up_rate": 61.7,
+  "avg_ret": 1.68
  },
  "prod": {
   "label": "蓝线·商业（Producer/Merchant）打顶",
@@ -18,9 +18,9 @@
   "n": 37,
   "hit_rate": 45.9,
   "avg_ret": 1.23,
-  "base_dir_rate": 37.4,
-  "excess_pp": 8.6,
-  "excess_ret": -0.46,
+  "base_dir_rate": 38.3,
+  "excess_pp": 7.6,
+  "excess_ret": -0.44,
   "events": [
    [
     "2016-11-22",
@@ -213,10 +213,10 @@
   "label": "绿线·管理基金（Managed Money）打顶",
   "rule": "他＝阶段底部/看多",
   "n": 35,
-  "hit_rate": 54.3,
-  "avg_ret": 1.77,
-  "base_dir_rate": 62.6,
-  "excess_pp": -8.3,
+  "hit_rate": 51.4,
+  "avg_ret": 1.74,
+  "base_dir_rate": 61.7,
+  "excess_pp": -10.3,
   "excess_ret": 0.07,
   "events": [
    [
@@ -232,7 +232,7 @@
    [
     "2016-09-06",
     97.529,
-    0.88
+    0.0
    ],
    [
     "2017-04-25",
