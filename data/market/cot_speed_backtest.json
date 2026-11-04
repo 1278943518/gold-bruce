@@ -20,7 +20,7 @@
   "avg_ret": 1.23,
   "base_dir_rate": 38.3,
   "excess_pp": 7.6,
-  "excess_ret": -0.44,
+  "excess_ret": -0.43,
   "events": [
    [
     "2016-11-22",
@@ -217,7 +217,7 @@
   "avg_ret": 1.74,
   "base_dir_rate": 61.7,
   "excess_pp": -10.3,
-  "excess_ret": 0.07,
+  "excess_ret": 0.08,
   "events": [
    [
     "2016-06-28",
