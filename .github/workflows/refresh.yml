@@ -2,9 +2,17 @@ name: 黄金看盘每日刷新
 
 on:
   schedule:
-    # 每天 UTC 00:00 = 北京时间 08:00
+    # 北京时间 08:00 / 12:00 / 16:00 / 20:00 / 次日 04:00
     - cron: '0 0 * * *'
+    - cron: '0 4 * * *'
+    - cron: '0 8 * * *'
+    - cron: '0 12 * * *'
+    - cron: '0 20 * * *'
   workflow_dispatch:
+
+concurrency:
+  group: gold-refresh
+  cancel-in-progress: false
 
 permissions:
   contents: write
@@ -12,6 +20,7 @@ permissions:
 jobs:
   refresh:
     runs-on: ubuntu-latest
+    timeout-minutes: 25
     steps:
       - name: 检出仓库
         uses: actions/checkout@v4
