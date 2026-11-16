@@ -10752,5 +10752,24 @@
   "mm_net": 103614.0,
   "other_net": 75934.0,
   "nonrept_net": 25354.0
+ },
+ {
+  "date": "2026-11-10",
+  "oi": 404725.0,
+  "prod_long": 19189.0,
+  "prod_short": 30070.0,
+  "swap_long": 18336.0,
+  "swap_short": 224977.0,
+  "mm_long": 127406.0,
+  "mm_short": 15065.0,
+  "other_long": 98828.0,
+  "other_short": 21062.0,
+  "nonrept_long": 46298.0,
+  "nonrept_short": 18883.0,
+  "prod_net": -10881.0,
+  "swap_net": -206641.0,
+  "mm_net": 112341.0,
+  "other_net": 77766.0,
+  "nonrept_net": 27415.0
  }
 ]
