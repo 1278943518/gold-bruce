@@ -9,23 +9,23 @@
  "valid_from": "2016-06-28",
  "base": {
   "n": 108,
-  "up_rate": 61.1,
-  "avg_ret": 1.62
+  "up_rate": 62.0,
+  "avg_ret": 1.63
  },
  "prod": {
   "label": "蓝线·商业（Producer/Merchant）打顶",
   "rule": "他＝行情衰减/看空",
   "n": 37,
   "hit_rate": 45.9,
-  "avg_ret": 1.27,
-  "base_dir_rate": 38.9,
-  "excess_pp": 7.1,
+  "avg_ret": 1.29,
+  "base_dir_rate": 38.0,
+  "excess_pp": 8.0,
   "excess_ret": -0.34,
   "events": [
    [
     "2016-11-22",
     94.517,
-    1.97
+    2.49
    ],
    [
     "2016-12-27",
@@ -215,9 +215,9 @@
   "n": 35,
   "hit_rate": 51.4,
   "avg_ret": 1.74,
-  "base_dir_rate": 61.1,
-  "excess_pp": -9.7,
-  "excess_ret": 0.13,
+  "base_dir_rate": 62.0,
+  "excess_pp": -10.6,
+  "excess_ret": 0.12,
   "events": [
    [
     "2016-06-28",
